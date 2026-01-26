@@ -1005,34 +1005,32 @@ button:focus-visible {
 
 /* CTA Marco Teórico */
 .cta-marco {
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: var(--crema-sucia);
-  border: 3px solid var(--negro);
+  margin-top: 4rem;
+  padding: 2rem 0;
   text-align: center;
 }
 
-.cta-link {
+.cta-marco .cta-link {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 1.2rem;
-  color: var(--negro);
+  font-size: 1rem;
+  text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--amarillo-aviso);
+  padding: 1rem 2rem;
+  background-color: var(--negro);
+  color: var(--crema);
   border: 3px solid var(--negro);
-  box-shadow: 4px 4px 0 var(--negro);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: all 0.15s ease;
 }
 
-.cta-link:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--negro);
+.cta-marco .cta-link:hover {
+  background-color: var(--azul-electrico);
+  border-color: var(--azul-electrico);
 }
 
-.cta-descripcion {
+.cta-marco .cta-descripcion {
   margin-top: 1rem;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--negro);
-  opacity: 0.8;
+  opacity: 0.6;
 }

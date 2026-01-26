@@ -182,13 +182,45 @@
 
 ---
 
+### Decisión: Index como Poster
+
+**Contexto:** El index anterior tenía demasiadas secciones (declaración, pilares, red, CTA) y se leía como landing de startup.
+
+**Opciones consideradas:**
+1. Arreglar la estructura actual (menos padding, mejor jerarquía)
+2. Ir a lo radical — poster de una pantalla
+
+**Decisión:** Opción 2. Poster radical.
+
+**Razón:** Máximo impacto, mínima información. El contenido vive en las subpáginas. Una sola pantalla con logo gigante, una frase, dos links.
+
+---
+
+### Decisión: Separar Manifiesto y Marco Teórico
+
+**Contexto:** El "manifiesto" original era un documento académico de ~6000 palabras y ~30 minutos de lectura. Un manifiesto debería ser declarativo, directo y memorable.
+
+**Opciones consideradas:**
+1. Acortar el documento existente
+2. Dividir en dos: manifiesto corto + marco teórico completo
+
+**Decisión:** Opción 2.
+
+**Nueva estructura:**
+- `manifiesto.html` → ~800 palabras, ~3-5 min
+- `marco.html` → ~6000 palabras, ~30 min
+
+**Razón:** El manifiesto engancha, el marco profundiza. Cada documento tiene su función. Quien quiere la visión rápida lee el manifiesto; quien quiere entender la fundamentación lee el marco teórico.
+
+---
+
 ## Decisiones Pendientes
 
 - [ ] Dominio propio (`mundanidadforzada.org` disponible ~12 USD/año)
 - [ ] Email con dominio propio
 - [ ] Contenido real de practitioners (nombres, bios, fotos)
 - [ ] Imagen OG para redes sociales
-- [ ] ¿Agregar año de fundación en algún lugar visible? → Decidido: sí, en footer ("Est. 2025")
+- [x] ¿Agregar año de fundación en algún lugar visible? → Decidido: sí, en footer ("Est. 2025")
 
 ---
 
