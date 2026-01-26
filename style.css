@@ -959,9 +959,9 @@ button:focus-visible {
   transform: rotate(-1deg);
 }
 
-/* La red: azul */
+/* Bitácora: negro (contraste accesible) */
 .poster-tag:last-child {
-  background-color: var(--azul-electrico);
+  background-color: var(--negro);
   color: var(--crema);
   transform: rotate(1.5deg);
 }
