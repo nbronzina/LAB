@@ -2,36 +2,31 @@
 
 > Última actualización: 26 enero 2026
 
-## Estado actual: MVP Completo
+## Estado: MVP Completo
 
-El sitio está funcional y publicado en https://nbronzina.github.io/LAB/
+Live en: https://nbronzina.github.io/LAB/
 
 ## Páginas
 
-| Página | Estado | Notas |
-|--------|--------|-------|
-| index.html | Completo | Poster |
-| manifiesto.html | Completo | Versión corta |
-| marco.html | Completo | Fundamentación académica |
-| red.html | Completo | Placeholders para practitioners |
+| Página | Estado |
+|--------|--------|
+| index.html | ✓ |
+| manifiesto.html | ✓ |
+| marco.html | ✓ |
+| red.html | ✓ (placeholders) |
+| bitacora.html | ✓ (placeholders) |
 
 ## Pendientes
 
-### Contenido
-- [ ] Nombres reales de practitioners
-- [ ] Bios de practitioners
-- [ ] Fotos de practitioners (80x80px)
+**Contenido:**
+- [ ] Practitioners reales (nombres, bios, fotos)
+- [ ] Entries de bitácora
 
-### Técnico
-- [ ] Favicon (archivos ya referenciados, falta subir)
-- [ ] og-image.png (1200x630px para social)
-- [ ] Dominio propio (mundanidadforzada.org ~$12/año)
-- [ ] Email con dominio propio
-
-### Futuro
-- [ ] Página de proyectos/casos de estudio
-- [ ] Blog o actualizaciones
-- [ ] Versión en inglés (?)
+**Técnico:**
+- [ ] Favicon
+- [ ] og-image.png
+- [ ] Dominio propio
+- [ ] Email con dominio
 
 ---
 

@@ -214,6 +214,36 @@
 
 ---
 
+### Decisión: Footer con CTA
+
+**Contexto:** El footer mostraba el email completo `nicolas.bronzina@gmail.com`.
+
+**Decisión:** Cambiar por CTA "Charlemos →"
+
+**Razón:** Más profesional, colectivo > individual, futuro-proof para cuando haya dominio propio.
+
+---
+
+### Decisión: CTA sumarse a la red
+
+**Contexto:** La página de red mostraba practitioners pero no invitaba a sumarse.
+
+**Decisión:** Agregar "¿Querés sumarte? Escribinos →" al final de red.html
+
+**Razón:** La red debe poder crecer. Invitación explícita.
+
+---
+
+### Decisión: Página Bitácora
+
+**Contexto:** El sitio necesita un lugar para mostrar proyectos y experimentos.
+
+**Decisión:** Crear bitacora.html como registro cronológico de trabajos.
+
+**Razón:** Muestra que el Lab produce, no solo teoriza. Estructura por año permite ver evolución.
+
+---
+
 ## Decisiones Pendientes
 
 - [ ] Dominio propio (`mundanidadforzada.org` disponible ~12 USD/año)

@@ -1082,3 +1082,71 @@ button:focus-visible {
 .red-cta-link:hover {
   border-color: var(--azul-electrico);
 }
+
+/* ============================================
+   BITÁCORA
+   ============================================ */
+.bitacora-content {
+  padding: 2rem 0 4rem;
+}
+
+.bitacora-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--coral);
+  text-shadow: 3px 3px 0 var(--azul-electrico);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.bitacora-intro {
+  font-size: 1.1rem;
+  color: var(--negro);
+  opacity: 0.7;
+  margin-bottom: 3rem;
+}
+
+.bitacora-year {
+  margin-bottom: 3rem;
+}
+
+.bitacora-year h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.5rem;
+  color: var(--coral);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--negro);
+}
+
+.bitacora-entry {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--azul-electrico);
+}
+
+.entry-date {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--negro);
+  opacity: 0.5;
+}
+
+.entry-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin: 0.25rem 0;
+}
+
+.entry-author {
+  font-size: 0.9rem;
+  color: var(--coral);
+  margin-bottom: 0.5rem;
+}
+
+.entry-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
