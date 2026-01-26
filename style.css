@@ -1,0 +1,404 @@
+/* ============================================
+   LAB DE MUNDANIDAD FORZADA
+   Estética low-tech / señalética vernácula
+   ============================================ */
+
+:root {
+  --coral: #E85D4A;
+  --coral-dark: #C94A3A;
+  --azul-electrico: #1E5EFF;
+  --crema: #F5EDE1;
+  --crema-sucia: #E8DFD0;
+  --negro: #1A1A1A;
+  --amarillo-aviso: #F2C94C;
+}
+
+/* RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BASE */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--crema);
+  color: var(--negro);
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* RUIDO DE IMPRESIÓN - overlay global */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================
+   HEADER / LOGO
+   ============================================ */
+.header {
+  padding: 3rem 1.5rem 2rem;
+  padding-left: 2.5rem;
+}
+
+.logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: var(--coral);
+  text-shadow: 4px 4px 0 var(--azul-electrico);
+  line-height: 0.9;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo span:nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+.logo span:nth-child(3) {
+  margin-left: 1rem;
+}
+
+/* ============================================
+   DECLARACIÓN
+   ============================================ */
+.declaracion {
+  background-color: var(--negro);
+  color: var(--crema);
+  padding: 3rem 0;
+  margin: 2rem 0;
+  transform: rotate(-0.5deg);
+  position: relative;
+}
+
+.declaracion::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--azul-electrico);
+  transform: translate(6px, 6px);
+  z-index: -1;
+}
+
+.declaracion-texto {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.7;
+  max-width: 750px;
+}
+
+/* STICKER - etiqueta amarilla */
+.sticker {
+  background-color: var(--amarillo-aviso);
+  color: var(--negro);
+  padding: 0.1em 0.4em;
+  display: inline-block;
+  transform: rotate(1.5deg);
+  font-weight: 700;
+}
+
+/* ============================================
+   SECTION TITLES
+   ============================================ */
+.section-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: var(--coral);
+  text-shadow: 3px 3px 0 var(--azul-electrico);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+   PILARES
+   ============================================ */
+.pilares {
+  padding: 4rem 0;
+  background-color: var(--crema-sucia);
+}
+
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pilar-card {
+  position: relative;
+}
+
+.pilar-card-inner {
+  background-color: var(--crema);
+  border: 3px solid var(--negro);
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Offset box - registro de impresión desalineado */
+.pilar-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--azul-electrico);
+  transform: translate(8px, 8px);
+  z-index: 0;
+}
+
+.pilar-card:nth-child(2)::before {
+  background-color: var(--coral);
+  transform: translate(-6px, 10px);
+}
+
+.pilar-card:nth-child(3)::before {
+  background-color: var(--amarillo-aviso);
+  transform: translate(10px, -6px);
+}
+
+.pilar-card:nth-child(4)::before {
+  background-color: var(--azul-electrico);
+  transform: translate(-8px, 8px);
+}
+
+.pilar-card h3 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: var(--negro);
+}
+
+.pilar-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ============================================
+   LABORATORIO
+   ============================================ */
+.laboratorio {
+  padding: 4rem 0;
+  text-align: left;
+}
+
+.laboratorio .section-title {
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+.laboratorio-box {
+  background-color: var(--negro);
+  color: var(--crema);
+  padding: 2rem;
+  border-left: 8px solid var(--coral);
+  max-width: 700px;
+  transform: rotate(0.3deg);
+}
+
+.laboratorio-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ============================================
+   MARCOS TEÓRICOS
+   ============================================ */
+.marcos {
+  padding: 4rem 0;
+  background-color: var(--coral);
+  color: var(--crema);
+  transform: rotate(0.5deg);
+  margin: 2rem 0;
+}
+
+.marcos .section-title {
+  color: var(--crema);
+  text-shadow: 3px 3px 0 var(--negro);
+}
+
+.marcos-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.marcos-lista li {
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--amarillo-aviso);
+}
+
+.marcos-lista strong {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.marco-desc {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+/* ============================================
+   LA RED
+   ============================================ */
+.red {
+  padding: 4rem 0;
+}
+
+.red-intro {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ciudades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ciudad {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  background-color: var(--negro);
+  color: var(--crema);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.ciudad:nth-child(1) { transform: rotate(-2deg); }
+.ciudad:nth-child(2) { transform: rotate(1.5deg); background-color: var(--azul-electrico); }
+.ciudad:nth-child(3) { transform: rotate(-1deg); }
+.ciudad:nth-child(4) { transform: rotate(2deg); background-color: var(--coral); }
+.ciudad:nth-child(5) { transform: rotate(-1.5deg); }
+
+/* ============================================
+   MANIFIESTO
+   ============================================ */
+.manifiesto {
+  padding: 3rem 0;
+  text-align: left;
+}
+
+.manifiesto-link {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: var(--negro);
+  text-decoration: none;
+  background-color: var(--amarillo-aviso);
+  padding: 1rem 2rem;
+  display: inline-block;
+  border: 3px solid var(--negro);
+  transform: rotate(-1deg);
+  transition: transform 0.15s ease;
+  position: relative;
+}
+
+.manifiesto-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--negro);
+  transform: translate(5px, 5px);
+  z-index: -1;
+}
+
+.manifiesto-link:hover {
+  transform: rotate(0deg) translate(-2px, -2px);
+}
+
+/* ============================================
+   CONTACTO / FOOTER
+   ============================================ */
+.contacto {
+  background-color: var(--negro);
+  color: var(--crema);
+  padding: 3rem 0;
+  margin-top: 2rem;
+}
+
+.contacto-label {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  color: var(--coral);
+}
+
+.contacto-email {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: var(--crema);
+  text-decoration: none;
+  border-bottom: 3px solid var(--azul-electrico);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.contacto-email:hover {
+  border-color: var(--amarillo-aviso);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 600px) {
+  .header {
+    padding: 2rem 1rem;
+  }
+
+  .logo {
+    text-shadow: 3px 3px 0 var(--azul-electrico);
+  }
+
+  .logo span:nth-child(2),
+  .logo span:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .declaracion {
+    transform: none;
+    margin: 1rem 0;
+  }
+
+  .marcos {
+    transform: none;
+  }
+
+  .pilares-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    text-shadow: 2px 2px 0 var(--azul-electrico);
+  }
+
+  .marcos .section-title {
+    text-shadow: 2px 2px 0 var(--negro);
+  }
+}
