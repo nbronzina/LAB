@@ -951,3 +951,88 @@ button:focus-visible {
     text-align: center;
   }
 }
+
+/* ============================================
+   MANIFIESTO CORTO - Elementos adicionales
+   ============================================ */
+
+/* Pilar card para manifiesto corto */
+.manifiesto-section .pilar-card {
+  background-color: var(--crema-sucia);
+  border-left: 4px solid var(--coral);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.manifiesto-section .pilar-card::before {
+  display: none;
+}
+
+.manifiesto-section .pilar-card h3 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 0.5rem;
+}
+
+.manifiesto-section .pilar-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Listas de marcos y principios */
+.marcos-lista,
+.principios-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.marcos-lista li,
+.principios-lista li {
+  padding: 1rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--azul-electrico);
+  margin-bottom: 0.75rem;
+  background-color: var(--crema-sucia);
+}
+
+.marcos-lista li strong,
+.principios-lista li strong {
+  color: var(--coral);
+}
+
+/* CTA Marco Teórico */
+.cta-marco {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: var(--crema-sucia);
+  border: 3px solid var(--negro);
+  text-align: center;
+}
+
+.cta-link {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.2rem;
+  color: var(--negro);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--amarillo-aviso);
+  border: 3px solid var(--negro);
+  box-shadow: 4px 4px 0 var(--negro);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--negro);
+}
+
+.cta-descripcion {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--negro);
+  opacity: 0.8;
+}
