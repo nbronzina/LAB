@@ -805,6 +805,35 @@ button:focus-visible {
   line-height: 1.5;
 }
 
+.practitioner-origin {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--negro);
+  opacity: 0.5;
+  margin-bottom: 0.25rem;
+}
+
+.practitioner-role {
+  font-size: 0.9rem;
+  color: var(--coral);
+  margin-bottom: 0.5rem;
+}
+
+.practitioner-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--azul-electrico);
+  text-decoration: none;
+  border-bottom: 1px solid var(--azul-electrico);
+}
+
+.practitioner-link:hover {
+  color: var(--coral);
+  border-color: var(--coral);
+}
+
 /* Responsive red page */
 @media (max-width: 600px) {
   .practitioner-card {
