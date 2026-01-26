@@ -314,22 +314,13 @@ body {
   display: inline-block;
   border: 3px solid var(--negro);
   transform: rotate(-1deg);
-  transition: transform 0.15s ease;
-  position: relative;
-  isolation: isolate;
-}
-
-.manifiesto-link::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--negro);
-  transform: translate(5px, 5px);
-  z-index: -1;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 5px 5px 0 var(--negro);
 }
 
 .manifiesto-link:hover {
   transform: rotate(0deg) translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--negro);
 }
 
 /* ============================================
