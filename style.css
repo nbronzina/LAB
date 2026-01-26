@@ -316,6 +316,7 @@ body {
   transform: rotate(-1deg);
   transition: transform 0.15s ease;
   position: relative;
+  isolation: isolate;
 }
 
 .manifiesto-link::before {
