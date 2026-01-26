@@ -510,6 +510,14 @@ body {
   margin-bottom: 1rem;
 }
 
+.subtitulo-seccion {
+  font-style: italic;
+  color: var(--coral);
+  font-weight: 500;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
 .manifiesto-content p {
   font-size: 1.1rem;
   line-height: 1.8;
