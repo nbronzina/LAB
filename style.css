@@ -402,3 +402,210 @@ body {
     text-shadow: 2px 2px 0 var(--negro);
   }
 }
+
+/* ============================================
+   MANIFIESTO PAGE
+   Página de lectura larga, más sobria
+   ============================================ */
+
+.manifiesto-page {
+  background-color: var(--crema);
+}
+
+/* Header compacto */
+.manifiesto-header {
+  padding: 1.5rem 0;
+  border-bottom: 3px solid var(--negro);
+}
+
+.manifiesto-header .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.back-link {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--negro);
+  transition: background-color 0.15s ease;
+}
+
+.back-link:hover {
+  background-color: var(--amarillo-aviso);
+}
+
+.logo-small {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  text-shadow: 2px 2px 0 var(--azul-electrico);
+}
+
+.logo-small span {
+  display: inline;
+}
+
+.logo-small span:nth-child(2),
+.logo-small span:nth-child(3) {
+  margin-left: 0;
+}
+
+/* Container más angosto para lectura */
+.container-narrow {
+  max-width: 750px;
+}
+
+/* Título principal */
+.manifiesto-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: var(--coral);
+  text-shadow: 4px 4px 0 var(--azul-electrico);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+.documento-nota {
+  font-size: 0.9rem;
+  color: var(--negro);
+  opacity: 0.7;
+  margin-bottom: 3rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--coral);
+}
+
+/* Contenido del manifiesto */
+.manifiesto-content {
+  padding-bottom: 4rem;
+}
+
+.manifiesto-section {
+  margin-bottom: 4rem;
+}
+
+.manifiesto-content h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--coral);
+  text-shadow: 2px 2px 0 var(--azul-electrico);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--negro);
+}
+
+.manifiesto-content h3 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  color: var(--negro);
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.manifiesto-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.manifiesto-content blockquote {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: var(--negro);
+  background-color: var(--amarillo-aviso);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-left: 6px solid var(--negro);
+  transform: rotate(-0.5deg);
+}
+
+.manifiesto-content ul {
+  margin: 1.5rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.manifiesto-content ul li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 3px solid var(--azul-electrico);
+  margin-bottom: 0.5rem;
+}
+
+/* Pilar extendido */
+.pilar-extendido {
+  background-color: var(--crema-sucia);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--coral);
+}
+
+.pilar-extendido h3 {
+  margin-top: 0;
+  color: var(--coral);
+}
+
+/* Marco teórico extendido */
+.marco-extendido {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--negro);
+  color: var(--crema);
+}
+
+.marco-extendido h3 {
+  color: var(--amarillo-aviso);
+  margin-top: 0;
+}
+
+.marco-extendido p {
+  color: var(--crema);
+}
+
+.marco-extendido strong {
+  color: var(--coral);
+}
+
+/* Cierre */
+.manifiesto-cierre {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 3px solid var(--negro);
+}
+
+/* Responsive manifiesto */
+@media (max-width: 600px) {
+  .manifiesto-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .manifiesto-title {
+    transform: none;
+    margin-top: 2rem;
+  }
+
+  .manifiesto-content h2 {
+    text-shadow: 1px 1px 0 var(--azul-electrico);
+  }
+
+  .pilar-extendido,
+  .marco-extendido {
+    padding: 1rem;
+  }
+
+  .manifiesto-content blockquote {
+    transform: none;
+    padding: 1rem 1.25rem;
+  }
+}
