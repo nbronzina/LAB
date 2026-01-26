@@ -1083,7 +1083,7 @@ button:focus-visible {
   font-family: 'Archivo Black', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--negro);
   margin-bottom: 0.5rem;
 }
 
@@ -1091,6 +1091,7 @@ button:focus-visible {
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+  color: var(--negro);
 }
 
 /* Listas de marcos y principios */
@@ -1107,11 +1108,13 @@ button:focus-visible {
   border-left: 3px solid var(--azul-electrico);
   margin-bottom: 0.75rem;
   background-color: var(--crema-sucia);
+  color: var(--negro);
 }
 
 .marcos-lista li strong,
 .principios-lista li strong {
-  color: var(--coral);
+  color: var(--negro);
+  font-weight: 700;
 }
 
 /* CTA Marco Teórico */
@@ -1142,8 +1145,7 @@ button:focus-visible {
 .cta-marco .cta-descripcion {
   margin-top: 1rem;
   font-size: 0.85rem;
-  color: var(--negro);
-  opacity: 0.6;
+  color: #4A4A4A;
 }
 
 /* ============================================
