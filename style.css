@@ -1086,8 +1086,15 @@ button:focus-visible {
 /* ============================================
    BITÁCORA
    ============================================ */
+.bitacora-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .bitacora-content {
   padding: 2rem 0 4rem;
+  flex: 1;
 }
 
 .bitacora-title {
