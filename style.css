@@ -578,7 +578,7 @@ button:focus-visible {
 
 .subtitulo-seccion {
   font-style: italic;
-  color: var(--coral);
+  color: var(--negro);
   font-weight: 500;
   margin-top: -1rem;
   margin-bottom: 1.5rem;
@@ -625,7 +625,7 @@ button:focus-visible {
 
 .pilar-extendido h3 {
   margin-top: 0;
-  color: var(--coral);
+  color: var(--negro);
 }
 
 /* Marco teórico extendido */
