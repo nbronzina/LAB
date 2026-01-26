@@ -812,3 +812,136 @@ button:focus-visible {
     gap: 1rem;
   }
 }
+
+/* ============================================
+   HOME POSTER
+   Una sola pantalla, máximo impacto
+   ============================================ */
+.home-poster {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  padding-left: 3rem;
+  gap: 2rem;
+}
+
+/* Logo gigante */
+.poster-logo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(3rem, 12vw, 7rem);
+  color: var(--coral);
+  text-shadow: 5px 5px 0 var(--azul-electrico);
+  line-height: 0.85;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-logo span:nth-child(2) {
+  margin-left: 0.3em;
+}
+
+.poster-logo span:nth-child(3) {
+  margin-left: 0.6em;
+}
+
+/* Frase */
+.poster-frase {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 500;
+  color: var(--negro);
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Links como tags */
+.poster-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.poster-tag {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--negro);
+  background-color: var(--amarillo-aviso);
+  padding: 0.75rem 1.25rem;
+  border: 3px solid var(--negro);
+  box-shadow: 4px 4px 0 var(--negro);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.poster-tag:first-child {
+  transform: rotate(-1.5deg);
+}
+
+.poster-tag:last-child {
+  transform: rotate(1deg);
+}
+
+.poster-tag:hover {
+  transform: rotate(0deg) translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--negro);
+}
+
+/* Footer mínimo */
+.poster-footer {
+  padding: 1.5rem 2rem 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--negro);
+  opacity: 0.7;
+}
+
+.poster-footer a {
+  color: var(--negro);
+  text-decoration: none;
+  border-bottom: 1px solid var(--coral);
+}
+
+.poster-footer a:hover {
+  border-color: var(--azul-electrico);
+}
+
+.poster-est {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive poster */
+@media (max-width: 600px) {
+  .poster {
+    padding: 1.5rem;
+    justify-content: flex-start;
+    padding-top: 15vh;
+  }
+
+  .poster-logo {
+    font-size: clamp(2.5rem, 15vw, 4rem);
+  }
+
+  .poster-footer {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
