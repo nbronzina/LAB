@@ -1225,7 +1225,7 @@ button:focus-visible {
 .bitacora-year h2 {
   font-family: 'Archivo Black', sans-serif;
   font-size: 1.5rem;
-  color: var(--coral);
+  color: var(--negro);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--negro);
@@ -1241,8 +1241,7 @@ button:focus-visible {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--negro);
-  opacity: 0.5;
+  color: #4A4A4A;
 }
 
 .entry-title {
@@ -1254,7 +1253,7 @@ button:focus-visible {
 
 .entry-author {
   font-size: 0.9rem;
-  color: var(--coral);
+  color: var(--negro);
   margin-bottom: 0.5rem;
 }
 
@@ -1264,25 +1263,26 @@ button:focus-visible {
 }
 
 .entry-description a {
-  color: var(--azul-electrico);
+  color: #0047AB;
   text-decoration: none;
-  border-bottom: 1px solid var(--azul-electrico);
+  border-bottom: 1px solid #0047AB;
 }
 
 .entry-description a:hover {
-  opacity: 0.7;
+  color: var(--negro);
+  border-color: var(--negro);
 }
 
 .entry-link {
   display: inline-block;
   margin-top: 0.5rem;
   font-size: 0.85rem;
-  color: var(--coral);
+  color: #0047AB;
   text-decoration: none;
-  border-bottom: 1px solid var(--coral);
+  border-bottom: 1px solid #0047AB;
 }
 
 .entry-link:hover {
-  color: var(--azul-electrico);
-  border-color: var(--azul-electrico);
+  color: var(--negro);
+  border-color: var(--negro);
 }
