@@ -869,7 +869,7 @@ button:focus-visible {
 
 .practitioner-ubicacion {
   font-size: 0.9rem;
-  color: var(--coral);
+  color: var(--coral-dark);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -883,14 +883,13 @@ button:focus-visible {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--negro);
-  opacity: 0.5;
+  color: #595959;
   margin-bottom: 0.25rem;
 }
 
 .practitioner-role {
   font-size: 0.9rem;
-  color: var(--coral);
+  color: var(--coral-dark);
   margin-bottom: 0.5rem;
 }
 
@@ -898,14 +897,14 @@ button:focus-visible {
   display: inline-block;
   margin-top: 0.5rem;
   font-size: 0.85rem;
-  color: var(--azul-electrico);
+  color: #0047AB;
   text-decoration: none;
-  border-bottom: 1px solid var(--azul-electrico);
+  border-bottom: 1px solid #0047AB;
 }
 
 .practitioner-link:hover {
-  color: var(--coral);
-  border-color: var(--coral);
+  color: var(--coral-dark);
+  border-color: var(--coral-dark);
 }
 
 /* Responsive red page */
