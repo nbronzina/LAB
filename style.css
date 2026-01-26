@@ -831,16 +831,16 @@ button:focus-visible {
   justify-content: center;
   align-items: flex-start;
   padding: 2rem;
-  padding-left: 3rem;
+  padding-left: 10vw;
   gap: 2rem;
 }
 
 /* Logo gigante */
 .poster-logo {
   font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(3rem, 12vw, 7rem);
+  font-size: clamp(4rem, 15vw, 10rem);
   color: var(--coral);
-  text-shadow: 5px 5px 0 var(--azul-electrico);
+  text-shadow: 6px 6px 0 var(--azul-electrico);
   line-height: 0.85;
   text-transform: uppercase;
   display: flex;
@@ -885,12 +885,18 @@ button:focus-visible {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+/* Manifiesto: negro */
 .poster-tag:first-child {
-  transform: rotate(-1.5deg);
+  background-color: var(--negro);
+  color: var(--crema);
+  transform: rotate(-1deg);
 }
 
+/* La red: azul */
 .poster-tag:last-child {
-  transform: rotate(1deg);
+  background-color: var(--azul-electrico);
+  color: var(--crema);
+  transform: rotate(1.5deg);
 }
 
 .poster-tag:hover {
@@ -900,7 +906,7 @@ button:focus-visible {
 
 /* Footer mínimo */
 .poster-footer {
-  padding: 1.5rem 2rem 1.5rem 3rem;
+  padding: 1.5rem 2rem 1.5rem 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
