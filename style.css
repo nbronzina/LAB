@@ -843,6 +843,7 @@ button:focus-visible {
   background-color: var(--crema-sucia);
   border-left: 4px solid var(--coral);
   margin-bottom: 1rem;
+  color: var(--negro);
 }
 
 .practitioner-foto-placeholder {
@@ -869,7 +870,7 @@ button:focus-visible {
 
 .practitioner-ubicacion {
   font-size: 0.9rem;
-  color: var(--coral-dark);
+  color: var(--negro);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -877,19 +878,21 @@ button:focus-visible {
 .practitioner-bio {
   font-size: 0.95rem;
   line-height: 1.5;
+  color: var(--negro);
 }
 
 .practitioner-origin {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #595959;
+  color: #4A4A4A;
   margin-bottom: 0.25rem;
 }
 
 .practitioner-role {
   font-size: 0.9rem;
-  color: var(--coral-dark);
+  color: var(--negro);
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
