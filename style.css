@@ -617,3 +617,206 @@ body {
     padding: 1rem 1.25rem;
   }
 }
+
+/* ============================================
+   FOCUS STYLES - Accesibilidad
+   ============================================ */
+
+a:focus,
+button:focus {
+  outline: 3px solid var(--azul-electrico);
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--azul-electrico);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   FUNDACIÓN
+   ============================================ */
+
+.fundacion {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--crema);
+  opacity: 0.5;
+  margin-top: 1.5rem;
+}
+
+/* ============================================
+   PILARES COMPACTO (home)
+   ============================================ */
+
+.pilares-compacto {
+  padding: 3rem 0;
+  background-color: var(--crema-sucia);
+}
+
+.pilares-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pilar-tag {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: var(--negro);
+  color: var(--crema);
+  padding: 0.75rem 1.25rem;
+  border: 3px solid var(--negro);
+}
+
+.pilar-tag:nth-child(1) { transform: rotate(-1deg); }
+.pilar-tag:nth-child(2) { background-color: var(--coral); transform: rotate(1.5deg); }
+.pilar-tag:nth-child(3) { background-color: var(--azul-electrico); transform: rotate(-0.5deg); }
+.pilar-tag:nth-child(4) { transform: rotate(1deg); }
+
+/* ============================================
+   RED - separación LATAM / Diáspora
+   ============================================ */
+
+.red-grupo {
+  margin-bottom: 2rem;
+}
+
+.red-grupo-titulo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--coral);
+  margin-bottom: 1rem;
+}
+
+.ciudades-diaspora {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ciudad-diaspora {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--negro);
+  padding-left: 1rem;
+  border-left: 3px solid var(--azul-electrico);
+}
+
+.red-link {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  color: var(--negro);
+  text-decoration: none;
+  border-bottom: 2px solid var(--coral);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.red-link:hover {
+  border-color: var(--azul-electrico);
+}
+
+/* ============================================
+   RED PAGE - Practitioners
+   ============================================ */
+
+.red-content {
+  padding-bottom: 4rem;
+}
+
+.red-page-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--coral);
+  text-shadow: 3px 3px 0 var(--azul-electrico);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.red-intro-texto {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.practitioners-grupo {
+  margin-bottom: 3rem;
+}
+
+.practitioners-grupo-titulo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--crema);
+  background-color: var(--negro);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.practitioner-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--crema-sucia);
+  border-left: 4px solid var(--coral);
+  margin-bottom: 1rem;
+}
+
+.practitioner-foto-placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: var(--negro);
+  border: 3px solid var(--negro);
+  flex-shrink: 0;
+}
+
+.practitioner-foto img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid var(--negro);
+}
+
+.practitioner-nombre {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.practitioner-ubicacion {
+  font-size: 0.9rem;
+  color: var(--coral);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.practitioner-bio {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive red page */
+@media (max-width: 600px) {
+  .practitioner-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
