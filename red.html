@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>La Red — Lab de Mundanidad Forzada</title>
-  <meta name="description" content="Practitioners del Lab de Mundanidad Forzada.">
+  <meta name="description" content="Red de practitioners de design fiction en Latinoamérica y la diáspora.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://nbronzina.github.io/LAB/red.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nbronzina.github.io/LAB/red.html">
   <meta property="og:title" content="La Red — Lab de Mundanidad Forzada">
-  <meta property="og:description" content="Practitioners del Lab de Mundanidad Forzada.">
+  <meta property="og:description" content="Red de practitioners de design fiction en Latinoamérica y la diáspora.">
   <meta property="og:image" content="https://nbronzina.github.io/LAB/og-image.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="La Red — Lab de Mundanidad Forzada">
-  <meta name="twitter:description" content="Practitioners del Lab de Mundanidad Forzada.">
+  <meta name="twitter:description" content="Red de practitioners de design fiction en Latinoamérica y la diáspora.">
   <meta name="twitter:image" content="https://nbronzina.github.io/LAB/og-image.png">
 
   <!-- Favicon -->
@@ -34,11 +38,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="red-page">
+  <a href="#main" class="skip-link">Saltar al contenido</a>
 
-  <div class="noise-overlay"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- HEADER COMPACTO -->
-  <header class="manifiesto-header">
+  <header class="manifiesto-header" role="banner">
     <div class="container">
       <a href="index.html" class="back-link">← Volver</a>
       <div class="logo logo-small">
@@ -50,7 +55,7 @@
   </header>
 
   <!-- CONTENIDO -->
-  <main class="red-content">
+  <main id="main" class="red-content" role="main">
     <div class="container container-narrow">
 
       <h1 class="red-page-title">La Red</h1>
@@ -91,14 +96,14 @@
 
         <article class="practitioner-card">
           <div class="practitioner-foto">
-            <img src="img/nicolas-bronzina.webp" alt="Nicolás Bronzina" class="practitioner-img">
+            <img src="img/nicolas-bronzina.webp" alt="Nicolás Bronzina" class="practitioner-img" width="80" height="80" loading="lazy" decoding="async">
           </div>
           <div class="practitioner-info">
             <div class="practitioner-origin">Argentina → Madrid</div>
             <h3 class="practitioner-nombre">Nicolás Bronzina</h3>
             <p class="practitioner-role">Futures Designer & AI Designer</p>
             <p class="practitioner-bio">Sociólogo, después diseñador UX, ahora trabajo en futuros e IA.</p>
-            <a href="https://www.nicolasbronzina.com/" target="_blank" class="practitioner-link">nicolasbronzina.com →</a>
+            <a href="https://www.nicolasbronzina.com/" target="_blank" rel="noopener noreferrer" class="practitioner-link">nicolasbronzina.com →</a>
           </div>
         </article>
 
@@ -147,7 +152,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="contacto">
+  <footer class="contacto" role="contentinfo">
     <div class="container">
       <a href="mailto:nicolas.bronzina@gmail.com" class="footer-cta">Charlemos →</a>
       <p class="fundacion">Est. 2025</p>

@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Bitácora — Lab de Mundanidad Forzada</title>
-  <meta name="description" content="Proyectos, experimentos y trabajos del Lab de Mundanidad Forzada.">
+  <meta name="description" content="Proyectos y experimentos del Lab de Mundanidad Forzada.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://nbronzina.github.io/LAB/bitacora.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nbronzina.github.io/LAB/bitacora.html">
   <meta property="og:title" content="Bitácora — Lab de Mundanidad Forzada">
-  <meta property="og:description" content="Proyectos, experimentos y trabajos del Lab de Mundanidad Forzada.">
+  <meta property="og:description" content="Proyectos y experimentos del Lab de Mundanidad Forzada.">
   <meta property="og:image" content="https://nbronzina.github.io/LAB/og-image.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bitácora — Lab de Mundanidad Forzada">
-  <meta name="twitter:description" content="Proyectos, experimentos y trabajos del Lab de Mundanidad Forzada.">
+  <meta name="twitter:description" content="Proyectos y experimentos del Lab de Mundanidad Forzada.">
   <meta name="twitter:image" content="https://nbronzina.github.io/LAB/og-image.png">
 
   <!-- Favicon -->
@@ -34,11 +38,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bitacora-page">
+  <a href="#main" class="skip-link">Saltar al contenido</a>
 
-  <div class="noise-overlay"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- HEADER COMPACTO -->
-  <header class="manifiesto-header">
+  <header class="manifiesto-header" role="banner">
     <div class="container">
       <a href="index.html" class="back-link">← Volver</a>
       <div class="logo logo-small">
@@ -50,7 +55,7 @@
   </header>
 
   <!-- CONTENIDO -->
-  <main class="bitacora-content">
+  <main id="main" class="bitacora-content" role="main">
     <div class="container container-narrow">
 
       <h1 class="bitacora-title">Bitácora</h1>
@@ -82,9 +87,9 @@
           <h3 class="entry-title">¿Qué pasaría si... Chivilcoy tuviera un Laboratorio de Innovación Climática?</h3>
           <p class="entry-author">Miriam Latorre — Chivilcoy, Argentina</p>
           <p class="entry-description">
-            Prototipo diegético especulando un futuro cercano (2032) donde la crisis del arsénico en el agua transformó a Chivilcoy en laboratorio de innovación climática. Incluye cartel ficticio y <a href="https://sites.google.com/view/labicchivilcoy/inicio" target="_blank">sitio web del Lab IC+</a>.
+            Prototipo diegético especulando un futuro cercano (2032) donde la crisis del arsénico en el agua transformó a Chivilcoy en laboratorio de innovación climática. Incluye cartel ficticio y <a href="https://sites.google.com/view/labicchivilcoy/inicio" target="_blank" rel="noopener noreferrer">sitio web del Lab IC+</a>.
           </p>
-          <a href="https://www.linkedin.com/pulse/qué-pasaría-si-chivilcoy-tuviera-un-laboratorio-de-miriam-latorre-sslqe/" target="_blank" class="entry-link">Ver proyecto →</a>
+          <a href="https://www.linkedin.com/pulse/qué-pasaría-si-chivilcoy-tuviera-un-laboratorio-de-miriam-latorre-sslqe/" target="_blank" rel="noopener noreferrer" class="entry-link">Ver proyecto →</a>
         </article>
 
         <article class="bitacora-entry">
@@ -100,7 +105,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="contacto">
+  <footer class="contacto" role="contentinfo">
     <div class="container">
       <a href="mailto:nicolas.bronzina@gmail.com" class="footer-cta">Charlemos →</a>
       <p class="fundacion">Est. 2025</p>

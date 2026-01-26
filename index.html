@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Lab de Mundanidad Forzada</title>
-  <meta name="description" content="Metodologías de design fiction desde contextos latinoamericanos.">
+  <meta name="description" content="Lab de Mundanidad Forzada. Metodologías de design fiction desde contextos latinoamericanos.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://nbronzina.github.io/LAB/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nbronzina.github.io/LAB/">
   <meta property="og:title" content="Lab de Mundanidad Forzada">
-  <meta property="og:description" content="Metodologías de design fiction desde contextos latinoamericanos.">
+  <meta property="og:description" content="Lab de Mundanidad Forzada. Metodologías de design fiction desde contextos latinoamericanos.">
   <meta property="og:image" content="https://nbronzina.github.io/LAB/og-image.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lab de Mundanidad Forzada">
-  <meta name="twitter:description" content="Metodologías de design fiction desde contextos latinoamericanos.">
+  <meta name="twitter:description" content="Lab de Mundanidad Forzada. Metodologías de design fiction desde contextos latinoamericanos.">
   <meta name="twitter:image" content="https://nbronzina.github.io/LAB/og-image.png">
 
   <!-- Favicon -->
@@ -34,10 +38,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="home-poster">
+  <a href="#main" class="skip-link">Saltar al contenido</a>
 
-  <div class="noise-overlay"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
 
-  <main class="poster">
+  <main id="main" class="poster" role="main">
 
     <div class="poster-logo">
       <span>Lab de</span>
@@ -49,7 +54,7 @@
       Metodologías de design fiction desde contextos latinoamericanos.
     </p>
 
-    <nav class="poster-links">
+    <nav class="poster-links" role="navigation" aria-label="Principal">
       <a href="manifiesto.html" class="poster-tag">Manifiesto</a>
       <a href="red.html" class="poster-tag">La red</a>
       <a href="bitacora.html" class="poster-tag">Bitácora</a>
@@ -57,7 +62,7 @@
 
   </main>
 
-  <footer class="poster-footer">
+  <footer class="poster-footer" role="contentinfo">
     <a href="mailto:nicolas.bronzina@gmail.com" class="footer-cta">Charlemos →</a>
     <span class="poster-est">Est. 2025</span>
   </footer>

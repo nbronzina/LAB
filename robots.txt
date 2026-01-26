@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nbronzina.github.io/LAB/sitemap.xml
