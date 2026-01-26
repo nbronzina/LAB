@@ -1150,3 +1150,27 @@ button:focus-visible {
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+.entry-description a {
+  color: var(--azul-electrico);
+  text-decoration: none;
+  border-bottom: 1px solid var(--azul-electrico);
+}
+
+.entry-description a:hover {
+  opacity: 0.7;
+}
+
+.entry-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--coral);
+  text-decoration: none;
+  border-bottom: 1px solid var(--coral);
+}
+
+.entry-link:hover {
+  color: var(--azul-electrico);
+  border-color: var(--azul-electrico);
+}
