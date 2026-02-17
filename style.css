@@ -1264,6 +1264,10 @@ button:focus-visible {
   line-height: 1.5;
 }
 
+.entry-description p + p {
+  margin-top: 1rem;
+}
+
 .entry-description a {
   color: #0047AB;
   text-decoration: none;
