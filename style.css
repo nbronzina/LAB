@@ -130,11 +130,6 @@ button:focus-visible {
 /* ============================================
    HEADER / LOGO
    ============================================ */
-.header {
-  padding: 3rem 1.5rem 2rem;
-  padding-left: 2.5rem;
-}
-
 .logo {
   font-family: 'Archivo Black', sans-serif;
   font-size: clamp(2.5rem, 8vw, 4rem);
@@ -154,105 +149,8 @@ button:focus-visible {
   margin-left: 1rem;
 }
 
-/* ============================================
-   DECLARACIÓN
-   ============================================ */
-.declaracion {
-  background-color: var(--negro);
-  color: var(--crema);
-  padding: 3rem 0;
-  margin: 2rem 0;
-  transform: rotate(-0.5deg);
-  position: relative;
-}
-
-.declaracion::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--azul-electrico);
-  transform: translate(6px, 6px);
-  z-index: -1;
-}
-
-.declaracion-texto {
-  font-size: clamp(1.1rem, 3vw, 1.35rem);
-  font-weight: 500;
-  line-height: 1.7;
-  max-width: 750px;
-}
-
-/* STICKER - etiqueta amarilla */
-.sticker {
-  background-color: var(--amarillo-aviso);
-  color: var(--negro);
-  padding: 0.1em 0.4em;
-  display: inline-block;
-  transform: rotate(1.5deg);
-  font-weight: 700;
-}
-
-/* ============================================
-   SECTION TITLES
-   ============================================ */
-.section-title {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  color: var(--coral);
-  text-shadow: 3px 3px 0 var(--azul-electrico);
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-/* ============================================
-   PILARES
-   ============================================ */
-.pilares {
-  padding: 4rem 0;
-  background-color: var(--crema-sucia);
-}
-
-.pilares-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
 .pilar-card {
   position: relative;
-}
-
-.pilar-card-inner {
-  background-color: var(--crema);
-  border: 3px solid var(--negro);
-  padding: 1.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-/* Offset box - registro de impresión desalineado */
-.pilar-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--azul-electrico);
-  transform: translate(8px, 8px);
-  z-index: 0;
-}
-
-.pilar-card:nth-child(2)::before {
-  background-color: var(--coral);
-  transform: translate(-6px, 10px);
-}
-
-.pilar-card:nth-child(3)::before {
-  background-color: var(--amarillo-aviso);
-  transform: translate(10px, -6px);
-}
-
-.pilar-card:nth-child(4)::before {
-  background-color: var(--azul-electrico);
-  transform: translate(-8px, 8px);
 }
 
 .pilar-card h3 {
@@ -268,133 +166,11 @@ button:focus-visible {
   line-height: 1.5;
 }
 
-/* ============================================
-   LABORATORIO
-   ============================================ */
-.laboratorio {
-  padding: 4rem 0;
-  text-align: left;
-}
-
-.laboratorio .section-title {
-  transform: rotate(-1deg);
-  display: inline-block;
-}
-
-.laboratorio-box {
-  background-color: var(--negro);
-  color: var(--crema);
-  padding: 2rem;
-  border-left: 8px solid var(--coral);
-  max-width: 700px;
-  transform: rotate(0.3deg);
-}
-
-.laboratorio-box p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-/* ============================================
-   MARCOS TEÓRICOS
-   ============================================ */
-.marcos {
-  padding: 4rem 0;
-  background-color: var(--coral);
-  color: var(--crema);
-  transform: rotate(0.5deg);
-  margin: 2rem 0;
-}
-
-.marcos .section-title {
-  color: var(--crema);
-  text-shadow: 3px 3px 0 var(--negro);
-}
-
 .marcos-lista {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-}
-
-.marcos-lista li {
-  font-size: 1.1rem;
-  padding-left: 1.5rem;
-  border-left: 4px solid var(--amarillo-aviso);
-}
-
-.marcos-lista strong {
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-
-.marco-desc {
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 1rem;
-}
-
-/* ============================================
-   LA RED
-   ============================================ */
-.red {
-  padding: 4rem 0;
-}
-
-.red-intro {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.ciudades {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.ciudad {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  background-color: var(--negro);
-  color: var(--crema);
-  padding: 0.5rem 1rem;
-  display: inline-block;
-}
-
-.ciudad:nth-child(1) { transform: rotate(-2deg); }
-.ciudad:nth-child(2) { transform: rotate(1.5deg); background-color: var(--azul-electrico); }
-.ciudad:nth-child(3) { transform: rotate(-1deg); }
-.ciudad:nth-child(4) { transform: rotate(2deg); background-color: var(--coral); }
-.ciudad:nth-child(5) { transform: rotate(-1.5deg); }
-
-/* ============================================
-   MANIFIESTO
-   ============================================ */
-.manifiesto {
-  padding: 3rem 0;
-  text-align: left;
-}
-
-.manifiesto-link {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(1.3rem, 4vw, 1.8rem);
-  color: var(--negro);
-  text-decoration: none;
-  background-color: var(--amarillo-aviso);
-  padding: 1rem 2rem;
-  display: inline-block;
-  border: 3px solid var(--negro);
-  transform: rotate(-1deg);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 5px 5px 0 var(--negro);
-}
-
-.manifiesto-link:hover {
-  transform: rotate(0deg) translate(-2px, -2px);
-  box-shadow: 7px 7px 0 var(--negro);
 }
 
 /* ============================================
@@ -407,37 +183,10 @@ button:focus-visible {
   margin-top: 2rem;
 }
 
-.contacto-label {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
-  color: var(--coral);
-}
-
-.contacto-email {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
-  color: var(--crema);
-  text-decoration: none;
-  border-bottom: 3px solid var(--azul-electrico);
-  padding-bottom: 0.25rem;
-  transition: border-color 0.15s ease;
-}
-
-.contacto-email:hover {
-  border-color: var(--amarillo-aviso);
-}
-
 /* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 600px) {
-  .header {
-    padding: 2rem 1rem;
-  }
-
   .logo {
     text-shadow: 3px 3px 0 var(--azul-electrico);
   }
@@ -445,27 +194,6 @@ button:focus-visible {
   .logo span:nth-child(2),
   .logo span:nth-child(3) {
     margin-left: 0;
-  }
-
-  .declaracion {
-    transform: none;
-    margin: 1rem 0;
-  }
-
-  .marcos {
-    transform: none;
-  }
-
-  .pilares-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    text-shadow: 2px 2px 0 var(--azul-electrico);
-  }
-
-  .marcos .section-title {
-    text-shadow: 2px 2px 0 var(--negro);
   }
 }
 
@@ -739,82 +467,6 @@ a.logo-small {
   color: var(--crema);
   opacity: 0.5;
   margin-top: 1.5rem;
-}
-
-/* ============================================
-   PILARES COMPACTO (home)
-   ============================================ */
-
-.pilares-compacto {
-  padding: 3rem 0;
-  background-color: var(--crema-sucia);
-}
-
-.pilares-lista {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.pilar-tag {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background-color: var(--negro);
-  color: var(--crema);
-  padding: 0.75rem 1.25rem;
-  border: 3px solid var(--negro);
-}
-
-.pilar-tag:nth-child(1) { transform: rotate(-1deg); }
-.pilar-tag:nth-child(2) { background-color: var(--coral); transform: rotate(1.5deg); }
-.pilar-tag:nth-child(3) { background-color: var(--azul-electrico); transform: rotate(-0.5deg); }
-.pilar-tag:nth-child(4) { transform: rotate(1deg); }
-
-/* ============================================
-   RED - separación LATAM / Diáspora
-   ============================================ */
-
-.red-grupo {
-  margin-bottom: 2rem;
-}
-
-.red-grupo-titulo {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--coral);
-  margin-bottom: 1rem;
-}
-
-.ciudades-diaspora {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.ciudad-diaspora {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--negro);
-  padding-left: 1rem;
-  border-left: 3px solid var(--azul-electrico);
-}
-
-.red-link {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1rem;
-  color: var(--negro);
-  text-decoration: none;
-  border-bottom: 2px solid var(--coral);
-  padding-bottom: 0.25rem;
-  transition: border-color 0.15s ease;
-}
-
-.red-link:hover {
-  border-color: var(--azul-electrico);
 }
 
 /* ============================================
@@ -1109,6 +761,7 @@ a.logo-small {
 
 .marcos-lista li,
 .principios-lista li {
+  font-size: 1.1rem;
   padding: 1rem;
   padding-left: 1.5rem;
   border-left: 3px solid var(--azul-electrico);
@@ -1119,6 +772,9 @@ a.logo-small {
 
 .marcos-lista li strong,
 .principios-lista li strong {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
   color: var(--negro);
   font-weight: 700;
 }
@@ -1424,17 +1080,6 @@ a.logo-small {
   font-size: 0.8rem;
   color: #4A4A4A;
   margin-bottom: 1rem;
-}
-
-.practica-lista {
-  padding-left: 1.25rem;
-  margin: 0.5rem 0 0.75rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.practica-lista li + li {
-  margin-top: 0.5rem;
 }
 
 .practica-cta {
