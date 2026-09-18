@@ -1373,6 +1373,59 @@ a.logo-small {
   width: 100%;
 }
 
+/* Video facade */
+.video-facade {
+  position: relative;
+  margin: 1.5rem 0 0.5rem;
+  background-color: var(--negro);
+}
+
+.video-facade-link {
+  display: block;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  cursor: pointer;
+}
+
+.video-facade-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-facade-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease;
+}
+
+.video-facade-link:hover .video-facade-play {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-facade-iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.video-facade-caption {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
+
+.video-facade-credit {
+  font-size: 0.8rem;
+  color: #4A4A4A;
+  margin-bottom: 1rem;
+}
+
 .practica-lista {
   padding-left: 1.25rem;
   margin: 0.5rem 0 0.75rem;
