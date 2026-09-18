@@ -491,19 +491,36 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-.back-link {
+a.logo-small {
+  text-decoration: none;
+  color: var(--coral);
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.header-nav a {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: var(--negro);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.75rem;
   border: 2px solid var(--negro);
   transition: background-color 0.15s ease;
 }
 
-.back-link:hover {
+.header-nav a:hover {
   background-color: var(--amarillo-aviso);
+}
+
+.header-nav a[aria-current="page"] {
+  background-color: var(--negro);
+  color: var(--crema);
 }
 
 .logo-small {
@@ -662,6 +679,15 @@ button:focus-visible {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .header-nav {
+    gap: 0.5rem;
+  }
+
+  .header-nav a {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
   }
 
   .manifiesto-title {
