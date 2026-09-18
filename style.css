@@ -618,6 +618,16 @@ a.logo-small {
   margin-left: 0.6em;
 }
 
+/* Declaración */
+.poster-declaracion {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  color: var(--negro);
+  text-transform: uppercase;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
 /* Frase */
 .poster-frase {
   font-family: 'Space Grotesk', sans-serif;
@@ -626,6 +636,8 @@ a.logo-small {
   color: var(--negro);
   max-width: 500px;
   line-height: 1.5;
+  margin-top: -1rem;
+  opacity: 0.7;
 }
 
 /* Links como tags */
