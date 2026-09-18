@@ -1292,3 +1292,100 @@ button:focus-visible {
   color: var(--negro);
   border-color: var(--negro);
 }
+
+/* ============================================
+   PRÁCTICAS
+   ============================================ */
+.practica-como-funciona {
+  margin-bottom: 2rem;
+}
+
+.practica-seccion-titulo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  margin-bottom: 1rem;
+}
+
+.practica-como-funciona p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.practica-como-funciona a {
+  color: #0047AB;
+  text-decoration: none;
+  border-bottom: 1px solid #0047AB;
+}
+
+.practica-como-funciona a:hover {
+  color: var(--negro);
+  border-color: var(--negro);
+}
+
+.practica-separador {
+  border: none;
+  border-top: 2px solid var(--negro);
+  margin: 2.5rem 0;
+}
+
+.practica {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--azul-electrico);
+}
+
+.practica-lead {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.1rem;
+  color: var(--coral);
+  margin-bottom: 0.75rem;
+}
+
+.practica-subtitulo {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.practica-cta {
+  margin: 1rem 0;
+}
+
+.practica-cta-boton {
+  display: inline-block;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--crema);
+  background-color: var(--coral);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.15s ease;
+}
+
+.practica-cta-boton:hover {
+  background-color: var(--coral-dark);
+}
+
+.practica-cta-alt {
+  font-size: 0.85rem;
+  color: #4A4A4A;
+  margin-top: 0.5rem;
+}
+
+.practica-cta-alt a {
+  color: #0047AB;
+  text-decoration: none;
+  border-bottom: 1px solid #0047AB;
+}
+
+.practica-cta-alt a:hover {
+  color: var(--negro);
+  border-color: var(--negro);
+}
