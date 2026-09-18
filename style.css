@@ -685,27 +685,6 @@ button:focus-visible {
 }
 
 /* ============================================
-   FOCUS STYLES - Accesibilidad
-   ============================================ */
-
-a:focus,
-button:focus {
-  outline: 3px solid var(--azul-electrico);
-  outline-offset: 2px;
-}
-
-a:focus:not(:focus-visible),
-button:focus:not(:focus-visible) {
-  outline: none;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--azul-electrico);
-  outline-offset: 2px;
-}
-
-/* ============================================
    FUNDACIÓN
    ============================================ */
 
@@ -846,14 +825,6 @@ button:focus-visible {
   color: var(--negro);
 }
 
-.practitioner-foto-placeholder {
-  width: 80px;
-  height: 80px;
-  background-color: var(--negro);
-  border: 3px solid var(--negro);
-  flex-shrink: 0;
-}
-
 .practitioner-foto img {
   width: 80px;
   height: 80px;
@@ -879,14 +850,6 @@ button:focus-visible {
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--negro);
-}
-
-.practitioner-origin {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #4A4A4A;
-  margin-bottom: 0.25rem;
 }
 
 .practitioner-role {
@@ -1220,6 +1183,10 @@ button:focus-visible {
   margin-bottom: 3rem;
 }
 
+.bitacora-intro-cont {
+  margin-top: -2rem;
+}
+
 .bitacora-year {
   margin-bottom: 3rem;
 }
@@ -1351,6 +1318,16 @@ button:focus-visible {
   color: var(--negro);
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.practica-ejemplo-link {
+  display: block;
+  max-width: 65%;
+  margin-bottom: 1rem;
+}
+
+.practica-ejemplo-img {
+  width: 100%;
 }
 
 .practica-lista {
