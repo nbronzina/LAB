@@ -1353,6 +1353,17 @@ button:focus-visible {
   margin-bottom: 0.5rem;
 }
 
+.practica-lista {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.practica-lista li + li {
+  margin-top: 0.5rem;
+}
+
 .practica-cta {
   margin: 1rem 0;
 }
