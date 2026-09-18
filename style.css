@@ -673,6 +673,23 @@ a.logo-small {
   border-top: 3px solid var(--negro);
 }
 
+.volver-arriba {
+  display: inline-block;
+  margin-top: 3rem;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  text-decoration: none;
+  border-bottom: 2px solid var(--coral);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.volver-arriba:hover {
+  border-color: var(--azul-electrico);
+}
+
 /* Responsive manifiesto */
 @media (max-width: 600px) {
   .manifiesto-header .container {
