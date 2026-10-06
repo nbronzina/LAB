@@ -244,13 +244,154 @@
 
 ---
 
+## 2026-10-07 — Marca: el continente
+
+### Decisión: El continente literal reemplaza al mapa con círculos
+
+**Contexto:** El ícono era un mapa de LATAM en contorno con círculos que escapan. A Nicolás no le gustaba, pero quería conservar la referencia al continente.
+
+**Opciones consideradas:**
+1. Alambre: un trazo continuo con un nudo
+2. El continente girado 90°, como lectura de "mirar hacia los lados"
+3. Sello de trámite
+4. El continente literal, relleno y sin girar
+
+**Decisión:** Opción 4.
+
+**Razón:** En palabras de Nicolás: "me gusta porque es literal el continente LATAM". Mantiene el anclaje territorial que ya tenía el mapa (ver decisión de enero) y se reconoce a 16 px. El sello ya estaba descartado desde enero.
+
+---
+
+### Decisión: Proyección Equal Earth
+
+**Contexto:** La primera versión del continente estaba dibujada en Mercator.
+
+**Opciones consideradas:**
+1. Mercator
+2. Equal Earth (áreas iguales)
+
+**Decisión:** Opción 2, centrada en el meridiano 76° O.
+
+**Razón:** Mercator agranda lo que está lejos del Ecuador. Equal Earth muestra cada territorio con su superficie real. Para un Lab que imagina desde el sur, tiene sentido no heredar la proyección que agranda el norte. El costo: la silueta queda más angosta y un poco menos familiar.
+
+---
+
+### Decisión: Malvinas en la marca
+
+**Decisión:** Sí. Las Islas Malvinas están en todas las versiones y en los tres tamaños.
+
+**Razón:** Decisión de Nicolás. En el favicon de 16 px ocupan un píxel: es el límite físico del tamaño, no una omisión.
+
+---
+
+### Decisión: Sin banda del Ecuador
+
+**Contexto:** Se probó cortar el continente con una banda horizontal en la línea del Ecuador, alineada con el interlineado del wordmark.
+
+**Decisión:** No. El continente va entero.
+
+**Razón:** Nicolás prefirió el continente sin intervenciones.
+
+---
+
+### Decisión: La sombra del continente sigue la del sitio
+
+**Contexto:** Los títulos del sitio usan `text-shadow` en azul eléctrico hacia abajo y a la derecha. En las primeras versiones del logo Alambre la había dibujado hacia la izquierda y con un azul aproximado, sacado de una captura. Se corrigió contra `style.css`.
+
+**Decisión:** El continente y el logo completo llevan el desplazamiento azul `#1E5EFF` abajo a la derecha. Las islas van sin azul.
+
+**Razón:** Es la decisión de enero ("Drop shadow siempre en azul eléctrico") aplicada al ícono. En formas tan chicas como las islas el desplazamiento se vuelve ruido.
+
+---
+
+### Decisión: Tres tamaños ópticos, marca completa por defecto
+
+**Contexto:** A tamaños chicos las Antillas se vuelven puntos sueltos y el istmo desaparece. Alambre armó una versión M (sin Antillas) y una S (engrosada), y entregó los avatares con la M sin avisar. Nicolás pidió "todo full marca".
+
+**Decisión:** La L, con todas las islas, es la opción por defecto y la de los avatares. La M queda para 32 a 64 px si la L se empasta. La S queda para favicons.
+
+**Razón:** La marca es el continente completo. Las versiones reducidas resuelven un problema de píxeles, no cambian la marca.
+
+---
+
+### Decisión: El logo completo es un archivo; en el sitio el wordmark sigue siendo texto
+
+**Contexto:** En enero se decidió que el wordmark tipográfico es el logo principal y el mapa el ícono, y que conviven.
+
+**Decisión:** Se mantiene. Se suma un logo completo (continente + wordmark) como archivo SVG, para donde no hay CSS: redes, `og-image`, documentos. En el sitio no cambia nada del wordmark.
+
+**Razón:** El wordmark de texto es accesible, liviano y ya funciona. Sumar el continente al header o al poster es una decisión de diseño aparte: queda en pendientes.
+
+---
+
+### Decisión: og-image nueva
+
+**Contexto:** La imagen anterior era una captura del wordmark de 1521x475 y 742 KB.
+
+**Decisión:** 1200x630, con el logo completo, la declaración y la frase, en la tipografía real del sitio. Sin el ruido de impresión.
+
+**Razón:** Sin el ruido pesa 65 KB en vez de más de 500, y en una miniatura el grano no se ve.
+
+---
+
+### Decisión: Los artefactos no se explican
+
+**Contexto:** En el post fijado de Instagram, Alambre sumó una placa que decía "Este cartel es de 2031" después de la foto del cartel.
+
+**Decisión:** Fuera. Ninguna pieza del Lab rotula su propia ficción.
+
+**Razón:** Nicolás: "No debe ser self-explanatory". Es la misma definición que da la página de prácticas: un artefacto es algo que alguien vería en ese mundo sin que nadie se lo explique.
+
+---
+
+### Decisión: Mundanidad forzada no es distopía
+
+**Contexto:** El primer borrador del post usaba un ticket de agua racionada y hablaba de "futuros que nadie elige".
+
+**Decisión:** Los ejemplos parten de adaptaciones cotidianas. El artefacto del post es un cartel de servicio técnico: "Se arreglan robots aspiradora, drones, bicis eléctricas. Se liberan asistentes de voz. Repuestos originales y de los otros."
+
+**Razón:** El borrador hacía lo contrario del pilar 4 del manifiesto: generaba extrañamiento en vez de revelar la creatividad que ya existe.
+
+---
+
+### Decisión: Piezas visuales con poco texto
+
+**Contexto:** El primer carrusel tenía placas de 45 a 60 palabras. Nicolás: "Mucho texto, no lo leí."
+
+**Decisión:** Hasta unas 15 palabras por placa. La explicación va en el texto del post.
+
+**Razón:** Legibilidad callejera. Lo que no se lee de pasada no se lee.
+
+---
+
+### Decisión: Prácticas en plural y sin fecha
+
+**Contexto:** La Práctica #01 se lanzó en febrero con cierre en junio y no recibió ninguna entrega.
+
+**Decisión:** Las prácticas no tienen fecha de cierre. La comunicación general habla de "las prácticas", no de la #01.
+
+**Razón:** Una práctica con fecha se lee como convocatoria, y una convocatoria se posterga hasta que vence.
+
+---
+
+### Decisión: La red se nombra abierta
+
+**Decisión:** "Latinoamérica y su diáspora". La diáspora es mundial, no solo España. Al listar países: "Argentina, Brasil, México, Uruguay y contando". Abierta a futuristas y a quien quiera probar por primera vez.
+
+**Razón:** La red no está cerrada y la descripción no tiene que cerrarla.
+
+---
+
 ## Decisiones Pendientes
 
-- [ ] Dominio propio (`mundanidadforzada.org` disponible ~12 USD/año)
+- [x] Dominio propio → `mundanidadforzada.org` está activo (ver `CNAME`)
 - [ ] Email con dominio propio
-- [ ] Contenido real de practitioners (nombres, bios, fotos)
-- [ ] Imagen OG para redes sociales
+- [x] Contenido real de practitioners (nombres, bios, fotos) → cinco fichas en `/red/`
+- [x] Imagen OG para redes sociales → reemplazada el 7 oct 2026
 - [x] ¿Agregar año de fundación en algún lugar visible? → Decidido: sí, en footer ("Est. 2025")
+- [ ] ¿El continente entra al header (`.logo-small`) o al poster de la home? Hoy es solo ícono
+- [ ] Retirar `img/lab-icon.png` (ícono anterior, 1 MB, sin referencias en el sitio) cuando los avatares de redes estén cambiados
+- [ ] En la home, "MUNDANIDAD" se corta por la derecha entre 601 y unos 1420 px de ancho de ventana. ¿Sangrado intencional del poster o bug?
 
 ---
 

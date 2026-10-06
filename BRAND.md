@@ -1,6 +1,6 @@
 # Lab de Mundanidad Forzada — Sistema de Marca
 
-> Última actualización: 26 enero 2026
+> Última actualización: 7 octubre 2026
 
 ---
 
@@ -82,13 +82,13 @@ La identidad del Lab no aspira a la legitimidad académica o institucional. En v
 
 - **Uso:** Títulos, headlines, logo
 - **Tratamiento:** Siempre en mayúsculas o capitalización agresiva. Con drop shadow en azul eléctrico para máximo impacto
-- **Fuente:** Google Fonts
+- **Fuente:** archivos locales en `/fonts` (woff2). Sin Google Fonts
 
 ### Cuerpo: Space Grotesk
 
 - **Uso:** Textos de cuerpo, navegación, información secundaria
 - **Pesos:** 400 (regular), 500 (medium), 700 (bold)
-- **Fuente:** Google Fonts
+- **Fuente:** archivos locales en `/fonts` (woff2). Sin Google Fonts
 
 ### Escala Tipográfica
 
@@ -143,12 +143,52 @@ FORZADA
 | "LMF" con shadow | Versión abreviada |
 | Logo pequeño (2px shadow) | Headers compactos |
 
-### Ícono
+### Ícono: el continente
 
-El ícono del Lab es el **mapa de LATAM con círculos que escapan** (archivo SVG existente). Se usa para:
+Desde octubre 2026 el ícono del Lab es **el continente latinoamericano, literal y relleno**. Reemplaza al mapa de contorno con círculos (`img/lab-icon.png`).
+
+Se usa para:
 - Favicon
 - Avatar de redes sociales
 - Donde haga falta elemento cuadrado/icónico
+
+**Qué es**
+
+- **Territorio:** de México a Tierra del Fuego, más Cuba, La Española, Puerto Rico y las Islas Malvinas.
+- **Proyección:** Equal Earth (áreas iguales), centrada en el meridiano 76° O. Cada territorio ocupa su superficie real. No se usa Mercator.
+- **Trazo:** datos de Natural Earth 1:50m. El delta del Amazonas y los archipiélagos australes van soldados al continente: a escala de logo se leían como manchas.
+- **Color:** coral. En la versión riso lleva el desplazamiento azul eléctrico abajo a la derecha, el mismo gesto que el `text-shadow` de los títulos. Las islas van sin azul: en formas tan chicas el desplazamiento se vuelve ruido.
+
+**Tres tamaños ópticos**
+
+| Tamaño | Archivos | Cuándo |
+|--------|----------|--------|
+| **L** | `continente-riso.svg`, `continente-coral.svg`, `continente-crema.svg`, `continente-negro.svg` | Por defecto. Con todas las islas |
+| **M** | `continente-m-coral.svg`, `continente-m-crema.svg` | Solo entre 32 y 64 px de alto, si la L se empasta. Sin Antillas, con Malvinas |
+| **S** | `continente-s-coral.svg`, `continente-s-crema.svg`, `favicon.svg` | Hasta 32 px. Trazo engrosado para que el istmo exista a 16 px |
+
+**La marca completa (L) es la opción por defecto, también en avatares.** M y S existen para cuando el tamaño en pantalla obliga. No se usan para "limpiar" la imagen.
+
+**Lo que no se hace con el continente**
+
+- No se gira ni se espeja
+- No lleva banda ni corte en la línea del Ecuador
+- No se le quitan las Malvinas
+- No vuelve al contorno con círculos
+
+### Logo completo (continente + wordmark)
+
+El continente a la izquierda y el wordmark en tres líneas escalonadas. Usa las mismas métricas que `.poster-logo`: Archivo Black, mayúsculas, interlineado 0.85, sangrías de 0.3em y 0.6em. La sombra mide 0.05em y va abajo a la derecha. El continente mide 1.3 veces el alto del bloque de texto y va centrado con él.
+
+Es un archivo, no texto vivo. Se usa donde no hay CSS: redes, `og-image`, documentos, firmas. **En el sitio el wordmark sigue siendo texto** (`.poster-logo`, `.logo`). Si el continente entra al header o al poster es una decisión pendiente (ver `DECISIONS.md`).
+
+| Versión | Archivo | Sobre qué fondo |
+|---------|---------|-----------------|
+| Riso (coral + azul) | `logo-riso.svg` | Crema, blanco o negro |
+| Crema | `logo-crema.svg` | Coral |
+| Negro, una tinta | `logo-negro.svg` | Crema o blanco |
+
+Por debajo de unos 140 px de ancho el wordmark deja de leerse. Ahí va el continente solo.
 
 ---
 
@@ -222,11 +262,58 @@ Elementos ligeramente rotados (-2° a +2°) para romper la rigidez.
 
 | Archivo | Contenido |
 |---------|-----------|
-| `favicon-16.png` | Ícono 16x16 |
-| `favicon-32.png` | Ícono 32x32 |
-| `apple-touch-icon.png` | Ícono para iOS |
-| `og-image.png` | Preview para redes sociales (1200x630) |
-| `logo-icon.svg` | Mapa LATAM con círculos |
+| `favicon.svg` | Continente S, coral, fondo transparente |
+| `favicon-16.png`, `favicon-32.png` | Lo mismo en PNG, fondo transparente |
+| `apple-touch-icon.png` | 180x180. Continente L riso sobre crema |
+| `og-image.png` | Preview para redes sociales (1200x630). Logo completo, declaración y frase |
+| `img/marca/logo-riso.svg`, `logo-crema.svg`, `logo-negro.svg` | Logo completo (continente + wordmark) |
+| `img/marca/continente-*.svg` | Continente L: riso, coral, crema, negro |
+| `img/marca/continente-m-*.svg`, `continente-s-*.svg` | Tamaños ópticos M y S: coral y crema |
+| `img/marca/avatar-crema.png` | Avatar 1200x1200. Continente riso sobre crema (LinkedIn) |
+| `img/marca/avatar-coral.png` | Avatar 1200x1200. Continente crema sobre coral (Instagram) |
+
+En los SVG el wordmark está convertido a trazos: no dependen de que la fuente esté cargada.
+
+---
+
+## Redes Sociales
+
+Las piezas para redes usan el mismo sistema que el sitio. No tienen tipografías ni colores propios.
+
+| Pieza | Regla |
+|-------|-------|
+| Avatar LinkedIn | `avatar-crema.png` |
+| Avatar Instagram | `avatar-coral.png`. Instagram lo recorta en círculo y lo muestra muy chico; el coral se distingue en modo claro y en modo oscuro |
+| Placas de carrusel | 1080x1350 (4:5), márgenes de 100 px |
+| Títulos | Archivo Black, mayúsculas. Coral con sombra azul `6px 6px 0` sobre crema o negro. Negro sobre coral |
+| Texto corrido | Space Grotesk 500 o 700 |
+| Etiquetas y numeración | Archivo Black 22 a 26 px, mayúsculas, `letter-spacing: 0.1em` |
+| Fondos | Crema, negro o coral, planos |
+
+**Poco texto por placa:** hasta unas 15 palabras. La explicación va en el texto del post, que lee quien se engancha.
+
+---
+
+## Voz Editorial
+
+Estas reglas valen para el sitio, las redes y cualquier pieza del Lab.
+
+**Frases fijas**
+
+- Declaración: "Mirar hacia los lados, no hacia arriba."
+- Frase: "Metodologías de design fiction desde contextos latinoamericanos."
+
+**Idioma:** español rioplatense, con voseo.
+
+**Los artefactos no se explican.** Una pieza del Lab nunca rotula su propia ficción: nada de "esto no existe", "es de 2031" ni "artefacto diegético" pegado encima. El artefacto se muestra como si fuera real y la conexión la hace quien mira. Las fechas y el contexto van, si hacen falta, en la bitácora o en el texto que acompaña.
+
+**Mundanidad forzada no es distopía.** Los ejemplos parten de adaptaciones cotidianas, de viveza criolla y de alambre: un cartel de servicio técnico que arregla robots aspiradora y "libera" asistentes de voz. No parten de escasez dramatizada ni de futuros que asustan. Es el pilar 4: revelar la creatividad que ya existe, sin recurrir al extrañamiento.
+
+**Las prácticas se nombran en plural.** Son ejercicios que se repiten, no tienen fecha de cierre y cualquiera puede responder. La comunicación general habla de "las prácticas", no de la #01.
+
+**La red se nombra abierta.** "Latinoamérica y su diáspora". La diáspora es mundial, no solo España. Cuando se listan países: "Argentina, Brasil, México, Uruguay y contando". Está abierta a futuristas y a quien quiera probar por primera vez.
+
+**Quién escribe.** El copy nuevo lo articula Alambre y lo valida Nicolás. Imprenta no redacta: si falta un texto, lo pide.
 
 ---
 
