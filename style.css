@@ -311,6 +311,7 @@ select:focus {
 /* Subrayado coral, del color del texto que lo rodea: notas y pies */
 .remiendo a,
 .documento-nota a,
+.pagina-intro a,
 .footer-redes a,
 .poster-footer a {
   color: inherit;
@@ -320,6 +321,7 @@ select:focus {
 
 .remiendo a:hover,
 .documento-nota a:hover,
+.pagina-intro a:hover,
 .footer-redes a:hover,
 .poster-footer a:hover {
   border-color: var(--azul-electrico);
@@ -328,6 +330,7 @@ select:focus {
 /* Azul y subrayado: links dentro de un texto */
 .entry-description a,
 .entry-link,
+.bitacora-nota a,
 .practica-como-funciona a,
 .practica-cta-alt a,
 .volante-acciones a,
@@ -340,6 +343,7 @@ select:focus {
 
 .entry-description a:hover,
 .entry-link:hover,
+.bitacora-nota a:hover,
 .practica-como-funciona a:hover,
 .practica-cta-alt a:hover,
 .volante-acciones a:hover,
@@ -1208,6 +1212,10 @@ select:focus {
 
 /* ============================================
    BITÁCORA
+   Un registro por día. La fecha va al margen y,
+   al lado, lo que se anotó ese día. Los artefactos
+   van pegados dentro del registro.
+   Cómo se anota: IMPRENTA.md
    ============================================ */
 .bitacora-year {
   margin-bottom: 3rem;
@@ -1221,15 +1229,55 @@ select:focus {
   border-bottom: 2px solid var(--negro);
 }
 
-/* Una entrada. scroll-margin: aire arriba cuando se llega por un ancla.
-   Las clases .entry-* también arman la práctica, en /practicas/ */
-.bitacora-entry {
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-  border-left: 3px solid var(--azul-electrico);
+/* Un día. La línea coral es el margen del cuaderno: los días no dejan
+   espacio entre sí, así corre sin cortes a lo largo del año.
+   scroll-margin: aire arriba cuando se llega por un ancla. */
+.bitacora-dia {
+  padding: 0 0 2.25rem 1rem;
+  border-left: 3px solid var(--coral);
   scroll-margin-top: 1.5rem;
 }
 
+.bitacora-dia:last-child {
+  padding-bottom: 0.25rem;
+}
+
+/* La fecha es el link al día */
+.bitacora-fecha {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.bitacora-fecha a {
+  color: var(--negro);
+  text-decoration: none;
+}
+
+/* Amarillo: con el cursor encima y cuando se llegó a ese día por su ancla */
+.bitacora-fecha a:hover,
+.bitacora-dia:target .bitacora-fecha a {
+  background-color: var(--amarillo-aviso);
+  box-shadow: 0 0 0 0.2rem var(--amarillo-aviso);
+}
+
+.bitacora-notas {
+  list-style: none;
+}
+
+/* Una anotación */
+.bitacora-nota {
+  line-height: 1.5;
+}
+
+.bitacora-notas > li + li {
+  margin-top: 1rem;
+}
+
+/* Las clases .entry-* también arman la práctica, en /practicas/ */
 .entry-date {
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -1265,22 +1313,18 @@ select:focus {
 }
 
 /* Artefacto primero: la pieza se muestra sin explicación.
-   El contexto queda plegado en "De dónde sale". */
+   El contexto queda plegado en "De dónde sale".
+   Los artefactos se inclinan una vez para cada lado: el que va
+   hacia la derecha lleva style="--giro: 1.5deg" en su .artefacto-pieza. */
 .bitacora-artefacto {
   display: grid;
   gap: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.75rem;
-  border-left-color: transparent;
+  padding: 0.75rem 0 0.5rem;
+  scroll-margin-top: 1.5rem;
 }
 
 .bitacora-artefacto .artefacto-pieza {
   width: min(78%, 19rem);
-}
-
-/* Dentro de un año, los artefactos se inclinan una vez para cada lado */
-.bitacora-artefacto:nth-child(even of .bitacora-artefacto) .artefacto-pieza {
-  --giro: 1.5deg;
 }
 
 .artefacto-origen {
@@ -1317,10 +1361,38 @@ select:focus {
   font-weight: 700;
 }
 
+/* Desde 700px la fecha pasa al margen, a la izquierda de la línea */
 @media (min-width: 700px) {
+  .bitacora-dia,
+  .bitacora-dia:last-child {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    padding: 0;
+    border-left: 0;
+  }
+
+  /* Queda a la vista mientras se recorre un día largo */
+  .bitacora-fecha {
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+    text-align: right;
+    padding-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .bitacora-notas {
+    padding: 0 0 2.25rem 1.25rem;
+    border-left: 3px solid var(--coral);
+  }
+
+  .bitacora-dia:last-child .bitacora-notas {
+    padding-bottom: 0.25rem;
+  }
+
   .bitacora-artefacto {
-    grid-template-columns: minmax(0, 19rem) minmax(0, 1fr);
-    column-gap: 2.5rem;
+    grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
+    column-gap: 2.25rem;
     align-items: start;
   }
 

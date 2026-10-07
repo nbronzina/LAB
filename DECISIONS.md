@@ -212,6 +212,8 @@
 
 **Razón:** El manifiesto engancha, el marco profundiza. Cada documento tiene su función. Quien quiere la visión rápida lee el manifiesto; quien quiere entender la fundamentación lee el marco teórico.
 
+Las cifras de arriba eran estimaciones. Contadas en octubre de 2026: el documento original tenía unas 4.300 palabras y pasó entero a ser el marco; el manifiesto se escribió nuevo y tiene unas 350.
+
 ---
 
 ### Decisión: Footer con CTA
@@ -613,6 +615,8 @@ Lighthouse da las mismas notas que antes en las ocho páginas, con una diferenci
 
 **Razón:** Hoy no cambia nada, porque cada año tiene un solo artefacto. Se va a notar cuando haya dos en el mismo año. En Chrome y Firefox anteriores a mediados de 2023 la regla nueva no existe: ahí todos los artefactos quedan inclinados hacia la izquierda.
 
+Reemplazada el 8 oct 2026: con la bitácora por día cada artefacto está en su propio bloque y la inclinación se indica a mano. Ver "La fecha al margen y los artefactos adentro".
+
 ---
 
 ### Decisión: El sitio se publica sin Jekyll
@@ -691,6 +695,74 @@ En la home y en la 404, donde el footer es una fila, las redes son un elemento m
 
 ---
 
+## 2026-10-08 — Bitácora: un registro por día
+
+Nicolás pidió repensar la bitácora: qué hay, qué falta y qué se puede hacer para que sea de verdad una bitácora. Leyó el diagnóstico y dejó lo demás en manos de Alambre: "Todo lo que creas".
+
+### Decisión: La bitácora anota lo que pasa, por día
+
+**Contexto:** Se creó en enero como "registro cronológico de trabajos". Al 7 de octubre tenía seis entradas, fechadas por mes, para trece meses de Lab: dos artefactos, dos sobre LATAM·2036 (un workshop y una defensa en el IED Madrid), un estado y la fundación. Firmaban dos de las seis personas de la red. Lo que pasó desde septiembre (tres personas nuevas, la marca, el mapa, el volante, la primera respuesta a la práctica) estaba escrito en este archivo y en el historial del repo. En la bitácora había una pieza y un párrafo.
+
+**Decisión:** Anotaciones cortas, por día. Entra lo que le pasa al Lab: quién se suma, qué se decide sobre cómo funciona, qué se prueba, qué sale a la calle o a las redes, qué se publica y qué queda pendiente. También lo que no anduvo y las pausas. No entran los arreglos del sitio que no cambian nada del Lab: para eso está el remiendo.
+
+**Razón:** Una vidriera de trabajos terminados dice poco de un Lab que se declara en construcción. Es el pilar 3 y el remiendo a la vista, llevados a la bitácora. Y una anotación de dos frases cuesta poco: lo que cuesta poco se sostiene.
+
+---
+
+### Decisión: La fecha al margen y los artefactos adentro
+
+**Decisión:** Cada día es un bloque con su fecha y sus anotaciones, la más nueva arriba. Una línea coral corre a lo largo de todo el año, como el margen de un cuaderno. Desde 700 px de ancho la fecha va a la izquierda de esa línea y queda a la vista mientras se recorre un día largo; más angosto, va arriba de las anotaciones. La fecha es un link a ese día (`/bitacora/#2026-10-07`). Los artefactos siguen igual, con la pieza primero y "De dónde sale" plegado, y ahora van dentro del día en que entraron.
+
+**Razón:** En una bitácora lo primero que se busca es el día. Y un artefacto dentro del registro deja ver qué pasaba alrededor cuando entró.
+
+Cambia una regla de la limpieza: la inclinación de los artefactos ya no la alterna el CSS dentro de cada año. Como ahora cada artefacto está en su día, se indica a mano (ver `IMPRENTA.md`). Con eso el afiche de Miriam pasa a inclinarse hacia la derecha.
+
+---
+
+### Decisión: Las anotaciones no llevan firma
+
+**Opciones consideradas:**
+1. Cada anotación firmada, con nombre y lugar
+2. Sin firma: primera persona del plural o impersonal, con el nombre y el lugar en la frase cuando dicen algo
+
+**Decisión:** Opción 2. Los artefactos conservan su crédito.
+
+**Razón:** Con la opción 1, quince anotaciones seguidas habrían dicho "Nicolás Bronzina, Madrid". El lugar se nombra cuando informa: "se suma Lucía Guedes, desde Montevideo". Cuando anoten otras personas de la red, su nombre va en la frase.
+
+---
+
+### Decisión: Lo anterior se reconstruyó con lo que estaba fechado
+
+**Decisión:** Diecinueve anotaciones nuevas, de enero de 2026 a hoy. Cada una sale de una fuente con fecha: este archivo, el historial del repo, los archivos de trabajo de las sesiones o una publicación. Las seis entradas que había siguen estando: los dos artefactos como estaban y las cuatro de texto pasadas a anotaciones, sin perder nombres ni links. El estado de septiembre quedó repartido en cuatro. De 2025 quedó anotado el mes, no el día, y así se deja.
+
+Cinco fechas que conviene saber de dónde salen:
+
+- **6 de octubre**, el post fijado de Instagram: este archivo anotó esas decisiones el 7, pero los archivos de trabajo son del 6, pasada la medianoche.
+- **7 de octubre**, la marca: es el día en que entró al sitio. Se decidió el 5 a la noche.
+- **12 de febrero**, la defensa en el IED: es la fecha del post de LinkedIn que la cuenta, y por eso la anotación dice "cuenta en LinkedIn". Del día de la defensa no hay registro.
+- **27 de enero**, el workshop LATAM·2036: es la fecha en que salió el artículo de Medium. El workshop fue antes, en enero, sin día anotado.
+- **28 de enero**, el dominio: en hora de Madrid. En el historial, dos de los tres commits figuran como 27 porque están en hora universal.
+
+Antes de publicar, una segunda revisión hecha contra los registros encontró dos errores: el post fijado estaba puesto en el 7 de octubre, y las palabras del manifiesto venían de una estimación de enero (ver "Separar Manifiesto y Marco Teórico"). Se contaron: el original tenía unas 4.300 y el nuevo, unas 350.
+
+**Razón:** Una bitácora que arranca vacía no parece una bitácora. Y todo lo que cuenta ya era público en el repo.
+
+---
+
+### Decisión: Quién anota
+
+**Decisión:** Cada sesión de trabajo cierra con su anotación. La escribe Alambre con lo que se decidió y la valida Nicolás. El resto de la red manda lo suyo por mail: con una línea y una foto alcanza. El pedido está en la bajada de la página.
+
+**Razón:** La bitácora anterior dependía de que alguien se acordara de escribirla. Las sesiones de trabajo ya dejan todo anotado: falta pasarlo en limpio antes de cerrar.
+
+---
+
+### Lo que no se hizo
+
+Un feed para seguir la bitácora y la última anotación a la vista en la home. Las dos cosas duplican cada anotación en otro archivo que hay que mantener a mano. Quedan en pendientes.
+
+---
+
 ## Decisiones Pendientes
 
 - [x] Dominio propio → `mundanidadforzada.org` está activo (ver `CNAME`)
@@ -701,7 +773,7 @@ En la home y en la 404, donde el footer es una fila, las redes son un elemento m
 - [ ] ¿El continente entra al header (`.logo`) o al poster de la home? Hoy es solo ícono
 - [x] Retirar `img/lab-icon.png` (ícono anterior, 1 MB, sin referencias en el sitio) cuando los avatares de redes estén cambiados → retirado el 7 oct 2026: Nicolás confirmó que ya los cambió. Queda en el historial del repo
 - [x] En la home, "MUNDANIDAD" se cortaba por la derecha entre 601 y unos 1420 px → bug, corregido el 7 oct 2026
-- [ ] La descripción de la red nombra Uruguay ("Argentina, Brasil, México, Uruguay y contando") y en `/red/` no hay nadie de Uruguay
+- [x] La descripción de la red nombra Uruguay ("Argentina, Brasil, México, Uruguay y contando") y en `/red/` no había nadie de Uruguay → Lucía Guedes, desde Montevideo, el 7 oct 2026
 - [x] Mapa de la red, segunda versión: un punto por persona sobre el continente, sin nombres ni hilos → publicado el 7 oct 2026
 - [x] La pieza pegada en la home. Al verla publicada, Nicolás preguntó qué aporta → se queda, decidido el 7 oct 2026 (ver "La home lleva pegado el último artefacto")
 - [ ] Probar en Firefox y Safari que el mapa de `/red/` queda fijo al recorrer las fichas. Se probó en Chromium
@@ -714,6 +786,7 @@ En la home y en la 404, donde el footer es una fila, las redes son un elemento m
 - [ ] La nota que abre el manifiesto y el marco estaba pensada más chica (0,9 rem) y con más aire debajo (3 rem). Nunca se vio así: la pisaba la regla de los párrafos. Se ve del tamaño del texto (1,1 rem). La limpieza sacó las dos líneas que no aplicaban
 - [ ] Las cajas de "Marcos teóricos" y "Principios organizativos" estaban pensadas con 1 rem de relleno. Se ven con 0,5 rem arriba y abajo y sin relleno a la derecha, así que el texto llega al borde de la caja. Por lo mismo: la regla de las listas pisaba a la de las cajas
 - [ ] El logo del header estaba pensado en una línea. Siempre se vio en tres
+- [ ] Un feed para seguir la bitácora, y la última anotación a la vista en la home. Ver "Bitácora: un registro por día"
 
 ---
 

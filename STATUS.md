@@ -18,7 +18,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 | `/red/` | ✓ Seis personas, con el mapa |
 | `/practicas/` | ✓ Práctica #01 abierta, sin fecha de cierre. Una respuesta publicada |
 | `/practicas/volante/` | ✓ Imprime en A4 y carta |
-| `/bitacora/` | ✓ Dos artefactos y cuatro entradas de texto |
+| `/bitacora/` | ✓ Registro por día, de septiembre de 2025 a hoy. Dos artefactos |
 | `404.html` | ✓ |
 
 ## Hecho en octubre 2026
@@ -36,6 +36,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - Lucía Guedes (Montevideo) se suma a la red: ficha, foto y punto en el mapa
 - En la red, las fichas van por orden alfabético de apellido
 - Instagram y LinkedIn del Lab en el footer de todas las páginas
+- La bitácora pasa a ser un registro por día, con lo anterior reconstruido y una rutina para anotar
 
 ## Pendientes
 
@@ -43,6 +44,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - [ ] Más respuestas a la Práctica #01
 - [ ] Revisión del marco teórico, anunciada en la bitácora de septiembre. Su introducción repite los dos primeros párrafos del manifiesto
 - [ ] Fotos de volantes pegados, para la bitácora
+- [ ] Anotaciones de otras personas de la red en la bitácora: hasta ahora anota una sola
 
 **Técnico:**
 - [ ] Email con dominio propio

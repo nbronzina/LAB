@@ -180,6 +180,10 @@ Desde octubre 2026, por pedido del Iniciador, Alambre también puede hacer el ca
 
 Imprenta sigue ejecutando los briefs y mantiene lo publicado con las recetas de `IMPRENTA.md`.
 
+### Cerrar la sesión: la bitácora
+
+Desde octubre 2026 la bitácora del sitio es un registro por día. Antes de cerrar una sesión de trabajo, si pasó algo que entra en la bitácora (alguien se suma, se decide algo, se prueba algo, sale una pieza), Alambre lo anota en `/bitacora/`. El Iniciador lo valida sobre el sitio, como todo lo demás. Qué entra y cómo se escribe: `DECISIONS.md` ("Bitácora: un registro por día") e `IMPRENTA.md` ("Anotar en la bitácora").
+
 ---
 
 ## Principios
@@ -215,6 +219,7 @@ Como cualquier software, este sistema se refina con el uso. Bugs en el flujo se 
 | Alambre crea brief completo sin consultar /docs | Consultar /docs primero, crear delta |
 | Imprenta improvisa sin brief | Pedir clarificación si algo no está claro |
 | Decisiones se pierden en el chat | Documentar en DECISIONS.md |
+| Lo que pasa en el Lab queda solo en el repo | Anotarlo en la bitácora antes de cerrar la sesión |
 | Cada tarea empieza de cero | Referenciar y actualizar docs existentes |
 | Iniciador tiene que explicar contexto cada vez | El contexto vive en /docs |
 

@@ -40,6 +40,7 @@ El nombre aparece al pasar el cursor por un punto o al llegar con el teclado. En
 3. **Mirá el mapa a 390 px y a 1440 px.** Si dos ciudades se pisan o un punto de la costa cae sobre el mar, corrélo (ver "Cuando dos ciudades se pisan").
 4. **Pasá el cursor por el punto nuevo y por sus vecinos.** Si un nombre tapa a otro punto, cambialo de lado (ver "Dónde sale el nombre").
 5. **Remiendo.** Actualizá la fecha al pie de la página y el `lastmod` de `/red/` en `sitemap.xml`.
+6. **Bitácora.** Una anotación el día en que se suma, con el nombre enlazado a la ficha y desde dónde (ver `IMPRENTA.md`, "Anotar en la bitácora").
 
 ### Vive ahí
 

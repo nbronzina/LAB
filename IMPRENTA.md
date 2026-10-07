@@ -193,7 +193,7 @@ Crear página de proyectos
 
 **Sin roles repetidos.** `<header>`, `<nav>`, `<main>` y `<footer>` ya dicen qué son: no llevan `role`.
 
-**La versión de la hoja.** Las páginas la piden como `style.css?v=3`. Subí el número en las ocho páginas cuando cambies o saques nombres de clases, o cuando el HTML nuevo dependa de una clase nueva: así el HTML nuevo nunca se junta con un CSS viejo guardado en el navegador de alguien. Para un cambio que no rompe el HTML anterior (un color, un margen) no hace falta.
+**La versión de la hoja.** Las páginas la piden como `style.css?v=4`. Subí el número en las ocho páginas cuando cambies o saques nombres de clases, o cuando el HTML nuevo dependa de una clase nueva: así el HTML nuevo nunca se junta con un CSS viejo guardado en el navegador de alguien. Para un cambio que no rompe el HTML anterior (un color, un margen) no hace falta.
 
 **Imágenes.** Siempre con `width`, `height` y `alt`. Los artefactos nuevos van en tres tamaños y con `srcset` (el afiche de Miriam, que es anterior, tiene dos). Las fotos de las fichas van a 240 x 240 px.
 
@@ -208,18 +208,41 @@ Tareas que se repiten. No hace falta un brief para hacerlas, sí que Nicolás la
 ### Publicar un artefacto
 
 1. **Imágenes.** Tres archivos WebP en `img/`: el completo (`artefacto-<nombre>.webp`, hasta unos 1100 px de ancho, calidad 80) y dos reducidos (`-640.webp` y `-480.webp`, calidad 74 a 76). Sin fechas ni la palabra "ficción" en el nombre del archivo.
-2. **Bitácora.** Un `article.bitacora-entry.bitacora-artefacto` con `id`, arriba de todo en su año. Copiá la estructura de `#servicio-tecnico`. El `h3` es el nombre que la propia pieza lleva. El `alt` describe lo que se ve. El contexto, el título del proyecto y los links van adentro de `details.artefacto-origen`.
+2. **Bitácora.** Un `li.bitacora-artefacto` con `id`, dentro del día en que entra (ver "Anotar en la bitácora"). Copiá la estructura de `#servicio-tecnico`. El `h4` es el nombre que la propia pieza lleva. El `alt` describe lo que se ve. El contexto, el título del proyecto y los links van adentro de `details.artefacto-origen`. Los artefactos se inclinan una vez para cada lado: si el anterior va hacia la izquierda, el nuevo lleva `style="--giro: 1.5deg"` en su `a.artefacto-pieza`, y al revés.
 3. **Home.** Cambiá la imagen y el link de `.poster-artefacto` por los del artefacto nuevo. La home muestra siempre el último.
 4. **Prácticas.** Si es respuesta a una práctica, sumala en "Respuestas" de esa práctica, con crédito y link a su ancla en la bitácora.
 5. **Remiendo y sitemap** de las páginas que tocaste.
 
 El texto de "De dónde sale" lo escribe Alambre y lo valida Nicolás. Si no lo tenés, pedilo.
 
+### Anotar en la bitácora
+
+La bitácora es un registro por día. Qué entra y qué no: `DECISIONS.md`, "Bitácora: un registro por día". El texto de cada anotación lo escribe Alambre y lo valida Nicolás. Imprenta no redacta ni anota por su cuenta: pasa al sitio la anotación que le llega escrita.
+
+1. **El día.** Si ese día ya tiene su `article.bitacora-dia`, la anotación va adentro, arriba de las demás. Si no, se arma uno nuevo arriba de todo en su año, copiando uno que ya esté:
+
+```html
+<article class="bitacora-dia" id="2026-10-08">
+  <h3 class="bitacora-fecha"><a href="#2026-10-08"><time datetime="2026-10-08"><span aria-hidden="true">8 oct</span><span class="solo-lector">8 de octubre de 2026</span></time></a></h3>
+  <ul class="bitacora-notas">
+    <li class="bitacora-nota">…</li>
+  </ul>
+</article>
+```
+
+   La fecha va cuatro veces y tienen que coincidir: en el `id`, en el `href`, en el `datetime` y escrita. A la vista va abreviada (ene, feb, mar, abr, may, jun, jul, ago, sept, oct, nov, dic) y completa para el lector de pantalla. El día es el de quien anota, en su hora.
+2. **La anotación.** Un `li.bitacora-nota` con una a tres frases. Los nombres de personas enlazan a su ficha (`/red/#nombre-apellido`) y lo que se menciona, a su página. Si lleva un link aparte ("Ver post →"), el texto y el link van cada uno en su `<p>`.
+3. **Un año nuevo** es otra `section.bitacora-year` arriba de la anterior.
+4. **Remiendo** de `/bitacora/` y su `lastmod` en `sitemap.xml`.
+
+La anotación de cada sesión de trabajo la escribe Alambre antes de cerrarla (ver `SYSTEM.md`, "Cerrar la sesión: la bitácora").
+
 ### Sumar una persona a la red
 
 1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora) y en el lugar que le toque por orden alfabético de apellido, copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP de 240 x 240 px. La foto va como las demás: la figura recortada del fondo (fondo transparente, se ve el color de la ficha), en escala de grises neutra y con el encuadre en cabeza y hombros.
 2. **Punto en el mapa.** Un `a.punto` que apunte a ese `id`, con las coordenadas de su ciudad. El paso a paso y la tabla de ciudades están en `MAPA.md`.
 3. **Remiendo** de `/red/` y su `lastmod` en `sitemap.xml`.
+4. **Bitácora.** Una anotación el día en que se suma, con el nombre enlazado a la ficha y desde dónde.
 
 ### Actualizar el remiendo
 

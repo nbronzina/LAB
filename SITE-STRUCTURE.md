@@ -9,12 +9,12 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 | URL | Archivo | Función |
 |-----|---------|---------|
 | `/` | `index.html` | Poster. Una pantalla: logo, declaración, frase, cuatro links y el último artefacto pegado |
-| `/manifiesto/` | `manifiesto/index.html` | Declaración corta. 3 a 5 minutos |
-| `/marco/` | `marco/index.html` | Fundamentación académica. 25 a 30 minutos. Se llega desde el manifiesto |
+| `/manifiesto/` | `manifiesto/index.html` | Declaración corta: unas 350 palabras |
+| `/marco/` | `marco/index.html` | Fundamentación académica: unas 4.300 palabras. Se llega desde el manifiesto |
 | `/red/` | `red/index.html` | Mapa de la red, fichas (LATAM y diáspora) e invitación a sumarse |
 | `/practicas/` | `practicas/index.html` | Cómo funcionan las prácticas, la #01, cómo responder y las respuestas |
 | `/practicas/volante/` | `practicas/volante/index.html` | Volante de la práctica para imprimir |
-| `/bitacora/` | `bitacora/index.html` | Registro por año. Los artefactos se ven primero |
+| `/bitacora/` | `bitacora/index.html` | Registro por día: anotaciones cortas y, entre ellas, los artefactos |
 | cualquier otra | `404.html` | Página no encontrada |
 
 ## Navegación
@@ -50,8 +50,8 @@ Piezas de CSS que usa más de una página. Están juntas al principio de `style.
 | Recuadro (caja de borde negro) | `.header-nav a`, `.artefacto-origen summary` | Links del header y "De dónde sale" en la bitácora |
 | Botón sticker (caja amarilla con sombra) | `.poster-tag`, `.volante-imprimir`, `.red-mapa-sumate` | Links del poster, "Imprimir" del volante, sticker del mapa |
 | Pieza pegada (un artefacto) | `.artefacto-pieza`, `.poster-artefacto` | Bitácora, prácticas y home |
-| Link de texto (azul, subrayado) | `.entry-description a`, `.entry-link`, `.practitioner-link` y otros | Bitácora, prácticas, volante y red |
-| Link de nota (subrayado coral) | `.remiendo a`, `.documento-nota a`, `.footer-redes a`, `.poster-footer a` | Remiendo, nota del manifiesto, redes del footer, footer del poster |
+| Link de texto (azul, subrayado) | `.entry-description a`, `.entry-link`, `.bitacora-nota a`, `.practitioner-link` y otros | Bitácora, prácticas, volante y red |
+| Link de nota (subrayado coral) | `.remiendo a`, `.documento-nota a`, `.pagina-intro a`, `.footer-redes a`, `.poster-footer a` | Remiendo, nota del manifiesto, bajada de una página de lista, redes del footer, footer del poster |
 | Página de lista | `body.pagina`, `main.pagina-contenido`, `.pagina-titulo`, `.pagina-intro` | Bitácora, prácticas y volante. `.pagina-titulo` es también el título de la red |
 | Cierre con llamado | `.cta-cierre`, `.cta-link`, `.cta-descripcion` | Final del manifiesto y de la bitácora |
 
@@ -88,8 +88,11 @@ Una clase existe solo si `style.css` o un script la usan. No hay clases "por las
 
 **Bitácora** (`body.pagina`)
 - `section.bitacora-year`: un año
-- `article.bitacora-entry`: una entrada de texto (fecha, título, autor, descripción, link)
-- `article.bitacora-entry.bitacora-artefacto` con `id`: un artefacto. La pieza (`a.artefacto-pieza`) y su ficha (`.artefacto-ficha`: fecha, nombre, crédito y `details.artefacto-origen` con "De dónde sale")
+- `article.bitacora-dia` con `id` (la fecha: `2026-10-07`, o `2025-11` si solo se sabe el mes): un día
+- `h3.bitacora-fecha`: la fecha, que es un link a ese día. Desde 700 px va al margen, a la izquierda de la línea coral, y queda fija mientras se recorre el día
+- `ul.bitacora-notas` y adentro, de lo más nuevo a lo más viejo:
+  - `li.bitacora-nota`: una anotación
+  - `li.bitacora-artefacto` con `id`: un artefacto. La pieza (`a.artefacto-pieza`) y su ficha (`.artefacto-ficha`: nombre en un `h4`, crédito y `details.artefacto-origen` con "De dónde sale")
 
 ## Anclas
 
@@ -97,6 +100,7 @@ Una clase existe solo si `style.css` o un script la usan. No hay clases "por las
 |-------|--------|--------|
 | `#servicio-tecnico` | `/bitacora/` | Cartel de servicio técnico |
 | `#laboratorio-de-innovacion-climatica` | `/bitacora/` | Afiche del Lab IC+ de Chivilcoy |
+| `#2026-10-07` (la fecha) | `/bitacora/` | Un día de la bitácora. Al llegar por el ancla, la fecha se marca en amarillo |
 | `#nombre-apellido` (por ejemplo `#miriam-latorre`) | `/red/` | La ficha de cada persona. En minúsculas, sin tildes y con guiones |
 
 Un ancla publicada no se renombra: puede estar enlazada desde afuera.
@@ -118,7 +122,7 @@ Todas las imágenes llevan `width`, `height` y un `alt` que describe lo que se v
 | Ancho | Qué cambia |
 |-------|------------|
 | hasta 600 px | Poster y header en columna, fichas con la foto arriba |
-| desde 700 px | Artefactos de la bitácora con la ficha al lado. En `/red/`, la lista a la izquierda y el mapa fijo a la derecha |
+| desde 700 px | En la bitácora, la fecha al margen y los artefactos con la ficha al lado. En `/red/`, la lista a la izquierda y el mapa fijo a la derecha |
 | de 700 a 899 px | En `/red/`, fichas con la foto arriba (la columna es angosta) |
 | desde 1000 px | Artefacto de la home abajo a la derecha |
 
