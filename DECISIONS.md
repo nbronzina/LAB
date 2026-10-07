@@ -677,6 +677,20 @@ Lighthouse da las mismas notas que antes en las ocho páginas, con una diferenci
 
 ---
 
+## 2026-10-08 — Footer: las redes del Lab
+
+### Decisión: Instagram y LinkedIn van en el footer, como texto
+
+**Contexto:** El sitio no enlazaba a las redes del Lab. Nicolás pidió sumarlas al footer.
+
+**Decisión:** Un renglón debajo de "Charlemos →" con el nombre de cada red, en la tipografía de las etiquetas y con el subrayado coral del link de nota. Va en las ocho páginas. Sin íconos: el sitio no usa ninguno y el nombre se lee igual.
+
+En la home y en la 404, donde el footer es una fila, las redes son un elemento más de la fila. Esa fila ahora necesita unos 960 px: entre 601 y 960 el remiendo baja a un segundo renglón. Hasta 600 px sigue en columna centrada, como antes.
+
+**Razón:** Quien llega al sitio y quiere seguir al Lab no tenía cómo. El footer es donde se busca eso y ya tenía el contacto.
+
+---
+
 ## Decisiones Pendientes
 
 - [x] Dominio propio → `mundanidadforzada.org` está activo (ver `CNAME`)

@@ -193,7 +193,7 @@ Crear página de proyectos
 
 **Sin roles repetidos.** `<header>`, `<nav>`, `<main>` y `<footer>` ya dicen qué son: no llevan `role`.
 
-**La versión de la hoja.** Las páginas la piden como `style.css?v=2`. Subí el número en las ocho páginas cuando cambies o saques nombres de clases: así el HTML nuevo nunca se junta con un CSS viejo guardado en el navegador de alguien. Para un cambio que no rompe el HTML anterior (un color, un margen) no hace falta.
+**La versión de la hoja.** Las páginas la piden como `style.css?v=3`. Subí el número en las ocho páginas cuando cambies o saques nombres de clases, o cuando el HTML nuevo dependa de una clase nueva: así el HTML nuevo nunca se junta con un CSS viejo guardado en el navegador de alguien. Para un cambio que no rompe el HTML anterior (un color, un margen) no hace falta.
 
 **Imágenes.** Siempre con `width`, `height` y `alt`. Los artefactos nuevos van en tres tamaños y con `srcset` (el afiche de Miriam, que es anterior, tiene dos). Las fotos de las fichas van a 240 x 240 px.
 

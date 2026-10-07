@@ -1,6 +1,6 @@
 # Lab de Mundanidad Forzada — Sistema de Marca
 
-> Última actualización: 7 octubre 2026
+> Última actualización: 8 octubre 2026
 
 ---
 
@@ -376,6 +376,8 @@ En los SVG el wordmark está convertido a trazos: no dependen de que la fuente e
 ## Redes Sociales
 
 Las piezas para redes usan el mismo sistema que el sitio. No tienen tipografías ni colores propios.
+
+Instagram: `@labmundanidadforzada`. LinkedIn: `linkedin.com/company/108845994`. Las dos están enlazadas en el footer de todas las páginas.
 
 | Pieza | Regla |
 |-------|-------|

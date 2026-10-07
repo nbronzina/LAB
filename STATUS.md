@@ -1,6 +1,6 @@
 # Status — Lab de Mundanidad Forzada
 
-> Última actualización: 7 octubre 2026
+> Última actualización: 8 octubre 2026
 
 ## Estado: en actividad
 
@@ -34,6 +34,8 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - Limpieza del código de todo el repo: `style.css` reescrita en orden, clases con nombres que dicen dónde se usan, publicación sin Jekyll, imágenes del tamaño en que se ven. El sitio se ve igual que antes
 - Ícono anterior retirado (`img/lab-icon.png`): los avatares de redes ya llevan el continente
 - Lucía Guedes (Montevideo) se suma a la red: ficha, foto y punto en el mapa
+- En la red, las fichas van por orden alfabético de apellido
+- Instagram y LinkedIn del Lab en el footer de todas las páginas
 
 ## Pendientes
 

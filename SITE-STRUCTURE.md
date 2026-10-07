@@ -1,6 +1,6 @@
 # Site Structure — Lab de Mundanidad Forzada
 
-> Última actualización: 7 octubre 2026
+> Última actualización: 8 octubre 2026
 
 ## Páginas
 
@@ -35,8 +35,8 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 | Componente | Dónde | Qué tiene |
 |------------|-------|-----------|
 | Header compacto (`header.site-header`) | Todas menos la home y la 404 | El logo chico en tres líneas (`a.logo`, link a `/`) y la navegación (`nav.header-nav`): Manifiesto, La red, Prácticas, Bitácora. La página actual lleva `aria-current="page"`; una subpágina marca a su sección con `aria-current="true"` |
-| Footer (`footer.site-footer`) | Todas menos la home y la 404 | "Charlemos →" (`.footer-cta`), "Est. 2025" (`.fundacion`) y el remiendo |
-| Footer del poster | Home y 404 | Lo mismo en una fila. La 404 no lleva remiendo |
+| Footer (`footer.site-footer`) | Todas menos la home y la 404 | "Charlemos →" (`.footer-cta`), las redes del Lab (`.footer-redes`), "Est. 2025" (`.fundacion`) y el remiendo |
+| Footer del poster | Home y 404 | Lo mismo en una fila. Entre 601 y 960 px el remiendo baja a un segundo renglón; hasta 600 px va en columna centrada. La 404 no lleva remiendo |
 | Remiendo | Todas menos la 404 | "Último remiendo:" con la fecha en un `<time>` y el link "Ver historial" al historial de ese archivo en GitHub |
 | Ruido de impresión | Todas | `.noise-overlay`. No se imprime |
 | Saltar al contenido | Todas menos la 404 | `.skip-link` |
@@ -51,7 +51,7 @@ Piezas de CSS que usa más de una página. Están juntas al principio de `style.
 | Botón sticker (caja amarilla con sombra) | `.poster-tag`, `.volante-imprimir`, `.red-mapa-sumate` | Links del poster, "Imprimir" del volante, sticker del mapa |
 | Pieza pegada (un artefacto) | `.artefacto-pieza`, `.poster-artefacto` | Bitácora, prácticas y home |
 | Link de texto (azul, subrayado) | `.entry-description a`, `.entry-link`, `.practitioner-link` y otros | Bitácora, prácticas, volante y red |
-| Link de nota (subrayado coral) | `.remiendo a`, `.documento-nota a`, `.poster-footer a` | Remiendo, nota del manifiesto, footer del poster |
+| Link de nota (subrayado coral) | `.remiendo a`, `.documento-nota a`, `.footer-redes a`, `.poster-footer a` | Remiendo, nota del manifiesto, redes del footer, footer del poster |
 | Página de lista | `body.pagina`, `main.pagina-contenido`, `.pagina-titulo`, `.pagina-intro` | Bitácora, prácticas y volante. `.pagina-titulo` es también el título de la red |
 | Cierre con llamado | `.cta-cierre`, `.cta-link`, `.cta-descripcion` | Final del manifiesto y de la bitácora |
 
