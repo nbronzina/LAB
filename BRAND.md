@@ -183,7 +183,7 @@ En el sitio el logo es texto y tiene dos tamaños: el del poster de la home y el
 
 ### Ícono: el continente
 
-Desde octubre 2026 el ícono del Lab es **el continente latinoamericano, literal y relleno**. Reemplaza al mapa de contorno con círculos (`img/lab-icon.png`).
+Desde octubre 2026 el ícono del Lab es **el continente latinoamericano, literal y relleno**. Reemplaza al mapa de contorno con círculos, que se retiró del repo ese mismo mes.
 
 Se usa para:
 - Favicon

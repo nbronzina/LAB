@@ -444,6 +444,8 @@ Una sola idea para toda la actualización: que el sitio haga lo que el manifiest
 
 **Razón:** El poster sigue siendo una pantalla (decisión de enero) y suma la prueba de lo que dice. Una pieza sola se mira. Una galería se pasa de largo.
 
+Confirmada el mismo día. Al verla publicada, Nicolás preguntó qué aportaba: es el único ejemplo concreto de la portada, y en el teléfono hace que el poster ya no entre en una pantalla. La dejó: "no saques el cartel".
+
 ---
 
 ### Decisión: El cartel de servicio técnico es la primera respuesta a la Práctica #01
@@ -671,11 +673,11 @@ Lighthouse da las mismas notas que antes en las ocho páginas, con una diferenci
 - [x] Imagen OG para redes sociales → reemplazada el 7 oct 2026
 - [x] ¿Agregar año de fundación en algún lugar visible? → Decidido: sí, en footer ("Est. 2025")
 - [ ] ¿El continente entra al header (`.logo`) o al poster de la home? Hoy es solo ícono
-- [ ] Retirar `img/lab-icon.png` (ícono anterior, 1 MB, sin referencias en el sitio) cuando los avatares de redes estén cambiados
+- [x] Retirar `img/lab-icon.png` (ícono anterior, 1 MB, sin referencias en el sitio) cuando los avatares de redes estén cambiados → retirado el 7 oct 2026: Nicolás confirmó que ya los cambió. Queda en el historial del repo
 - [x] En la home, "MUNDANIDAD" se cortaba por la derecha entre 601 y unos 1420 px → bug, corregido el 7 oct 2026
 - [ ] La descripción de la red nombra Uruguay ("Argentina, Brasil, México, Uruguay y contando") y en `/red/` no hay nadie de Uruguay
 - [x] Mapa de la red, segunda versión: un punto por persona sobre el continente, sin nombres ni hilos → publicado el 7 oct 2026
-- [ ] La pieza pegada en la home. Al verla publicada, Nicolás preguntó qué aporta. Suma el único ejemplo concreto de la portada y, en el teléfono, hace que el poster ya no entre en una pantalla. Sigue ahí hasta que él decida
+- [x] La pieza pegada en la home. Al verla publicada, Nicolás preguntó qué aporta → se queda, decidido el 7 oct 2026 (ver "La home lleva pegado el último artefacto")
 - [ ] Probar en Firefox y Safari que el mapa de `/red/` queda fijo al recorrer las fichas. Se probó en Chromium
 - [ ] Imprimir el volante desde Firefox y Safari. Se probó en Chromium, en A4 y en carta
 - [ ] En el manifiesto, las tarjetas de los pilares tienen 56 px de aire arriba del título y 24 px debajo del texto. En el marco, las mismas tarjetas tienen 24 px arriba. La limpieza lo dejó como estaba
