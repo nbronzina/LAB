@@ -231,7 +231,7 @@ La bitácora es un registro por día. Qué entra y qué no: `DECISIONS.md`, "Bit
 ```
 
    La fecha va cuatro veces y tienen que coincidir: en el `id`, en el `href`, en el `datetime` y escrita. A la vista va abreviada (ene, feb, mar, abr, may, jun, jul, ago, sept, oct, nov, dic) y completa para el lector de pantalla. El día es el de quien anota, en su hora.
-2. **La anotación.** Un `li.bitacora-nota` con una a tres frases. Los nombres de personas enlazan a su ficha (`/red/#nombre-apellido`) y lo que se menciona, a su página. Si lleva un link aparte ("Ver post →"), el texto y el link van cada uno en su `<p>`.
+2. **La anotación.** Un `li.bitacora-nota` con una a tres frases: el hecho, sin el camino para llegar. Los nombres de personas enlazan a su ficha (`/red/#nombre-apellido`) y lo que se menciona, a su página. Si lleva un link aparte ("Ver post →"), el texto y el link van cada uno en su `<p>`.
 3. **Un año nuevo** es otra `section.bitacora-year` arriba de la anterior.
 4. **Remiendo** de `/bitacora/` y su `lastmod` en `sitemap.xml`.
 

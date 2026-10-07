@@ -182,7 +182,7 @@ Imprenta sigue ejecutando los briefs y mantiene lo publicado con las recetas de 
 
 ### Cerrar la sesión: la bitácora
 
-Desde octubre 2026 la bitácora del sitio es un registro por día. Antes de cerrar una sesión de trabajo, si pasó algo que entra en la bitácora (alguien se suma, se decide algo, se prueba algo, sale una pieza), Alambre lo anota en `/bitacora/`. El Iniciador lo valida sobre el sitio, como todo lo demás. Qué entra y cómo se escribe: `DECISIONS.md` ("Bitácora: un registro por día") e `IMPRENTA.md` ("Anotar en la bitácora").
+Desde octubre 2026 la bitácora del sitio es un registro por día. Antes de cerrar una sesión de trabajo, si pasó algo que entra en la bitácora (alguien se suma, se abre algo, sale una pieza), Alambre lo anota en `/bitacora/`. El Iniciador lo valida sobre el sitio, como todo lo demás. Qué entra y cómo se escribe: `DECISIONS.md` ("Bitácora: un registro por día") e `IMPRENTA.md` ("Anotar en la bitácora").
 
 ---
 

@@ -697,15 +697,36 @@ En la home y en la 404, donde el footer es una fila, las redes son un elemento m
 
 ## 2026-10-08 — Bitácora: un registro por día
 
-Nicolás pidió repensar la bitácora: qué hay, qué falta y qué se puede hacer para que sea de verdad una bitácora. Leyó el diagnóstico y dejó lo demás en manos de Alambre: "Todo lo que creas".
+Nicolás pidió repensar la bitácora: qué hay, qué falta y qué se puede hacer para que sea de verdad una bitácora. Leyó el diagnóstico y dejó lo demás en manos de Alambre: "Todo lo que creas". Una hora después de publicada la leyó entera y la recortó: ver "Hechos, sin el camino".
 
 ### Decisión: La bitácora anota lo que pasa, por día
 
 **Contexto:** Se creó en enero como "registro cronológico de trabajos". Al 7 de octubre tenía seis entradas, fechadas por mes, para trece meses de Lab: dos artefactos, dos sobre LATAM·2036 (un workshop y una defensa en el IED Madrid), un estado y la fundación. Firmaban dos de las seis personas de la red. Lo que pasó desde septiembre (tres personas nuevas, la marca, el mapa, el volante, la primera respuesta a la práctica) estaba escrito en este archivo y en el historial del repo. En la bitácora había una pieza y un párrafo.
 
-**Decisión:** Anotaciones cortas, por día. Entra lo que le pasa al Lab: quién se suma, qué se decide sobre cómo funciona, qué se prueba, qué sale a la calle o a las redes, qué se publica y qué queda pendiente. También lo que no anduvo y las pausas. No entran los arreglos del sitio que no cambian nada del Lab: para eso está el remiendo.
+**Decisión:** Anotaciones cortas, por día. Entra lo que le pasa al Lab: quién se suma, qué se abre, qué se publica y qué sale a la calle o a las redes. También las pausas. No entran los arreglos del sitio que no cambian nada del Lab: para eso está el remiendo.
 
-**Razón:** Una vidriera de trabajos terminados dice poco de un Lab que se declara en construcción. Es el pilar 3 y el remiendo a la vista, llevados a la bitácora. Y una anotación de dos frases cuesta poco: lo que cuesta poco se sostiene.
+**Razón:** Una vidriera de trabajos terminados dice poco de un Lab que se declara en construcción. Y una anotación de dos frases cuesta poco: lo que cuesta poco se sostiene.
+
+---
+
+### Decisión: Hechos, sin el camino
+
+**Contexto:** Alambre había propuesto anotar también lo que se probó y no anduvo, y la primera versión publicada lo hacía. Nicolás la leyó y sacó:
+
+- el 8 de octubre entero: la bitácora contando su propio cambio, con un link a este archivo
+- el 6 de octubre entero: la placa que se sacó del post fijado de Instagram y el borrador con el ticket de agua
+- el 20 de febrero entero, la explicación y el ejemplo que se sumaron a la práctica: "no suma, son detalles"
+- del 7 de octubre, el mapa que se probó antes y el cambio de orden de las fichas
+- del 18 de septiembre, la práctica sin fecha de cierre y sin respuestas, y "lo que sigue"
+- del 17 de febrero, "Cierre estimado: junio"
+
+Y pidió que Chivilcoy lleve el país.
+
+**Decisión:** La bitácora anota hechos del Lab, sin el camino para llegar a cada uno. No entran versiones descartadas, borradores, plazos, pendientes ni cambios menores, y la bitácora no habla de sí misma. Un lugar que no se ubica solo lleva país: "Chivilcoy, Argentina".
+
+**Razón:** Decisión de Nicolás. El camino no se pierde: está en este archivo, que es público.
+
+Dos consecuencias. Sin el 20 de febrero, la anotación de la pausa pasa a decir "entre el 17 de febrero y hoy". Y la bajada de la página, que prometía "qué se prueba, qué sale y qué no", queda en "quién se suma, qué se abre y qué sale".
 
 ---
 
@@ -727,23 +748,22 @@ Cambia una regla de la limpieza: la inclinación de los artefactos ya no la alte
 
 **Decisión:** Opción 2. Los artefactos conservan su crédito.
 
-**Razón:** Con la opción 1, quince anotaciones seguidas habrían dicho "Nicolás Bronzina, Madrid". El lugar se nombra cuando informa: "se suma Lucía Guedes, desde Montevideo". Cuando anoten otras personas de la red, su nombre va en la frase.
+**Razón:** Con la opción 1, casi todas las anotaciones habrían dicho "Nicolás Bronzina, Madrid". El lugar se nombra cuando informa: "se suma Lucía Guedes, desde Montevideo". Cuando anoten otras personas de la red, su nombre va en la frase.
 
 ---
 
 ### Decisión: Lo anterior se reconstruyó con lo que estaba fechado
 
-**Decisión:** Diecinueve anotaciones nuevas, de enero de 2026 a hoy. Cada una sale de una fuente con fecha: este archivo, el historial del repo, los archivos de trabajo de las sesiones o una publicación. Las seis entradas que había siguen estando: los dos artefactos como estaban y las cuatro de texto pasadas a anotaciones, sin perder nombres ni links. El estado de septiembre quedó repartido en cuatro. De 2025 quedó anotado el mes, no el día, y así se deja.
+**Decisión:** Catorce anotaciones nuevas, de enero de 2026 a hoy (se habían escrito diecinueve: ver "Hechos, sin el camino"). Cada una sale de una fuente con fecha: este archivo, el historial del repo o una publicación. Las seis entradas que había siguen estando: los dos artefactos como estaban y las cuatro de texto pasadas a anotaciones, sin perder nombres ni links. De 2025 quedó anotado el mes, no el día, y así se deja.
 
-Cinco fechas que conviene saber de dónde salen:
+Cuatro fechas que conviene saber de dónde salen:
 
-- **6 de octubre**, el post fijado de Instagram: este archivo anotó esas decisiones el 7, pero los archivos de trabajo son del 6, pasada la medianoche.
 - **7 de octubre**, la marca: es el día en que entró al sitio. Se decidió el 5 a la noche.
 - **12 de febrero**, la defensa en el IED: es la fecha del post de LinkedIn que la cuenta, y por eso la anotación dice "cuenta en LinkedIn". Del día de la defensa no hay registro.
 - **27 de enero**, el workshop LATAM·2036: es la fecha en que salió el artículo de Medium. El workshop fue antes, en enero, sin día anotado.
 - **28 de enero**, el dominio: en hora de Madrid. En el historial, dos de los tres commits figuran como 27 porque están en hora universal.
 
-Antes de publicar, una segunda revisión hecha contra los registros encontró dos errores: el post fijado estaba puesto en el 7 de octubre, y las palabras del manifiesto venían de una estimación de enero (ver "Separar Manifiesto y Marco Teórico"). Se contaron: el original tenía unas 4.300 y el nuevo, unas 350.
+Antes de publicar, una segunda revisión hecha contra los registros encontró dos errores. Uno era una fecha del post fijado, que después salió de la bitácora. El otro, las palabras del manifiesto, que venían de una estimación de enero (ver "Separar Manifiesto y Marco Teórico"). Se contaron: el original tenía unas 4.300 y el nuevo, unas 350.
 
 **Razón:** Una bitácora que arranca vacía no parece una bitácora. Y todo lo que cuenta ya era público en el repo.
 
@@ -751,9 +771,9 @@ Antes de publicar, una segunda revisión hecha contra los registros encontró do
 
 ### Decisión: Quién anota
 
-**Decisión:** Cada sesión de trabajo cierra con su anotación. La escribe Alambre con lo que se decidió y la valida Nicolás. El resto de la red manda lo suyo por mail: con una línea y una foto alcanza. El pedido está en la bajada de la página.
+**Decisión:** Cada sesión de trabajo cierra con su anotación, si pasó algo que entra. La escribe Alambre y la valida Nicolás. El resto de la red manda lo suyo por mail: con una línea y una foto alcanza. El pedido está en la bajada de la página.
 
-**Razón:** La bitácora anterior dependía de que alguien se acordara de escribirla. Las sesiones de trabajo ya dejan todo anotado: falta pasarlo en limpio antes de cerrar.
+**Razón:** La bitácora anterior dependía de que alguien se acordara de escribirla.
 
 ---
 
