@@ -34,22 +34,22 @@
   <meta name="theme-color" content="#E85D4A">
   <link rel="preload" href="../fonts/archivo-black-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/space-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=2">
 </head>
-<body class="bitacora-page">
+<body class="pagina">
   <a href="#main" class="skip-link">Saltar al contenido</a>
 
   <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- HEADER COMPACTO -->
-  <header class="manifiesto-header" role="banner">
+  <header class="site-header">
     <div class="container">
-      <a href="/" class="logo logo-small">
+      <a href="/" class="logo">
         <span>Lab de</span>
         <span>Mundanidad</span>
         <span>Forzada</span>
       </a>
-      <nav class="header-nav" role="navigation" aria-label="Principal">
+      <nav class="header-nav" aria-label="Principal">
         <a href="/manifiesto/">Manifiesto</a>
         <a href="/red/">La red</a>
         <a href="/practicas/" aria-current="page">Prácticas</a>
@@ -59,14 +59,14 @@
   </header>
 
   <!-- CONTENIDO -->
-  <main id="main" class="bitacora-content" role="main">
+  <main id="main" class="pagina-contenido">
     <div class="container container-narrow">
 
-      <h1 class="bitacora-title">Prácticas</h1>
-      <p class="bitacora-intro">
+      <h1 class="pagina-titulo">Prácticas</h1>
+      <p class="pagina-intro">
         Ejercicios de design fiction que se repiten. Cada práctica propone un punto de partida y la red responde desde donde está: Chivilcoy, Querétaro, Valencia, Madrid, donde sea que estés.
       </p>
-      <p class="bitacora-intro bitacora-intro-cont">
+      <p class="pagina-intro pagina-intro-sigue">
         No son convocatorias. La versión que se publica no es la primera, es la que sobrevivió al feedback.
       </p>
 
@@ -109,7 +109,7 @@
 
           <h3 class="practica-subtitulo">Un ejemplo</h3>
           <a href="/bitacora/#laboratorio-de-innovacion-climatica" class="artefacto-pieza">
-            <img src="../img/ejemplo-practica-miriam.webp" alt="Afiche municipal: Laboratorio de Innovación Climática. Invitación al acto oficial por el 178° aniversario de Chivilcoy, viernes 22 de octubre de 2032." width="1060" height="1500" loading="lazy" decoding="async">
+            <img src="../img/ejemplo-practica-miriam-640.webp" srcset="../img/ejemplo-practica-miriam-640.webp 640w, ../img/ejemplo-practica-miriam.webp 1060w" sizes="(min-width: 540px) 26rem, calc(88vw - 59px)" alt="Afiche municipal: Laboratorio de Innovación Climática. Invitación al acto oficial por el 178° aniversario de Chivilcoy, viernes 22 de octubre de 2032." width="1060" height="1500" loading="lazy" decoding="async">
           </a>
           <p>Chivilcoy, 2032. La crisis del arsénico en el agua convirtió al pueblo en laboratorio de innovación climática. Miriam Latorre construyó el cartel y el sitio web de ese laboratorio ficticio. <a href="/bitacora/#laboratorio-de-innovacion-climatica">Ver en la bitácora →</a></p>
 
@@ -130,32 +130,40 @@
     </div>
   </main>
 
-  <!-- Video facade: reemplaza link por iframe al click -->
+  <!-- Video: al hacer clic, el link a YouTube se reemplaza por el reproductor. Sin JavaScript queda el link. -->
   <script>
-    (function(){
-      var el=document.getElementById('video-mVkys9sAv_c');
-      if(!el)return;
-      var a=el.querySelector('.video-facade-link');
-      if(!a)return;
-      a.removeAttribute('target');
-      a.removeAttribute('rel');
-      a.setAttribute('role','button');
-      a.addEventListener('click',function(e){
+    (function () {
+      var caja = document.getElementById('video-mVkys9sAv_c');
+      var link = caja && caja.querySelector('.video-facade-link');
+      if (!link) return;
+
+      // Con JavaScript ya no abre YouTube en otra pestaña: reproduce acá, y se anuncia como botón
+      link.removeAttribute('target');
+      link.removeAttribute('rel');
+      link.setAttribute('role', 'button');
+
+      function reproducir(e) {
         e.preventDefault();
-        var f=document.createElement('iframe');
-        f.src='https://www.youtube-nocookie.com/embed/mVkys9sAv_c?autoplay=1&rel=0';
-        f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture');
-        f.setAttribute('allowfullscreen','');
-        f.setAttribute('loading','lazy');
-        f.setAttribute('title',a.getAttribute('aria-label'));
-        f.className='video-facade-iframe';
-        el.replaceChild(f,a);
+        var video = document.createElement('iframe');
+        video.src = 'https://www.youtube-nocookie.com/embed/mVkys9sAv_c?autoplay=1&rel=0';
+        video.title = link.getAttribute('aria-label');
+        video.allow = 'autoplay; encrypted-media; picture-in-picture';
+        video.allowFullscreen = true;
+        video.className = 'video-facade-iframe';
+        caja.replaceChild(video, link);
+        video.focus();
+      }
+
+      link.addEventListener('click', reproducir);
+      // Un botón también se activa con la barra espaciadora
+      link.addEventListener('keydown', function (e) {
+        if (e.key === ' ') reproducir(e);
       });
     })();
   </script>
 
   <!-- FOOTER -->
-  <footer class="contacto" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <a href="mailto:nicolas.bronzina@gmail.com" class="footer-cta">Charlemos →</a>
       <p class="fundacion">Est. 2025</p>

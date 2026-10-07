@@ -1,16 +1,24 @@
 /* ============================================
    LAB DE MUNDANIDAD FORZADA
    Estética low-tech / señalética vernácula
+
+   Una sola hoja, sin paso de build. Orden: variables,
+   fuentes, base, piezas compartidas, cada página, impresión.
    ============================================ */
 
 :root {
   --coral: #E85D4A;
   --coral-dark: #C94A3A;
   --azul-electrico: #1E5EFF;
+  --azul-link: #0047AB;
   --crema: #F5EDE1;
   --crema-sucia: #E8DFD0;
   --negro: #1A1A1A;
+  --gris: #4A4A4A;
   --amarillo-aviso: #F2C94C;
+
+  --display: 'Archivo Black', sans-serif;
+  --texto: 'Space Grotesk', sans-serif;
 }
 
 /* ============================================
@@ -51,14 +59,17 @@
   font-display: swap;
 }
 
-/* RESET */
+/* ============================================
+   BASE
+   ============================================ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* BASE */
+/* 16px fijo y no 100%: con una letra más grande configurada en el navegador,
+   el logo, los títulos y la grilla de la bitácora se cortan. El zoom funciona. */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -71,7 +82,7 @@ html {
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--texto);
   background-color: var(--crema);
   color: var(--negro);
   line-height: 1.6;
@@ -80,7 +91,7 @@ body {
   overflow-x: hidden;
 }
 
-/* SKIP LINK - Accessibility */
+/* Saltar al contenido: aparece al llegar con el teclado */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -107,9 +118,11 @@ body {
   white-space: nowrap;
 }
 
-/* FOCUS STYLES - Accessibility */
-a:focus,
-button:focus,
+/* El foco se marca al llegar con el teclado, no con el mouse.
+   En un campo de formulario, siempre. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
 input:focus,
 textarea:focus,
 select:focus {
@@ -117,18 +130,7 @@ select:focus {
   outline-offset: 2px;
 }
 
-a:focus:not(:focus-visible),
-button:focus:not(:focus-visible) {
-  outline: none;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--azul-electrico);
-  outline-offset: 2px;
-}
-
-/* RUIDO DE IMPRESIÓN - overlay global */
+/* Ruido de impresión: overlay sobre todo el sitio */
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -138,108 +140,47 @@ button:focus-visible {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* CONTAINER */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* ============================================
-   HEADER / LOGO
-   ============================================ */
-.logo {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  color: var(--coral);
-  text-shadow: 4px 4px 0 var(--azul-electrico);
-  line-height: 0.9;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-}
-
-.logo span:nth-child(2) {
-  margin-left: 0.5rem;
-}
-
-.logo span:nth-child(3) {
-  margin-left: 1rem;
-}
-
-.pilar-card {
-  position: relative;
-}
-
-.pilar-card h3 {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  color: var(--negro);
-}
-
-.pilar-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.marcos-lista {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+/* Más angosto, para leer */
+.container-narrow {
+  max-width: 750px;
 }
 
 /* ============================================
-   CONTACTO / FOOTER
-   ============================================ */
-.contacto {
-  background-color: var(--negro);
-  color: var(--crema);
-  padding: 3rem 0;
-  margin-top: 2rem;
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 600px) {
-  .logo {
-    text-shadow: 3px 3px 0 var(--azul-electrico);
-  }
-
-  .logo span:nth-child(2),
-  .logo span:nth-child(3) {
-    margin-left: 0;
-  }
-}
-
-/* ============================================
-   MANIFIESTO PAGE
-   Página de lectura larga, más sobria
+   PIEZAS COMPARTIDAS
+   Lo que usa más de una página. Si se cambia acá,
+   cambia en todas.
    ============================================ */
 
-.manifiesto-page {
-  background-color: var(--crema);
-}
-
-/* Header compacto */
-.manifiesto-header {
+/* --- Header de las páginas internas --- */
+.site-header {
   padding: 1.5rem 0;
   border-bottom: 3px solid var(--negro);
 }
 
-.manifiesto-header .container {
+.site-header .container {
   display: flex;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
-a.logo-small {
+/* El logo chico. El de la home es .poster-logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  line-height: 0.9;
+  text-transform: uppercase;
   text-decoration: none;
   color: var(--coral);
+  text-shadow: 2px 2px 0 var(--azul-electrico);
 }
 
 .header-nav {
@@ -249,198 +190,39 @@ a.logo-small {
   margin-left: auto;
 }
 
-.header-nav a {
-  font-family: 'Archivo Black', sans-serif;
+/* --- Recuadro: caja de borde negro ---
+   Los links del header y "De dónde sale" en la bitácora */
+.header-nav a,
+.artefacto-origen summary {
+  font-family: var(--display);
   font-size: 0.75rem;
   text-transform: uppercase;
   color: var(--negro);
-  text-decoration: none;
   padding: 0.4rem 0.75rem;
   border: 2px solid var(--negro);
   transition: background-color 0.15s ease;
 }
 
-.header-nav a:hover {
-  background-color: var(--amarillo-aviso);
-}
-
-/* "page": la página actual. "true": su sección, cuando es una subpágina (el volante) */
-.header-nav a[aria-current="page"],
-.header-nav a[aria-current="true"] {
-  background-color: var(--negro);
-  color: var(--crema);
-}
-
-.logo-small {
-  font-size: clamp(1.2rem, 4vw, 1.6rem);
-  text-shadow: 2px 2px 0 var(--azul-electrico);
-}
-
-.logo-small span {
-  display: inline;
-}
-
-.logo-small span:nth-child(2),
-.logo-small span:nth-child(3) {
-  margin-left: 0;
-}
-
-/* Container más angosto para lectura */
-.container-narrow {
-  max-width: 750px;
-}
-
-/* Título principal */
-.manifiesto-title {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  color: var(--coral);
-  text-shadow: 4px 4px 0 var(--azul-electrico);
-  text-transform: uppercase;
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
-  transform: rotate(-1deg);
-  display: inline-block;
-}
-
-.documento-nota {
-  font-size: 0.9rem;
-  color: var(--negro);
-  opacity: 0.7;
-  margin-bottom: 3rem;
-  padding-left: 0.5rem;
-  border-left: 3px solid var(--coral);
-}
-
-/* Contenido del manifiesto */
-.manifiesto-content {
-  padding-bottom: 4rem;
-}
-
-.manifiesto-section {
-  margin-bottom: 4rem;
-}
-
-.manifiesto-content h2 {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: var(--coral);
-  text-shadow: 2px 2px 0 var(--azul-electrico);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid var(--negro);
-}
-
-.manifiesto-content h3 {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1.1rem;
-  color: var(--negro);
-  text-transform: uppercase;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.subtitulo-seccion {
-  font-style: italic;
-  color: var(--negro);
-  font-weight: 500;
-  margin-top: -1rem;
-  margin-bottom: 1.5rem;
-}
-
-.manifiesto-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1.25rem;
-}
-
-.manifiesto-content blockquote {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(1.3rem, 4vw, 1.8rem);
-  color: var(--negro);
-  background-color: var(--amarillo-aviso);
-  padding: 1.5rem 2rem;
-  margin: 2rem 0;
-  border-left: 6px solid var(--negro);
-  transform: rotate(-0.5deg);
-}
-
-.manifiesto-content ul {
-  margin: 1.5rem 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.manifiesto-content ul li {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  padding: 0.5rem 0 0.5rem 1.5rem;
-  border-left: 3px solid var(--azul-electrico);
-  margin-bottom: 0.5rem;
-}
-
-/* Pilar extendido */
-.pilar-extendido {
-  background-color: var(--crema-sucia);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border-left: 5px solid var(--coral);
-}
-
-.pilar-extendido h3 {
-  margin-top: 0;
-  color: var(--negro);
-}
-
-/* Marco teórico extendido */
-.marco-extendido {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: var(--negro);
-  color: var(--crema);
-}
-
-.marco-extendido h3 {
-  color: var(--amarillo-aviso);
-  margin-top: 0;
-}
-
-.marco-extendido p {
-  color: var(--crema);
-}
-
-.marco-extendido strong {
-  color: var(--coral);
-}
-
-/* Cierre */
-.manifiesto-cierre {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 3px solid var(--negro);
-}
-
-.volver-arriba {
-  display: inline-block;
-  margin-top: 3rem;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  color: var(--negro);
+.header-nav a {
   text-decoration: none;
-  border-bottom: 2px solid var(--coral);
-  padding-bottom: 0.25rem;
-  transition: border-color 0.15s ease;
 }
 
-.volver-arriba:hover {
-  border-color: var(--azul-electrico);
+.header-nav a:hover,
+.artefacto-origen summary:hover {
+  background-color: var(--amarillo-aviso);
 }
 
-/* Responsive manifiesto */
+/* Marcado: la página actual ("page"), la sección de una subpágina ("true")
+   y, en la bitácora, el contexto abierto */
+.header-nav a[aria-current="page"],
+.header-nav a[aria-current="true"],
+.artefacto-origen[open] summary {
+  background-color: var(--negro);
+  color: var(--crema);
+}
+
 @media (max-width: 600px) {
-  .manifiesto-header .container {
+  .site-header .container {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
@@ -454,33 +236,34 @@ a.logo-small {
     font-size: 0.65rem;
     padding: 0.3rem 0.5rem;
   }
-
-  .manifiesto-title {
-    transform: none;
-    margin-top: 2rem;
-  }
-
-  .manifiesto-content h2 {
-    text-shadow: 1px 1px 0 var(--azul-electrico);
-  }
-
-  .pilar-extendido,
-  .marco-extendido {
-    padding: 1rem;
-  }
-
-  .manifiesto-content blockquote {
-    transform: none;
-    padding: 1rem 1.25rem;
-  }
 }
 
-/* ============================================
-   FUNDACIÓN
-   ============================================ */
+/* --- Footer de las páginas internas --- */
+.site-footer {
+  background-color: var(--negro);
+  color: var(--crema);
+  padding: 3rem 0;
+  margin-top: 2rem;
+}
+
+/* "Charlemos →". También va en el footer del poster */
+.footer-cta {
+  font-family: var(--display);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--crema);
+  text-decoration: none;
+  border-bottom: 2px solid var(--coral);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.footer-cta:hover {
+  border-color: var(--azul-electrico);
+}
 
 .fundacion {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -498,42 +281,565 @@ a.logo-small {
   margin-top: 0.5rem;
 }
 
-.remiendo a {
+/* --- Links --- */
+
+/* Subrayado coral, del color del texto que lo rodea: notas y pies */
+.remiendo a,
+.documento-nota a,
+.poster-footer a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid var(--coral);
 }
 
-.remiendo a:hover {
+.remiendo a:hover,
+.documento-nota a:hover,
+.poster-footer a:hover {
   border-color: var(--azul-electrico);
 }
 
-.documento-nota a {
-  color: inherit;
+/* Azul y subrayado: links dentro de un texto */
+.entry-description a,
+.entry-link,
+.practica-como-funciona a,
+.practica-cta-alt a,
+.volante-acciones a,
+.volante-foto a,
+.practitioner-link {
+  color: var(--azul-link);
   text-decoration: none;
-  border-bottom: 1px solid var(--coral);
+  border-bottom: 1px solid var(--azul-link);
 }
 
-.documento-nota a:hover {
-  border-color: var(--azul-electrico);
+.entry-description a:hover,
+.entry-link:hover,
+.practica-como-funciona a:hover,
+.practica-cta-alt a:hover,
+.volante-acciones a:hover,
+.volante-foto a:hover {
+  color: var(--negro);
+  border-color: var(--negro);
 }
 
-/* ============================================
-   RED PAGE - Practitioners
-   ============================================ */
-
-.red-content {
-  padding-bottom: 4rem;
+.practitioner-link:hover {
+  color: var(--coral-dark);
+  border-color: var(--coral-dark);
 }
 
-.red-page-title {
-  font-family: 'Archivo Black', sans-serif;
+/* --- Botón sticker: caja amarilla con sombra negra ---
+   Links del poster, "Imprimir" del volante y sticker del mapa.
+   Tamaño, giro y movimiento van en cada uno. */
+.poster-tag,
+.volante-imprimir,
+.red-mapa-sumate {
+  font-family: var(--display);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--negro);
+  background-color: var(--amarillo-aviso);
+  border: 3px solid var(--negro);
+  box-shadow: 4px 4px 0 var(--negro);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.poster-tag:hover,
+.volante-imprimir:hover,
+.red-mapa-sumate:hover {
+  box-shadow: 6px 6px 0 var(--negro);
+}
+
+/* --- Pieza pegada: un artefacto, como una foto pegada sobre el papel ---
+   .artefacto-pieza en la bitácora y en prácticas; .poster-artefacto en la home. */
+.artefacto-pieza,
+.poster-artefacto {
+  position: relative;
+  display: block;
+  transition: transform 0.15s ease;
+}
+
+.artefacto-pieza::before,
+.poster-artefacto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--azul-electrico);
+  transform: translate(8px, 8px);
+  z-index: -1;
+}
+
+.artefacto-pieza img,
+.poster-artefacto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--negro);
+}
+
+/* --giro: hacia qué lado va inclinada. Al pasar el cursor se endereza */
+.artefacto-pieza {
+  margin-left: 0.25rem;
+  transform: rotate(var(--giro, -1.5deg));
+}
+
+.artefacto-pieza:hover {
+  transform: rotate(0deg);
+}
+
+/* --- Página de lista: bitácora, prácticas y volante ---
+   El footer queda abajo aunque el contenido sea corto (el alto mínimo viene de body). */
+.pagina {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina-contenido {
+  padding: 2rem 0 4rem;
+  flex: 1;
+}
+
+/* También es el título de la red */
+.pagina-titulo {
+  font-family: var(--display);
   font-size: clamp(2rem, 6vw, 3rem);
   color: var(--coral);
   text-shadow: 3px 3px 0 var(--azul-electrico);
   text-transform: uppercase;
-  margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+.pagina-intro {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-bottom: 3rem;
+}
+
+/* Segundo párrafo de la introducción: se pega al primero */
+.pagina-intro-sigue {
+  margin-top: -2rem;
+}
+
+/* --- Cierre con llamado: al final del manifiesto y de la bitácora --- */
+.cta-cierre {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cta-cierre .cta-link {
+  font-family: var(--display);
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--negro);
+  color: var(--crema);
+  border: 3px solid var(--negro);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.cta-cierre .cta-link:hover {
+  background-color: var(--azul-electrico);
+  border-color: var(--azul-electrico);
+}
+
+.cta-cierre .cta-descripcion {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+/* ============================================
+   HOME POSTER
+   Una sola pantalla, máximo impacto.
+   La 404 usa el mismo poster.
+   ============================================ */
+.home-poster {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  padding-left: 10vw;
+  gap: 2rem;
+}
+
+/* Logo gigante. El tamaño sale del ancho: "MUNDANIDAD" mide 7.64em
+   y tiene que entrar entera entre el margen izquierdo (10vw) y el derecho. */
+.poster-logo {
+  font-family: var(--display);
+  font-size: clamp(2.6rem, calc(11.3vw - 5px), 10rem);
+  color: var(--coral);
+  text-shadow: 6px 6px 0 var(--azul-electrico);
+  line-height: 0.85;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster-logo span:nth-child(2) {
+  margin-left: 0.3em;
+}
+
+.poster-logo span:nth-child(3) {
+  margin-left: 0.6em;
+}
+
+/* Declaración */
+.poster-declaracion {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  text-transform: uppercase;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+/* Frase */
+.poster-frase {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 500;
+  max-width: 500px;
+  line-height: 1.5;
+  margin-top: -1rem;
+  opacity: 0.7;
+}
+
+/* Links como tags. Caja amarilla: ver "Botón sticker" */
+.poster-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.poster-tag {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  padding: 0.75rem 1.25rem;
+}
+
+/* El primero y el último van en negro: Manifiesto y Bitácora */
+.poster-tag:first-child,
+.poster-tag:last-child {
+  background-color: var(--negro);
+  color: var(--crema);
+}
+
+.poster-tag:first-child {
+  transform: rotate(-1deg);
+}
+
+.poster-tag:last-child {
+  transform: rotate(1.5deg);
+}
+
+.poster-tag:hover {
+  transform: rotate(0deg) translate(-2px, -2px);
+}
+
+/* Footer mínimo */
+.poster-footer {
+  padding: 1.5rem 2rem 1.5rem 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.poster-est {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.poster-remiendo {
+  font-size: 0.8rem;
+}
+
+/* El último artefacto de la bitácora, pegado en el poster.
+   Sin epígrafe: los artefactos no se explican. */
+.poster-artefacto {
+  align-self: flex-end;
+  width: min(50%, 12rem);
+  margin: 0.5rem 0.75rem 0 0;
+  transform: rotate(2deg);
+}
+
+.poster-artefacto::before {
+  transition: transform 0.15s ease;
+}
+
+.poster-artefacto:hover {
+  transform: rotate(0deg) translate(-2px, -2px);
+}
+
+.poster-artefacto:hover::before {
+  transform: translate(11px, 11px);
+}
+
+/* Con lugar a la derecha, va abajo a la derecha y el poster sigue en una pantalla */
+@media (min-width: 1000px) {
+  .poster {
+    position: relative;
+  }
+
+  .poster-artefacto {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 1.5rem;
+    width: clamp(11rem, min(18vw, 29vh), 17rem);
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .poster {
+    padding: 1.5rem;
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
+
+  .poster-logo {
+    font-size: clamp(2rem, calc(13.1vw - 5px), 3.5rem);
+    text-shadow: 4px 4px 0 var(--azul-electrico);
+  }
+
+  .poster-logo span:nth-child(2),
+  .poster-logo span:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .poster-footer {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   DOCUMENTO
+   Manifiesto y marco teórico: páginas de lectura
+   larga, más sobrias.
+   ============================================ */
+.documento {
+  padding-bottom: 4rem;
+}
+
+.documento-titulo {
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  color: var(--coral);
+  text-shadow: 4px 4px 0 var(--azul-electrico);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+.documento-nota {
+  opacity: 0.7;
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--coral);
+}
+
+.documento-seccion {
+  margin-bottom: 4rem;
+}
+
+/* Texto corrido */
+.documento h2 {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--coral);
+  text-shadow: 2px 2px 0 var(--azul-electrico);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--negro);
+}
+
+.documento h3 {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.documento p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.subtitulo-seccion {
+  font-style: italic;
+  font-weight: 500;
+  margin-top: -1rem;
+}
+
+.documento blockquote {
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: var(--negro);
+  background-color: var(--amarillo-aviso);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border-left: 6px solid var(--negro);
+  transform: rotate(-0.5deg);
+}
+
+.documento ul {
+  margin: 1.5rem 0;
+  list-style: none;
+}
+
+.documento ul li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 3px solid var(--azul-electrico);
+  margin-bottom: 0.5rem;
+}
+
+/* Manifiesto: los cuatro pilares, en corto.
+   Van después de .documento h3 y .documento p: pesan lo mismo y gana el orden. */
+.pilar-card {
+  color: var(--negro);
+  background-color: var(--crema-sucia);
+  border-left: 4px solid var(--coral);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pilar-card h3 {
+  font-family: var(--display);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.pilar-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Manifiesto: marcos y principios, una caja por ítem */
+.marcos-lista li,
+.principios-lista li {
+  color: var(--negro);
+  background-color: var(--crema-sucia);
+}
+
+.marcos-lista li strong,
+.principios-lista li strong {
+  font-family: var(--display);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--negro);
+}
+
+.marcos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Marco teórico: pilar extendido */
+.pilar-extendido {
+  background-color: var(--crema-sucia);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--coral);
+}
+
+.pilar-extendido h3,
+.marco-extendido h3 {
+  margin-top: 0;
+}
+
+/* Marco teórico: cada autor, en negro */
+.marco-extendido {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--negro);
+  color: var(--crema);
+}
+
+.marco-extendido h3 {
+  color: var(--amarillo-aviso);
+}
+
+.marco-extendido strong {
+  color: var(--coral);
+}
+
+/* Manifiesto: cierre */
+.documento-cierre {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 3px solid var(--negro);
+}
+
+/* Marco teórico: volver arriba */
+.volver-arriba {
+  display: inline-block;
+  margin-top: 3rem;
+  font-family: var(--display);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  text-decoration: none;
+  border-bottom: 2px solid var(--coral);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.volver-arriba:hover {
+  border-color: var(--azul-electrico);
+}
+
+@media (max-width: 600px) {
+  .documento-titulo {
+    transform: none;
+    margin-top: 2rem;
+  }
+
+  .documento h2 {
+    text-shadow: 1px 1px 0 var(--azul-electrico);
+  }
+
+  .pilar-extendido,
+  .marco-extendido {
+    padding: 1rem;
+  }
+
+  .documento blockquote {
+    transform: none;
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* ============================================
+   RED - Fichas
+   ============================================ */
+.red-content {
+  padding-bottom: 4rem;
+}
+
+.red-encabezado .pagina-titulo {
+  margin-top: 3rem;
 }
 
 .red-intro-texto {
@@ -548,7 +854,7 @@ a.logo-small {
 }
 
 .practitioners-grupo-titulo {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -559,14 +865,20 @@ a.logo-small {
   margin-bottom: 1.5rem;
 }
 
+/* Una ficha. scroll-margin: aire arriba cuando se llega desde el mapa */
 .practitioner-card {
   display: flex;
   gap: 1.5rem;
   padding: 1.5rem;
+  color: var(--negro);
   background-color: var(--crema-sucia);
   border-left: 4px solid var(--coral);
   margin-bottom: 1rem;
-  color: var(--negro);
+  scroll-margin-top: 1.5rem;
+}
+
+.practitioner-card:target {
+  box-shadow: 8px 8px 0 var(--azul-electrico);
 }
 
 .practitioner-foto img {
@@ -577,15 +889,15 @@ a.logo-small {
 }
 
 .practitioner-nombre {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 1.1rem;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
 
-.practitioner-ubicacion {
+.practitioner-ubicacion,
+.practitioner-role {
   font-size: 0.9rem;
-  color: var(--negro);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -593,36 +905,12 @@ a.logo-small {
 .practitioner-bio {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: var(--negro);
-}
-
-.practitioner-role {
-  font-size: 0.9rem;
-  color: var(--negro);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
 }
 
 .practitioner-link {
   display: inline-block;
   margin-top: 0.5rem;
   font-size: 0.85rem;
-  color: #0047AB;
-  text-decoration: none;
-  border-bottom: 1px solid #0047AB;
-}
-
-.practitioner-link:hover {
-  color: var(--coral-dark);
-  border-color: var(--coral-dark);
-}
-
-/* Responsive red page */
-@media (max-width: 600px) {
-  .practitioner-card {
-    flex-direction: column;
-    gap: 1rem;
-  }
 }
 
 /* Diáspora: el azul es el color del desplazamiento.
@@ -635,13 +923,33 @@ a.logo-small {
   border-left-color: var(--azul-electrico);
 }
 
-/* Ficha a la que se llega desde el mapa */
-.practitioner-card {
-  scroll-margin-top: 1.5rem;
+/* Sumarse a la red */
+.red-cta {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  text-align: center;
 }
 
-.practitioner-card:target {
-  box-shadow: 8px 8px 0 var(--azul-electrico);
+.red-cta-link {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  text-decoration: none;
+  border-bottom: 3px solid var(--coral);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.red-cta-link:hover {
+  border-color: var(--azul-electrico);
+}
+
+@media (max-width: 600px) {
+  .practitioner-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 /* ============================================
@@ -727,7 +1035,7 @@ a.logo-small {
   left: 50%;
   bottom: calc(100% + 0.5rem);
   transform: translateX(calc(var(--x) * -1));
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 0.75rem;
   line-height: 1;
   letter-spacing: 0.06em;
@@ -773,28 +1081,20 @@ a.logo-small {
   top: calc(100% + 0.5rem);
 }
 
-/* Sticker: el punto que falta. Va sobre el Pacífico y su tamaño acompaña al del mapa */
+/* Sticker: el punto que falta. Va sobre el Pacífico y su tamaño acompaña al del mapa.
+   Caja amarilla: ver "Botón sticker" */
 .red-mapa-sumate {
   position: absolute;
   left: 0;
   top: 64%;
-  font-family: 'Archivo Black', sans-serif;
   font-size: clamp(0.6rem, 3.9cqw, 0.9rem);
   line-height: 1.15;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--negro);
-  background-color: var(--amarillo-aviso);
   padding: 0.5rem 0.65rem;
-  border: 3px solid var(--negro);
-  box-shadow: 4px 4px 0 var(--negro);
   transform: rotate(-2deg);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .red-mapa-sumate:hover {
   transform: rotate(0deg) translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--negro);
 }
 
 /* Desde 700px: la lista a la izquierda y el mapa a la derecha.
@@ -817,6 +1117,7 @@ a.logo-small {
     grid-row: 2;
   }
 
+  /* Solo adentro de la grilla: en cualquier otro lado sigue centrado */
   .red-cuerpo .red-cta {
     grid-column: 1;
     grid-row: 3;
@@ -839,419 +1140,45 @@ a.logo-small {
 
 /* Entre 700 y 899px la columna es angosta: la foto va arriba del texto */
 @media (min-width: 700px) and (max-width: 899px) {
-  .red-page .practitioner-card {
+  .red-grupos .practitioner-card {
     flex-direction: column;
     gap: 1rem;
   }
 }
 
 /* ============================================
-   HOME POSTER
-   Una sola pantalla, máximo impacto
-   ============================================ */
-.home-poster {
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-}
-
-.poster {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem;
-  padding-left: 10vw;
-  gap: 2rem;
-}
-
-/* Logo gigante. El tamaño sale del ancho: "MUNDANIDAD" mide 7.64em
-   y tiene que entrar entera entre el margen izquierdo (10vw) y el derecho. */
-.poster-logo {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(2.6rem, calc(11.3vw - 5px), 10rem);
-  color: var(--coral);
-  text-shadow: 6px 6px 0 var(--azul-electrico);
-  line-height: 0.85;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-}
-
-.poster-logo span:nth-child(2) {
-  margin-left: 0.3em;
-}
-
-.poster-logo span:nth-child(3) {
-  margin-left: 0.6em;
-}
-
-/* Declaración */
-.poster-declaracion {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(1.4rem, 4vw, 2.2rem);
-  color: var(--negro);
-  text-transform: uppercase;
-  line-height: 1.1;
-  max-width: 600px;
-}
-
-/* Frase */
-.poster-frase {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(1rem, 3vw, 1.4rem);
-  font-weight: 500;
-  color: var(--negro);
-  max-width: 500px;
-  line-height: 1.5;
-  margin-top: -1rem;
-  opacity: 0.7;
-}
-
-/* Links como tags */
-.poster-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.poster-tag {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--negro);
-  background-color: var(--amarillo-aviso);
-  padding: 0.75rem 1.25rem;
-  border: 3px solid var(--negro);
-  box-shadow: 4px 4px 0 var(--negro);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-/* Manifiesto: negro */
-.poster-tag:first-child {
-  background-color: var(--negro);
-  color: var(--crema);
-  transform: rotate(-1deg);
-}
-
-/* Bitácora: negro (contraste accesible) */
-.poster-tag:last-child {
-  background-color: var(--negro);
-  color: var(--crema);
-  transform: rotate(1.5deg);
-}
-
-.poster-tag:hover {
-  transform: rotate(0deg) translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--negro);
-}
-
-/* Footer mínimo */
-.poster-footer {
-  padding: 1.5rem 2rem 1.5rem 10vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-  color: var(--negro);
-  opacity: 0.7;
-}
-
-.poster-footer a {
-  color: var(--negro);
-  text-decoration: none;
-  border-bottom: 1px solid var(--coral);
-}
-
-.poster-footer a:hover {
-  border-color: var(--azul-electrico);
-}
-
-.poster-est {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.poster-remiendo {
-  font-size: 0.8rem;
-}
-
-/* El último artefacto de la bitácora, pegado en el poster.
-   Sin epígrafe: los artefactos no se explican. */
-.poster-artefacto {
-  position: relative;
-  display: block;
-  align-self: flex-end;
-  width: min(50%, 12rem);
-  margin: 0.5rem 0.75rem 0 0;
-  transform: rotate(2deg);
-  transition: transform 0.15s ease;
-}
-
-.poster-artefacto::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--azul-electrico);
-  transform: translate(8px, 8px);
-  z-index: -1;
-  transition: transform 0.15s ease;
-}
-
-.poster-artefacto img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 3px solid var(--negro);
-}
-
-.poster-artefacto:hover {
-  transform: rotate(0deg) translate(-2px, -2px);
-}
-
-.poster-artefacto:hover::before {
-  transform: translate(11px, 11px);
-}
-
-/* Con lugar a la derecha, va abajo a la derecha y el poster sigue en una pantalla */
-@media (min-width: 1000px) {
-  .poster {
-    position: relative;
-  }
-
-  .poster-artefacto {
-    position: absolute;
-    right: 2.5rem;
-    bottom: 1.5rem;
-    width: clamp(11rem, min(18vw, 29vh), 17rem);
-    margin: 0;
-  }
-}
-
-/* Responsive poster */
-@media (max-width: 600px) {
-  .poster {
-    padding: 1.5rem;
-    justify-content: flex-start;
-    padding-top: 10vh;
-  }
-
-  .poster-logo {
-    font-size: clamp(2rem, calc(13.1vw - 5px), 3.5rem);
-    text-shadow: 4px 4px 0 var(--azul-electrico);
-  }
-
-  .poster-logo span:nth-child(2),
-  .poster-logo span:nth-child(3) {
-    margin-left: 0;
-  }
-
-  .poster-footer {
-    padding: 1.5rem;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-}
-
-/* ============================================
-   MANIFIESTO CORTO - Elementos adicionales
-   ============================================ */
-
-/* Pilar card para manifiesto corto */
-.manifiesto-section .pilar-card {
-  background-color: var(--crema-sucia);
-  border-left: 4px solid var(--coral);
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.manifiesto-section .pilar-card::before {
-  display: none;
-}
-
-.manifiesto-section .pilar-card h3 {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: var(--negro);
-  margin-bottom: 0.5rem;
-}
-
-.manifiesto-section .pilar-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-  color: var(--negro);
-}
-
-/* Listas de marcos y principios */
-.marcos-lista,
-.principios-lista {
-  list-style: none;
-  padding: 0;
-}
-
-.marcos-lista li,
-.principios-lista li {
-  font-size: 1.1rem;
-  padding: 1rem;
-  padding-left: 1.5rem;
-  border-left: 3px solid var(--azul-electrico);
-  margin-bottom: 0.75rem;
-  background-color: var(--crema-sucia);
-  color: var(--negro);
-}
-
-.marcos-lista li strong,
-.principios-lista li strong {
-  font-family: 'Archivo Black', sans-serif;
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: var(--negro);
-  font-weight: 700;
-}
-
-/* CTA Marco Teórico */
-.cta-marco {
-  margin-top: 4rem;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.cta-marco .cta-link {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: var(--negro);
-  color: var(--crema);
-  border: 3px solid var(--negro);
-  transition: all 0.15s ease;
-}
-
-.cta-marco .cta-link:hover {
-  background-color: var(--azul-electrico);
-  border-color: var(--azul-electrico);
-}
-
-.cta-marco .cta-descripcion {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: #4A4A4A;
-}
-
-/* ============================================
-   FOOTER CTA
-   ============================================ */
-.footer-cta {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: var(--crema);
-  text-decoration: none;
-  border-bottom: 2px solid var(--coral);
-  padding-bottom: 0.25rem;
-  transition: border-color 0.15s ease;
-}
-
-.footer-cta:hover {
-  border-color: var(--azul-electrico);
-}
-
-/* ============================================
-   RED CTA - Sumarse a la red
-   ============================================ */
-.red-cta {
-  margin-top: 4rem;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.red-cta-link {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  color: var(--negro);
-  text-decoration: none;
-  border-bottom: 3px solid var(--coral);
-  padding-bottom: 0.25rem;
-  transition: border-color 0.15s ease;
-}
-
-.red-cta-link:hover {
-  border-color: var(--azul-electrico);
-}
-
-/* ============================================
    BITÁCORA
    ============================================ */
-.bitacora-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.bitacora-content {
-  padding: 2rem 0 4rem;
-  flex: 1;
-}
-
-.bitacora-title {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(2rem, 6vw, 3rem);
-  color: var(--coral);
-  text-shadow: 3px 3px 0 var(--azul-electrico);
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.bitacora-intro {
-  font-size: 1.1rem;
-  color: var(--negro);
-  opacity: 0.7;
-  margin-bottom: 3rem;
-}
-
-.bitacora-intro-cont {
-  margin-top: -2rem;
-}
-
 .bitacora-year {
   margin-bottom: 3rem;
 }
 
 .bitacora-year h2 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 1.5rem;
-  color: var(--negro);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--negro);
 }
 
+/* Una entrada. scroll-margin: aire arriba cuando se llega por un ancla.
+   Las clases .entry-* también arman la práctica, en /practicas/ */
 .bitacora-entry {
   margin-bottom: 2rem;
   padding-left: 1rem;
   border-left: 3px solid var(--azul-electrico);
+  scroll-margin-top: 1.5rem;
 }
 
 .entry-date {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #4A4A4A;
+  color: var(--gris);
 }
 
 .entry-title {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 1.1rem;
   text-transform: uppercase;
   margin: 0.25rem 0;
@@ -1259,7 +1186,6 @@ a.logo-small {
 
 .entry-author {
   font-size: 0.9rem;
-  color: var(--negro);
   margin-bottom: 0.5rem;
 }
 
@@ -1272,37 +1198,14 @@ a.logo-small {
   margin-top: 1rem;
 }
 
-.entry-description a {
-  color: #0047AB;
-  text-decoration: none;
-  border-bottom: 1px solid #0047AB;
-}
-
-.entry-description a:hover {
-  color: var(--negro);
-  border-color: var(--negro);
-}
-
 .entry-link {
   display: inline-block;
   margin-top: 0.5rem;
   font-size: 0.85rem;
-  color: #0047AB;
-  text-decoration: none;
-  border-bottom: 1px solid #0047AB;
-}
-
-.entry-link:hover {
-  color: var(--negro);
-  border-color: var(--negro);
 }
 
 /* Artefacto primero: la pieza se muestra sin explicación.
    El contexto queda plegado en "De dónde sale". */
-.bitacora-entry {
-  scroll-margin-top: 1.5rem;
-}
-
 .bitacora-artefacto {
   display: grid;
   gap: 1.5rem;
@@ -1311,57 +1214,24 @@ a.logo-small {
   border-left-color: transparent;
 }
 
-.artefacto-pieza {
-  position: relative;
-  display: block;
-  margin-left: 0.25rem;
-  transform: rotate(-1.5deg);
-  transition: transform 0.15s ease;
-}
-
 .bitacora-artefacto .artefacto-pieza {
   width: min(78%, 19rem);
 }
 
-.bitacora-artefacto:nth-of-type(even) .artefacto-pieza {
-  transform: rotate(1.5deg);
-}
-
-.artefacto-pieza::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--azul-electrico);
-  transform: translate(8px, 8px);
-  z-index: -1;
-}
-
-.artefacto-pieza img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 3px solid var(--negro);
-}
-
-.artefacto-pieza:hover {
-  transform: rotate(0deg);
+/* Dentro de un año, los artefactos se inclinan una vez para cada lado */
+.bitacora-artefacto:nth-child(even of .bitacora-artefacto) .artefacto-pieza {
+  --giro: 1.5deg;
 }
 
 .artefacto-origen {
   margin-top: 0.75rem;
 }
 
+/* Caja: ver "Recuadro" */
 .artefacto-origen summary {
   display: inline-block;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: var(--negro);
-  padding: 0.4rem 0.75rem;
-  border: 2px solid var(--negro);
   cursor: pointer;
   list-style: none;
-  transition: background-color 0.15s ease;
 }
 
 .artefacto-origen summary::-webkit-details-marker {
@@ -1372,20 +1242,6 @@ a.logo-small {
 .artefacto-origen summary::after {
   content: ' +';
   content: ' +' / '';
-}
-
-.artefacto-origen summary:hover {
-  background-color: var(--amarillo-aviso);
-}
-
-.artefacto-origen summary:focus-visible {
-  outline: 2px solid var(--azul-electrico);
-  outline-offset: 2px;
-}
-
-.artefacto-origen[open] summary {
-  color: var(--crema);
-  background-color: var(--negro);
 }
 
 .artefacto-origen[open] summary::after {
@@ -1425,10 +1281,9 @@ a.logo-small {
 }
 
 .practica-seccion-titulo {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 1.25rem;
   text-transform: uppercase;
-  color: var(--negro);
   margin-bottom: 1rem;
 }
 
@@ -1436,17 +1291,6 @@ a.logo-small {
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 0.75rem;
-}
-
-.practica-como-funciona a {
-  color: #0047AB;
-  text-decoration: none;
-  border-bottom: 1px solid #0047AB;
-}
-
-.practica-como-funciona a:hover {
-  color: var(--negro);
-  border-color: var(--negro);
 }
 
 .practica-separador {
@@ -1463,7 +1307,7 @@ a.logo-small {
 
 /* Coral oscuro y cuerpo de título: el coral pleno sobre crema da 2.97:1 */
 .practica-lead {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--coral-dark);
@@ -1471,15 +1315,15 @@ a.logo-small {
 }
 
 .practica-subtitulo {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 0.95rem;
   text-transform: uppercase;
-  color: var(--negro);
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* El ejemplo y las respuestas son artefactos: van pegados como en la bitácora */
+/* El ejemplo y las respuestas son artefactos: van pegados como en la bitácora.
+   Están dentro de .entry-description, donde los links llevan subrayado: acá no. */
 .practica .artefacto-pieza {
   width: min(88%, 26rem);
   margin-top: 1rem;
@@ -1488,15 +1332,11 @@ a.logo-small {
 }
 
 .practica .practica-respuesta {
+  --giro: 1.5deg;
   width: min(60%, 15rem);
-  transform: rotate(1.5deg);
 }
 
-.practica .artefacto-pieza:hover {
-  transform: rotate(0deg);
-}
-
-/* Video facade */
+/* Video: una imagen con link que, al hacer clic, se reemplaza por el reproductor */
 .video-facade {
   position: relative;
   margin: 1.5rem 0 0.5rem;
@@ -1509,6 +1349,10 @@ a.logo-small {
   aspect-ratio: 16 / 9;
   width: 100%;
   cursor: pointer;
+}
+
+.entry-description .video-facade-link {
+  border-bottom: 0;
 }
 
 .video-facade-thumb {
@@ -1530,6 +1374,7 @@ a.logo-small {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+/* La pone el script de la página cuando arranca el video */
 .video-facade-iframe {
   display: block;
   width: 100%;
@@ -1545,7 +1390,7 @@ a.logo-small {
 
 .video-facade-credit {
   font-size: 0.8rem;
-  color: #4A4A4A;
+  color: var(--gris);
   margin-bottom: 1rem;
 }
 
@@ -1553,53 +1398,34 @@ a.logo-small {
   margin: 1rem 0;
 }
 
+/* Botón de enviar: negro sobre coral (5:1) */
 .practica-cta-boton {
   display: inline-block;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 1rem;
   text-transform: uppercase;
-  color: var(--crema);
-  background-color: var(--coral);
   text-decoration: none;
+  color: var(--negro);
+  background-color: var(--coral);
   padding: 0.75rem 1.5rem;
   transition: background-color 0.15s ease;
 }
 
 .practica-cta-boton:hover {
-  background-color: var(--coral-dark);
+  background-color: var(--amarillo-aviso);
 }
 
-/* Dentro de .entry-description los links son azules y subrayados.
-   El botón y las imágenes con link no: negro sobre coral da 5:1. */
+/* Dentro de .entry-description los links son azules y subrayados: el botón no */
 .entry-description .practica-cta-boton,
 .entry-description .practica-cta-boton:hover {
   color: var(--negro);
   border-bottom: 0;
 }
 
-.entry-description .practica-cta-boton:hover {
-  background-color: var(--amarillo-aviso);
-}
-
-.entry-description .video-facade-link {
-  border-bottom: 0;
-}
-
 .practica-cta-alt {
   font-size: 0.85rem;
-  color: #4A4A4A;
+  color: var(--gris);
   margin-top: 0.5rem;
-}
-
-.practica-cta-alt a {
-  color: #0047AB;
-  text-decoration: none;
-  border-bottom: 1px solid #0047AB;
-}
-
-.practica-cta-alt a:hover {
-  color: var(--negro);
-  border-color: var(--negro);
 }
 
 /* ============================================
@@ -1618,35 +1444,15 @@ a.logo-small {
   font-size: 0.95rem;
 }
 
-.volante-acciones a,
-.volante-foto a {
-  color: #0047AB;
-  text-decoration: none;
-  border-bottom: 1px solid #0047AB;
-}
-
-.volante-acciones a:hover,
-.volante-foto a:hover {
-  color: var(--negro);
-  border-color: var(--negro);
-}
-
+/* Caja amarilla: ver "Botón sticker" */
 .volante-imprimir {
-  font-family: 'Archivo Black', sans-serif;
   font-size: 1rem;
-  text-transform: uppercase;
-  color: var(--negro);
-  background-color: var(--amarillo-aviso);
   padding: 0.75rem 1.5rem;
-  border: 3px solid var(--negro);
-  box-shadow: 4px 4px 0 var(--negro);
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .volante-imprimir:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--negro);
 }
 
 .volante-foto {
@@ -1654,7 +1460,7 @@ a.logo-small {
   margin-bottom: 2.5rem;
 }
 
-/* La hoja */
+/* La hoja. Negro y blanco puros: es lo que sale de la impresora */
 .hoja {
   container-type: size;
   display: flex;
@@ -1683,7 +1489,7 @@ a.logo-small {
   display: flex;
   flex-direction: column;
   gap: 0.9cqw;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   line-height: 0.92;
   text-transform: uppercase;
   white-space: nowrap;
@@ -1733,7 +1539,7 @@ a.logo-small {
 }
 
 .hoja-url {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: var(--display);
   font-size: 3.4cqw;
   line-height: 1;
   white-space: nowrap;
@@ -1790,8 +1596,8 @@ a.logo-small {
     background-color: #fff;
   }
 
-  .volante-page .manifiesto-header,
-  .volante-page .contacto,
+  .volante-page .site-header,
+  .volante-page .site-footer,
   .volante-instrucciones {
     display: none;
   }

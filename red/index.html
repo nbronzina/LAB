@@ -34,22 +34,22 @@
   <meta name="theme-color" content="#E85D4A">
   <link rel="preload" href="../fonts/archivo-black-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/space-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=2">
 </head>
-<body class="red-page">
+<body>
   <a href="#main" class="skip-link">Saltar al contenido</a>
 
   <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- HEADER COMPACTO -->
-  <header class="manifiesto-header" role="banner">
+  <header class="site-header">
     <div class="container">
-      <a href="/" class="logo logo-small">
+      <a href="/" class="logo">
         <span>Lab de</span>
         <span>Mundanidad</span>
         <span>Forzada</span>
       </a>
-      <nav class="header-nav" role="navigation" aria-label="Principal">
+      <nav class="header-nav" aria-label="Principal">
         <a href="/manifiesto/">Manifiesto</a>
         <a href="/red/" aria-current="page">La red</a>
         <a href="/practicas/">Prácticas</a>
@@ -59,11 +59,11 @@
   </header>
 
   <!-- CONTENIDO -->
-  <main id="main" class="red-content" role="main">
+  <main id="main" class="red-content">
     <div class="container red-cuerpo">
 
       <div class="red-encabezado">
-        <h1 class="red-page-title">La Red</h1>
+        <h1 class="pagina-titulo">La Red</h1>
         <p class="red-intro-texto">
           Red distribuida de practitioners conectados metodológicamente. El ancla es Latinoamérica — algunos trabajamos desde la diáspora.
         </p>
@@ -89,9 +89,9 @@
 
           <article class="practitioner-card" id="miriam-latorre">
             <div class="practitioner-foto">
-              <img src="../img/miriam-latorre.webp" alt="Miriam Latorre" class="practitioner-img" width="80" height="80" loading="lazy" decoding="async">
+              <img src="../img/miriam-latorre.webp" alt="Miriam Latorre" width="80" height="80" loading="lazy" decoding="async">
             </div>
-            <div class="practitioner-info">
+            <div>
               <h3 class="practitioner-nombre">Miriam Latorre</h3>
               <p class="practitioner-ubicacion">Chivilcoy, Argentina</p>
               <p class="practitioner-role">LX Design | Design Fiction | Worldbuilding</p>
@@ -102,9 +102,9 @@
 
           <article class="practitioner-card" id="israel-viadest">
             <div class="practitioner-foto">
-              <img src="../img/israel-viadest.webp" alt="Israel Viadest" class="practitioner-img" width="80" height="80" loading="lazy" decoding="async">
+              <img src="../img/israel-viadest.webp" alt="Israel Viadest" width="80" height="80" loading="lazy" decoding="async">
             </div>
-            <div class="practitioner-info">
+            <div>
               <h3 class="practitioner-nombre">Israel Viadest</h3>
               <p class="practitioner-ubicacion">Querétaro, México</p>
               <p class="practitioner-role">Arte y tecnología | Design Fiction | Futuros posibles</p>
@@ -121,9 +121,9 @@
 
           <article class="practitioner-card" id="nicolas-bronzina">
             <div class="practitioner-foto">
-              <img src="../img/nicolas-bronzina.webp" alt="Nicolás Bronzina" class="practitioner-img" width="80" height="80" loading="lazy" decoding="async">
+              <img src="../img/nicolas-bronzina.webp" alt="Nicolás Bronzina" width="80" height="80" loading="lazy" decoding="async">
             </div>
-            <div class="practitioner-info">
+            <div>
               <h3 class="practitioner-nombre">Nicolás Bronzina</h3>
               <p class="practitioner-ubicacion">Buenos Aires → Madrid</p>
               <p class="practitioner-role">Futures Design | Sociología | IA</p>
@@ -134,9 +134,9 @@
 
           <article class="practitioner-card" id="jorge-de-la-mora">
             <div class="practitioner-foto">
-              <img src="../img/jorge-de-la-mora.webp" alt="Jorge De la Mora" class="practitioner-img" width="80" height="80" loading="lazy" decoding="async">
+              <img src="../img/jorge-de-la-mora.webp" alt="Jorge De la Mora" width="80" height="80" loading="lazy" decoding="async">
             </div>
-            <div class="practitioner-info">
+            <div>
               <h3 class="practitioner-nombre">Jorge De la Mora</h3>
               <p class="practitioner-ubicacion">Monterrey → Valencia</p>
               <p class="practitioner-role">Strategic Foresight | Design Research | IA</p>
@@ -147,9 +147,9 @@
 
           <article class="practitioner-card" id="renan-gastaldy">
             <div class="practitioner-foto">
-              <img src="../img/renan-gastaldy.webp" alt="Renan Gastaldy" class="practitioner-img" width="80" height="80" loading="lazy" decoding="async">
+              <img src="../img/renan-gastaldy.webp" alt="Renan Gastaldy" width="80" height="80" loading="lazy" decoding="async">
             </div>
-            <div class="practitioner-info">
+            <div>
               <h3 class="practitioner-nombre">Renan Gastaldy</h3>
               <p class="practitioner-ubicacion">São Paulo → Valencia</p>
               <p class="practitioner-role">Brand Design | Digital | Diseño Especulativo</p>
@@ -173,7 +173,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="contacto" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <a href="mailto:nicolas.bronzina@gmail.com" class="footer-cta">Charlemos →</a>
       <p class="fundacion">Est. 2025</p>
