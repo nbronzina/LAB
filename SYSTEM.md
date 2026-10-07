@@ -97,6 +97,7 @@ El sistema vive en el gap entre "chatear con IA" y "tener artefactos funcionales
 | `BRAND.md` | Sistema de marca |
 | `SITE-STRUCTURE.md` | Estructura del sitio |
 | `DECISIONS.md` | Log de decisiones con razones |
+| `STATUS.md` | Estado del sitio y pendientes |
 | `IMPRENTA.md` | Brief base para Claude Code |
 | `SYSTEM.md` | Este documento |
 | `BRIEF-*.md` | Briefs delta para tareas específicas |
@@ -156,6 +157,28 @@ El sistema vive en el gap entre "chatear con IA" y "tener artefactos funcionales
 5. Brief delta a Imprenta (o Alambre actualiza docs directamente si no hay código)
 ```
 
+### Prototipo como PR
+
+Desde octubre 2026 hay una variante. Cuando para mostrarle algo al Iniciador hace falta verlo andando, Alambre arma el prototipo en una rama, sobre el CSS real, y le muestra capturas.
+
+```
+1. Alambre arma el prototipo en una rama y lo prueba
+         │
+         ▼
+2. Iniciador mira capturas y decide qué entra
+         │
+         ▼
+3. Alambre abre el PR con el código, los docs al día y un brief delta que dice qué trae
+         │
+         ▼
+4. Iniciador mergea (mergear es publicar)
+         │
+         ▼
+5. Imprenta revisa lo publicado y lo mantiene con las recetas de IMPRENTA.md
+```
+
+Nada se sube antes del paso 2 y nada se publica sin el paso 4.
+
 ---
 
 ## Principios
@@ -201,7 +224,7 @@ Como cualquier software, este sistema se refina con el uso. Bugs en el flujo se 
 Este sistema es v1. Posibles evoluciones:
 
 - [ ] Imprenta tiene acceso directo a /docs en el repo (no necesita que se le pasen)
-- [ ] Alambre puede commitear directamente a /docs
+- [x] Alambre puede commitear a /docs y entregar prototipos, siempre por PR (octubre 2026)
 - [ ] Otros miembros del Lab tienen sus propios Alambres configurados
 - [ ] El sistema se documenta como metodología replicable para otros colectivos
 

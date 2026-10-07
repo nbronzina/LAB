@@ -382,6 +382,105 @@
 
 ---
 
+## 2026-10-07 — Sitio: que haga lo que dice
+
+Una sola idea para toda la actualización: que el sitio haga lo que el manifiesto dice.
+
+### Decisión: En la bitácora, el artefacto va primero
+
+**Contexto:** La bitácora era una lista de texto. El afiche de Miriam estaba descripto y no se veía: para verlo había que salir del sitio.
+
+**Decisión:** Las entradas que son artefactos muestran la pieza, el nombre que la propia pieza lleva y el crédito. El contexto queda plegado bajo "De dónde sale". Las demás entradas (estado del Lab, tutorías, talleres) siguen como estaban.
+
+**Razón:** Es "los artefactos no se explican" aplicado al sitio: primero se encuentra la pieza y el contexto lo abre quien quiere. Cumple lo que la bitácora se propuso en enero: mostrar que el Lab produce, no solo teoriza.
+
+---
+
+### Decisión: La home lleva pegado el último artefacto
+
+**Contexto:** La home decía qué hace el Lab y no mostraba nada hecho.
+
+**Opciones consideradas:**
+1. Dejar el poster solo con texto
+2. Una galería o un carrusel
+3. Una sola pieza, la última de la bitácora, pegada sobre el poster
+
+**Decisión:** Opción 3. Sin epígrafe. Es un link a su entrada en la bitácora y se cambia cuando entra un artefacto nuevo.
+
+**Razón:** El poster sigue siendo una pantalla (decisión de enero) y suma la prueba de lo que dice. Una pieza sola se mira. Una galería se pasa de largo.
+
+---
+
+### Decisión: El cartel de servicio técnico es la primera respuesta a la Práctica #01
+
+**Contexto:** La práctica llevaba meses con "Todavía no hay respuestas publicadas". El cartel ya era público: es la segunda placa del post fijado de Instagram.
+
+**Decisión:** Entra a la bitácora (octubre 2026), a la home y a "Respuestas" en `/practicas/`, con crédito de Nicolás. El texto de "De dónde sale" son dos frases del texto del post, que ya estaban validadas. Aclara que la imagen está hecha con IA generativa.
+
+**Razón:** Una convocatoria vacía no invita. Quien inicia responde primero.
+
+---
+
+### Decisión: Volante para imprimir
+
+**Contexto:** La Práctica #01 circuló por LinkedIn e Instagram y no tuvo respuestas.
+
+**Decisión:** `/practicas/volante/`: una hoja A4 o carta, a una tinta, con la pregunta, la consigna en tres párrafos cortos, un QR y tiras para arrancar. Cada persona de la red la imprime y la pega donde vive.
+
+**Razón:** Los volantes callejeros son referencia del sistema de marca desde enero y hasta ahora no había ninguno. Saca la práctica de las redes y la lleva al lugar desde donde se pide responder. Cada volante pegado es además una foto para la bitácora.
+
+---
+
+### Decisión: "MUNDANIDAD" entra completa
+
+**Contexto:** Estaba en pendientes: entre 601 y unos 1420 px de ancho la palabra se cortaba por la derecha. A 1280 px se leía "MUNDANIDA".
+
+**Decisión:** Es un bug y se corrige. El tamaño del logo sale del ancho de la ventana: `clamp(2.6rem, calc(11.3vw - 5px), 10rem)`. En la home el logo pasa a ser el `<h1>` de la página, que no tenía.
+
+**Razón:** Un sangrado deliberado no deja la palabra a una letra de terminar.
+
+---
+
+### Decisión: Archivo Black sin negrita sintética
+
+**Contexto:** Archivo Black tiene un solo peso. Los `h1`, `h2` y `h3` piden negrita y el navegador la inventaba engrosando la letra. Los títulos de las páginas internas se veían más gordos y empastados que el logo de la home.
+
+**Decisión:** La fuente se declara para todo el rango de pesos: `font-weight: 400 900`.
+
+**Razón:** Los títulos vuelven a verse como la marca. Es una línea de CSS.
+
+---
+
+### Decisión: En Prácticas, texto negro sobre coral
+
+**Contexto:** El botón "Enviar respuesta" heredaba el azul de los links: azul sobre coral, contraste 2.4:1. La pregunta de la práctica iba en coral sobre crema, 2.97:1.
+
+**Decisión:** El botón lleva texto negro (5:1). La pregunta va en coral oscuro y un punto más grande.
+
+**Razón:** Es el botón por el que entra una respuesta. `BRAND.md` ya indicaba coral oscuro para texto coral sobre fondos claros.
+
+---
+
+### Decisión: El mapa de la red con nombres e hilos, no
+
+**Contexto:** Alambre propuso abrir `/red/` con el continente de la marca como mapa: el nombre de cada persona sobre su ciudad de origen y un hilo azul hasta donde vive hoy.
+
+**Decisión:** No en esa forma. `/red/` queda como estaba.
+
+**Razón:** Nicolás: "Ahora somos 5 pero si se suman más queda feo." Con quince personas los nombres se pisan y los hilos hacia Europa se vuelven una maraña. Un mapa de la red tiene que aguantar que la red crezca. Queda en pendientes una versión con un punto por persona, sin nombres ni hilos.
+
+---
+
+### Decisión: Alambre puede entregar un prototipo como PR
+
+**Contexto:** El flujo era: Alambre escribe el brief, Imprenta codea. Para esta actualización Alambre armó el prototipo sobre el CSS real, para poder mostrarle capturas a Nicolás antes de decidir.
+
+**Decisión:** Cuando el prototipo ya está hecho y probado, entra como PR. Imprenta lo revisa y lo mantiene, y sigue ejecutando los briefs.
+
+**Razón:** Reescribir como brief algo que ya funciona es trabajo doble. El límite no cambia: nada se publica sin que Nicolás lo valide.
+
+---
+
 ## Decisiones Pendientes
 
 - [x] Dominio propio → `mundanidadforzada.org` está activo (ver `CNAME`)
@@ -391,7 +490,11 @@
 - [x] ¿Agregar año de fundación en algún lugar visible? → Decidido: sí, en footer ("Est. 2025")
 - [ ] ¿El continente entra al header (`.logo-small`) o al poster de la home? Hoy es solo ícono
 - [ ] Retirar `img/lab-icon.png` (ícono anterior, 1 MB, sin referencias en el sitio) cuando los avatares de redes estén cambiados
-- [ ] En la home, "MUNDANIDAD" se corta por la derecha entre 601 y unos 1420 px de ancho de ventana. ¿Sangrado intencional del poster o bug?
+- [x] En la home, "MUNDANIDAD" se cortaba por la derecha entre 601 y unos 1420 px → bug, corregido el 7 oct 2026
+- [ ] La descripción de la red nombra Uruguay ("Argentina, Brasil, México, Uruguay y contando") y en `/red/` no hay nadie de Uruguay
+- [ ] Mapa de la red, segunda versión: un punto por persona sobre el continente, sin nombres ni hilos. Alambre la muestra probada con treinta puntos
+- [ ] Remiendo al pie: "Último remiendo:" con la fecha en cada página y, si Nicolás quiere, un link al historial de cambios en GitHub. Está explicado y falta su decisión: con link, solo la fecha, o nada
+- [ ] Imprimir el volante desde Firefox y Safari. Se probó en Chromium, en A4 y en carta
 
 ---
 

@@ -49,8 +49,9 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 | Archivo | Contenido |
 |---------|-----------|
 | `BRAND.md` | Sistema de marca completo (colores, tipografía, principios) |
-| `SITE-STRUCTURE.md` | Estructura del sitio (páginas, secciones, navegación) |
+| `SITE-STRUCTURE.md` | Estructura del sitio (páginas, componentes, anclas, imágenes) |
 | `DECISIONS.md` | Log de decisiones con razones |
+| `STATUS.md` | Estado del sitio y pendientes |
 | `SYSTEM.md` | Cómo funciona el sistema Iniciador → Alambre → Imprenta |
 | `IMPRENTA.md` | Este documento |
 | `BRIEF-*.md` | Briefs delta para tareas específicas |
@@ -62,10 +63,10 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 ### Stack
 
 - HTML + CSS puro
-- JavaScript: mínimo o cero
-- Sin frameworks
-- Optimizado para GitHub Pages
-- Sin dependencias externas excepto Google Fonts
+- JavaScript: mínimo o cero. Hoy hay dos usos: la fachada del video en `/practicas/` y el botón "Imprimir" del volante
+- Sin frameworks ni paso de build
+- Optimizado para GitHub Pages. Se publica desde la rama por defecto: mergear es publicar
+- Sin dependencias externas. Las fuentes son locales
 
 ### Colores
 
@@ -85,7 +86,8 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 
 - **Display:** Archivo Black (títulos, logo)
 - **Cuerpo:** Space Grotesk (textos, navegación)
-- Fuente: Google Fonts
+- Fuente: archivos locales en `/fonts` (woff2). Sin Google Fonts
+- Archivo Black tiene un solo peso y se declara con `font-weight: 400 900`. No lo cambies: evita la negrita sintética en los títulos
 
 ### Elementos recurrentes
 
@@ -99,6 +101,8 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 
 - Breakpoint principal: 600px
 - Mobile-first approach
+- Otros cortes (700, 900 y 1000 px): ver `SITE-STRUCTURE.md`
+- Antes de dar algo por terminado, miralo a 390 px y a 1440 px
 
 ---
 
@@ -148,20 +152,51 @@ Crear página de proyectos
 
 ```
 /
-├── index.html          # Landing page (gancho)
-├── manifiesto.html     # Documento completo del Lab
-├── red.html            # Practitioners
-├── style.css           # Estilos compartidos
-├── favicon-16.png      # Favicon 16x16
-├── favicon-32.png      # Favicon 32x32
-├── apple-touch-icon.png # Ícono iOS
-├── og-image.png        # Open Graph image
-├── BRAND.md            # Sistema de marca
-├── SITE-STRUCTURE.md   # Estructura del sitio
-├── DECISIONS.md        # Log de decisiones
-├── SYSTEM.md           # Sistema de trabajo
-└── IMPRENTA.md         # Este archivo
+├── index.html              # Home: poster
+├── manifiesto/index.html   # Manifiesto
+├── marco/index.html        # Marco teórico
+├── red/index.html          # La red: fichas
+├── practicas/index.html    # Prácticas
+├── practicas/volante/index.html  # Volante para imprimir
+├── bitacora/index.html     # Bitácora
+├── 404.html                # Página no encontrada
+├── style.css               # Estilos compartidos (único CSS)
+├── fonts/                  # Archivo Black y Space Grotesk (woff2)
+├── img/                    # Fotos de fichas, artefactos, miniatura del video
+├── img/marca/              # Logo, continente, avatares. No se editan a mano
+├── favicon.svg, favicon-16.png, favicon-32.png, apple-touch-icon.png
+├── og-image.png            # Imagen para redes (1200x630)
+├── sitemap.xml, robots.txt, CNAME
+├── BRAND.md, SITE-STRUCTURE.md, DECISIONS.md, STATUS.md, SYSTEM.md
+├── IMPRENTA.md             # Este archivo
+└── BRIEF-*.md              # Briefs delta
 ```
+
+---
+
+## Recetas
+
+Tareas que se repiten. No hace falta un brief para hacerlas, sí que Nicolás las pida.
+
+### Publicar un artefacto
+
+1. **Imágenes.** Tres archivos WebP en `img/`: el completo (`artefacto-<nombre>.webp`, hasta unos 1100 px de ancho, calidad 80) y dos reducidos (`-640.webp` y `-480.webp`, calidad 74 a 76). Sin fechas ni la palabra "ficción" en el nombre del archivo.
+2. **Bitácora.** Un `article.bitacora-entry.bitacora-artefacto` con `id`, arriba de todo en su año. Copiá la estructura de `#servicio-tecnico`. El `h3` es el nombre que la propia pieza lleva. El `alt` describe lo que se ve. El contexto, el título del proyecto y los links van adentro de `details.artefacto-origen`.
+3. **Home.** Cambiá la imagen y el link de `.poster-artefacto` por los del artefacto nuevo. La home muestra siempre el último.
+4. **Prácticas.** Si es respuesta a una práctica, sumala en "Respuestas" de esa práctica, con crédito y link a su ancla en la bitácora.
+5. **Sitemap.** Actualizá el `lastmod` de las páginas que tocaste.
+
+El texto de "De dónde sale" lo escribe Alambre y lo valida Nicolás. Si no lo tenés, pedilo.
+
+### Sumar una persona a la red
+
+Un `article.practitioner-card` nuevo en `/red/`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. La ficha necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP. Actualizá el `lastmod` de `/red/` en `sitemap.xml`.
+
+### Abrir una práctica nueva
+
+1. Un `article.practica` nuevo en `/practicas/`, arriba de la anterior.
+2. Su volante: copiá `practicas/volante/` a una carpeta nueva, cambiá la pregunta y la consigna, y volvé a medir las tres líneas de la pregunta para que lleguen justo al ancho de la hoja (ver el comentario en `style.css`, sección "VOLANTE"). El QR actual apunta a `/practicas/` y sirve igual.
+3. El copy lo trae un brief.
 
 ---
 

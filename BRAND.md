@@ -74,6 +74,19 @@ La identidad del Lab no aspira a la legitimidad académica o institucional. En v
 - **Crema sobre Azul** — Variación energética
 - **Crema sobre Coral** — Secciones destacadas
 
+### Contraste
+
+Medido contra WCAG. Vale para cualquier texto que haya que leer, no para los títulos grandes con sombra.
+
+| Combinación | Contraste | Uso |
+|-------------|-----------|-----|
+| Negro sobre coral | 5:1 | Botones y texto sobre coral |
+| Crema sobre negro | 15:1 | Rótulos, footer |
+| Coral oscuro sobre crema | 4:1 | Texto coral desde 19 px en Archivo Black |
+| Coral sobre crema | 2.97:1 | Solo títulos grandes con sombra azul |
+| Crema sobre coral | 2.97:1 | Solo títulos grandes. Nunca texto chico ni botones |
+| Azul de link sobre coral | 2.4:1 | No se usa |
+
 ---
 
 ## Tipografía
@@ -83,6 +96,7 @@ La identidad del Lab no aspira a la legitimidad académica o institucional. En v
 - **Uso:** Títulos, headlines, logo
 - **Tratamiento:** Siempre en mayúsculas o capitalización agresiva. Con drop shadow en azul eléctrico para máximo impacto
 - **Fuente:** archivos locales en `/fonts` (woff2). Sin Google Fonts
+- **Peso:** tiene uno solo. El `@font-face` lo declara para todo el rango (`font-weight: 400 900`) para que el navegador no le invente una negrita encima en títulos y `strong`
 
 ### Cuerpo: Space Grotesk
 
@@ -243,6 +257,48 @@ Fondo amarillo, ligeramente rotado, para highlights.
 
 Elementos ligeramente rotados (-2° a +2°) para romper la rigidez.
 
+### Pieza pegada
+
+Así se muestra un artefacto en el sitio (home, bitácora, prácticas): como una foto pegada sobre el papel.
+
+- Borde negro de 3 px
+- Caja offset azul de 8 px, abajo a la derecha
+- Rotación de 1.5° a 2°, hacia un lado o hacia el otro
+- Sin epígrafe encima ni al lado. El nombre que lleva es el que la propia pieza dice ("Servicio técnico")
+- Al pasar el cursor se endereza
+
+```css
+.artefacto-pieza {
+  position: relative;
+  display: block;
+  transform: rotate(-1.5deg);
+}
+
+.artefacto-pieza::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--azul-electrico);
+  transform: translate(8px, 8px);
+  z-index: -1;
+}
+
+.artefacto-pieza img {
+  border: 3px solid var(--negro);
+}
+```
+
+### Volante
+
+`/practicas/volante/`. Una hoja para imprimir, cortar y pegar en la calle.
+
+- A una tinta: negro sobre el papel que haya. Sin fondos de color, para que salga bien fotocopiado
+- La pregunta en Archivo Black, en tres líneas compuestas al ancho de la hoja, como un afiche tipográfico
+- La consigna en tres párrafos cortos, sin vocabulario del Lab ("artefacto diegético", "design fiction")
+- QR, dirección escrita y logo a una tinta (`logo-negro.svg`)
+- Diez tiras para arrancar con la dirección
+- Entra en A4 y en carta
+
 ---
 
 ## Lo que NO Hacer
@@ -302,10 +358,15 @@ Estas reglas valen para el sitio, las redes y cualquier pieza del Lab.
 
 - Declaración: "Mirar hacia los lados, no hacia arriba."
 - Frase: "Metodologías de design fiction desde contextos latinoamericanos."
+- Contexto plegado de un artefacto: "De dónde sale"
 
 **Idioma:** español rioplatense, con voseo.
 
 **Los artefactos no se explican.** Una pieza del Lab nunca rotula su propia ficción: nada de "esto no existe", "es de 2031" ni "artefacto diegético" pegado encima. El artefacto se muestra como si fuera real y la conexión la hace quien mira. Las fechas y el contexto van, si hacen falta, en la bitácora o en el texto que acompaña.
+
+En el sitio eso tiene forma: la pieza se ve primero y el contexto queda plegado bajo "De dónde sale". El texto alternativo de la imagen describe lo que se ve, como si fuera real: "Cartel pintado a mano en la pared de un servicio técnico", no "artefacto diegético".
+
+**Fuera del sitio, se habla para quien no conoce el Lab.** El volante se lee en la calle: dice "un objeto de ese futuro", no "artefacto diegético".
 
 **Mundanidad forzada no es distopía.** Los ejemplos parten de adaptaciones cotidianas, de viveza criolla y de alambre: un cartel de servicio técnico que arregla robots aspiradora y "libera" asistentes de voz. No parten de escasez dramatizada ni de futuros que asustan. Es el pilar 4: revelar la creatividad que ya existe, sin recurrir al extrañamiento.
 

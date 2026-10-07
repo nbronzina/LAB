@@ -1,32 +1,52 @@
 # Status — Lab de Mundanidad Forzada
 
-> Última actualización: 26 enero 2026
+> Última actualización: 7 octubre 2026
 
-## Estado: MVP Completo
+## Estado: en actividad
 
-Live en: https://nbronzina.github.io/LAB/
+Live en: https://mundanidadforzada.org/
+
+Se publica solo desde la rama por defecto del repo (GitHub Pages). Mergear es publicar.
 
 ## Páginas
 
 | Página | Estado |
 |--------|--------|
-| index.html | ✓ |
-| manifiesto.html | ✓ |
-| marco.html | ✓ |
-| red.html | ✓ (placeholders) |
-| bitacora.html | ✓ (placeholders) |
+| `/` | ✓ Poster con el último artefacto |
+| `/manifiesto/` | ✓ |
+| `/marco/` | ✓ Revisión de texto pendiente (ver abajo) |
+| `/red/` | ✓ Cinco personas |
+| `/practicas/` | ✓ Práctica #01 abierta, sin fecha de cierre. Una respuesta publicada |
+| `/practicas/volante/` | ✓ Imprime en A4 y carta |
+| `/bitacora/` | ✓ Dos artefactos y cuatro entradas de texto |
+| `404.html` | ✓ |
+
+## Hecho en octubre 2026
+
+- Marca nueva: el continente (favicon, `og-image`, logo completo, avatares)
+- Bitácora con el artefacto primero y home con el último artefacto pegado
+- Primera respuesta publicada a la Práctica #01
+- Volante para imprimir
+- Arreglos: "MUNDANIDAD" completa en la home, `h1` en la home, Archivo Black sin negrita sintética, contraste del botón de prácticas
 
 ## Pendientes
 
 **Contenido:**
-- [ ] Practitioners reales (nombres, bios, fotos)
-- [ ] Entries de bitácora
+- [ ] Más respuestas a la Práctica #01
+- [ ] Persona de Uruguay en `/red/` (la descripción de la red ya nombra Uruguay)
+- [ ] Revisión del marco teórico, anunciada en la bitácora de septiembre. Su introducción repite los dos primeros párrafos del manifiesto
+- [ ] Fotos de volantes pegados, para la bitácora
 
 **Técnico:**
-- [ ] Favicon
-- [ ] og-image.png
-- [ ] Dominio propio
-- [ ] Email con dominio
+- [ ] Email con dominio propio
+- [ ] Probar la impresión del volante en Firefox y Safari
+- [ ] Retirar `img/lab-icon.png` cuando los avatares de redes estén cambiados
+
+**En discusión:**
+- [ ] Mapa de la red, segunda versión (un punto por persona)
+- [ ] Remiendo al pie de cada página
+
+**Decisiones abiertas:** ver el final de `DECISIONS.md`.
 
 ---
 
