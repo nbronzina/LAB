@@ -34,12 +34,28 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 
 | Componente | Dónde | Qué tiene |
 |------------|-------|-----------|
-| Header compacto | Todas menos la home y la 404 | Logo en una línea (link a `/`) y navegación: Manifiesto, La red, Prácticas, Bitácora. La página actual lleva `aria-current="page"`; una subpágina marca a su sección con `aria-current="true"` |
-| Footer | Todas menos la home y la 404 | "Charlemos →", "Est. 2025" y el remiendo |
+| Header compacto (`header.site-header`) | Todas menos la home y la 404 | El logo chico en tres líneas (`a.logo`, link a `/`) y la navegación (`nav.header-nav`): Manifiesto, La red, Prácticas, Bitácora. La página actual lleva `aria-current="page"`; una subpágina marca a su sección con `aria-current="true"` |
+| Footer (`footer.site-footer`) | Todas menos la home y la 404 | "Charlemos →" (`.footer-cta`), "Est. 2025" (`.fundacion`) y el remiendo |
 | Footer del poster | Home y 404 | Lo mismo en una fila. La 404 no lleva remiendo |
 | Remiendo | Todas menos la 404 | "Último remiendo:" con la fecha en un `<time>` y el link "Ver historial" al historial de ese archivo en GitHub |
 | Ruido de impresión | Todas | `.noise-overlay`. No se imprime |
 | Saltar al contenido | Todas menos la 404 | `.skip-link` |
+
+## Clases compartidas
+
+Piezas de CSS que usa más de una página. Están juntas al principio de `style.css`, en "PIEZAS COMPARTIDAS". Si se cambia una, cambia en todos los lugares donde se usa.
+
+| Pieza | Clases | Dónde |
+|-------|--------|-------|
+| Recuadro (caja de borde negro) | `.header-nav a`, `.artefacto-origen summary` | Links del header y "De dónde sale" en la bitácora |
+| Botón sticker (caja amarilla con sombra) | `.poster-tag`, `.volante-imprimir`, `.red-mapa-sumate` | Links del poster, "Imprimir" del volante, sticker del mapa |
+| Pieza pegada (un artefacto) | `.artefacto-pieza`, `.poster-artefacto` | Bitácora, prácticas y home |
+| Link de texto (azul, subrayado) | `.entry-description a`, `.entry-link`, `.practitioner-link` y otros | Bitácora, prácticas, volante y red |
+| Link de nota (subrayado coral) | `.remiendo a`, `.documento-nota a`, `.poster-footer a` | Remiendo, nota del manifiesto, footer del poster |
+| Página de lista | `body.pagina`, `main.pagina-contenido`, `.pagina-titulo`, `.pagina-intro` | Bitácora, prácticas y volante. `.pagina-titulo` es también el título de la red |
+| Cierre con llamado | `.cta-cierre`, `.cta-link`, `.cta-descripcion` | Final del manifiesto y de la bitácora |
+
+Una clase existe solo si `style.css` o un script la usan. No hay clases "por las dudas".
 
 ## Componentes por página
 
@@ -48,7 +64,12 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 - `.poster-declaracion`, `.poster-frase`, `.poster-links` (cuatro `.poster-tag`)
 - `.poster-artefacto`: el último artefacto de la bitácora, pegado. Desde 1000 px va abajo a la derecha; más angosto, debajo de los links
 
-**Red** (`body.red-page`)
+**Manifiesto y Marco** (`main.documento`)
+- `h1.documento-titulo`, `.documento-nota` y una `section.documento-seccion` por tema. Adentro de `.documento`, los `h2`, `h3`, `p`, `ul` y `blockquote` ya tienen estilo: no llevan clase
+- Solo en el manifiesto: `article.pilar-card` (un pilar), `ul.marcos-lista`, `ul.principios-lista`, `.documento-cierre` y el cierre con llamado al marco
+- Solo en el marco: `article.pilar-extendido`, `article.marco-extendido` (un autor, en negro), `.subtitulo-seccion` y `.volver-arriba`
+
+**Red**
 - `.red-cuerpo`: la grilla de la página. Desde 700 px, la lista a la izquierda y el mapa a la derecha
 - `.red-encabezado`: título e introducción
 - `nav.red-mapa`: el continente (`img.red-mapa-continente`), los puntos (`ul.red-mapa-puntos`, un `<li>` por ciudad y un `a.punto` por persona) y el sticker `.red-mapa-sumate`. Ver `MAPA.md`
@@ -56,16 +77,16 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 - `article.practitioner-card` con `id`: una ficha. Es el destino de su punto en el mapa
 - `.red-cta`: invitación a sumarse
 
-**Prácticas** (`body.bitacora-page`)
+**Prácticas** (`body.pagina`)
 - `.practica-como-funciona`, con el link al volante
 - `article.practica`: una práctica. Adentro: video con fachada (`.video-facade`), secciones con `h3.practica-subtitulo`, el ejemplo y las respuestas como piezas pegadas (`.artefacto-pieza`), el botón `.practica-cta-boton`
 
-**Volante** (`body.volante-page`)
+**Volante** (`body.pagina.volante-page`)
 - `.volante-instrucciones`: título, para qué sirve, botón "Imprimir". No se imprime
 - `article.hoja`: la hoja. Es lo único que se imprime y ocupa todo el papel
 - `.hoja-pregunta`, `.hoja-consigna`, `.hoja-pie` (QR, dirección, logo), `.hoja-tiras`
 
-**Bitácora** (`body.bitacora-page`)
+**Bitácora** (`body.pagina`)
 - `section.bitacora-year`: un año
 - `article.bitacora-entry`: una entrada de texto (fecha, título, autor, descripción, link)
 - `article.bitacora-entry.bitacora-artefacto` con `id`: un artefacto. La pieza (`a.artefacto-pieza`) y su ficha (`.artefacto-ficha`: fecha, nombre, crédito y `details.artefacto-origen` con "De dónde sale")
@@ -85,7 +106,7 @@ Un ancla publicada no se renombra: puede estar enlazada desde afuera.
 | Carpeta o patrón | Contenido |
 |------------------|-----------|
 | `img/marca/` | Logo, continente, avatares y banner de LinkedIn. No se editan a mano |
-| `img/nombre-apellido.webp` | Fotos de las fichas, 80x80 en pantalla |
+| `img/nombre-apellido.webp` | Fotos de las fichas: 240x240, con fondo transparente. Se ven a 80x80 |
 | `img/artefacto-<nombre>.webp` | Un artefacto a tamaño completo. Es lo que se abre al tocar la pieza |
 | `img/artefacto-<nombre>-640.webp`, `-480.webp` | La misma pieza a 640 y 480 px de ancho, para mostrarla en las páginas |
 | `img/ejemplo-practica-miriam.webp`, `-640.webp` | El afiche de Miriam. Conserva el nombre con el que se publicó |

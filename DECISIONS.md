@@ -552,6 +552,117 @@ Cómo se suma un punto: `MAPA.md`.
 
 ---
 
+## 2026-10-07 — Código: limpieza de todo el repo
+
+Nicolás pidió leer, interpretar, borrar, editar y optimizar el código de todo el repo. La condición la puso Alambre: que el sitio se vea igual que antes.
+
+### Decisión: Se ordena el código sin cambiar cómo se ve el sitio
+
+**Contexto:** `style.css` había crecido por capas. Cada pedido sumó reglas al final y varias pisaban a otras de más arriba. El azul de los links estaba escrito a mano doce veces y la tipografía de los títulos, treinta y cuatro.
+
+**Decisión:** La hoja se reescribió entera en un orden fijo: variables, fuentes, base, piezas compartidas, cada página e impresión. Lo que se repetía pasó a una sola regla (recuadro, botón sticker, pieza pegada, link de texto, link de nota). Los colores y las dos tipografías se usan por variable. Se borró lo que no hacía nada: reglas que otra pisaba, selectores sin elemento, clases sin regla, los `role` que repetían lo que la etiqueta ya dice y una fuente que ninguna página cargaba. No se tocó ningún texto, ninguna medida y ningún color.
+
+**Cómo se comprobó:** Con capturas de las ocho páginas antes y después, a 22 tamaños de ventana y a doble densidad con el ruido de impresión, comparadas píxel por píxel. Lo mismo con cada link y cada botón con el cursor encima y con el foco, con las anclas, con "De dónde sale" abierto y con cada página impresa a PDF. Además se comparó el estilo calculado de cada elemento, propiedad por propiedad, a siete anchos.
+
+Después se repitió todo con contenido de prueba sumado a las páginas: más personas y más puntos, más artefactos, otra práctica, links y listas donde hoy no hay. Sirve para saber que lo que se publique más adelante también se va a ver como se habría visto con la hoja anterior. Y lo revisó un segundo agente que no había visto el trabajo.
+
+Dio igual en todo, salvo cuatro cosas que hoy no cambian lo que se ve:
+
+- El botón de "Cierre con llamado" (`.cta-link`) anima solo el color del fondo y el del borde. Antes animaba todas las propiedades, y las únicas que cambian son esas dos.
+- Las tarjetas de los pilares ya no llevan `position: relative`. No tenían adentro nada que lo usara.
+- La inclinación de los artefactos en la bitácora: ver la decisión que sigue.
+- Las fotos de las fichas y la imagen del ejemplo en `/practicas/`, que se achicaron y se compararon aparte: ver "Imágenes del tamaño en que se ven".
+
+Lo que queda fuera de esa comparación: una pieza usada fuera de su página, como una tarjeta de pilar en la home o el botón de enviar fuera de una práctica. Ahí la hoja nueva le da el aspecto que la pieza tiene hoy en su página. La anterior no siempre lo hacía.
+
+Lighthouse da las mismas notas que antes en las ocho páginas, con una diferencia que no es un problema nuevo: en `/red/`, accesibilidad pasa de 96 a 95. Al sacar los `role` repetidos, tres controles de ARIA que aprobaban por tenerlos dejan de aplicar, y el único aviso que ya había (dos puntos del mapa muy juntos, ver `MAPA.md`) pesa más en la cuenta.
+
+**Razón:** En una hoja donde cada cosa está una sola vez, se cambia una página sin romper otra. Quedaron 214 reglas de 246 y 716 declaraciones de 853. Comprimida pesa 0,7 KB más que antes (8,7 contra 8,1), porque ahora cada bloque dice qué es y dónde se usa.
+
+---
+
+### Decisión: Los nombres dicen dónde se usa cada cosa
+
+**Contexto:** El header de todas las páginas se llamaba `manifiesto-header` y el footer, `contacto`. Prácticas y volante usaban clases `bitacora-*`. Los nombres venían de cuando cada pieza estaba en una sola página.
+
+**Decisión:** Se renombraron. Los `id` y las anclas no cambiaron.
+
+| Antes | Ahora |
+|-------|-------|
+| `manifiesto-header` | `site-header` |
+| `contacto` | `site-footer` |
+| `logo logo-small` | `logo` |
+| `manifiesto-content`, `manifiesto-title`, `manifiesto-section`, `manifiesto-cierre` | `documento`, `documento-titulo`, `documento-seccion`, `documento-cierre` |
+| `cta-marco` | `cta-cierre` |
+| `bitacora-page`, `bitacora-content` | `pagina`, `pagina-contenido` |
+| `bitacora-title`, `red-page-title` | `pagina-titulo` |
+| `bitacora-intro`, `bitacora-intro-cont` | `pagina-intro`, `pagina-intro-sigue` |
+| `manifiesto-page`, `red-page`, `practitioner-img`, `practitioner-info` | Se sacaron: no hacían falta |
+
+**Razón:** Quien llega al código busca el header por "header", no por "manifiesto". La lista de piezas compartidas y dónde se usa cada una está en `SITE-STRUCTURE.md`.
+
+---
+
+### Decisión: En la bitácora, los artefactos se inclinan una vez para cada lado
+
+**Contexto:** La regla anterior inclinaba hacia la derecha a las entradas pares de cada año, fueran artefactos o texto. Con una entrada de texto entre dos artefactos, los dos quedaban para el mismo lado. Además, un artefacto inclinado a la derecha no se enderezaba con el cursor encima, como pide `BRAND.md`.
+
+**Decisión:** La cuenta se hace solo entre artefactos, y todos se enderezan.
+
+**Razón:** Hoy no cambia nada, porque cada año tiene un solo artefacto. Se va a notar cuando haya dos en el mismo año. En Chrome y Firefox anteriores a mediados de 2023 la regla nueva no existe: ahí todos los artefactos quedan inclinados hacia la izquierda.
+
+---
+
+### Decisión: El sitio se publica sin Jekyll
+
+**Contexto:** GitHub Pages pasaba el repo por Jekyll antes de publicarlo (figura en el registro de cada publicación), aunque el sitio es HTML escrito a mano. Jekyll convierte los `.md` en páginas: lo esperable es que `BRAND.md`, `DECISIONS.md` y los briefs estuvieran publicados en el dominio como páginas, con el tema de GitHub. No se pudo abrir el sitio para verlo.
+
+**Decisión:** Un archivo vacío en la raíz, `.nojekyll`.
+
+**Razón:** Se publica lo que hay en el repo, archivo por archivo, que es lo mismo que se prueba antes de subir. Los `.md` quedan en el dominio como archivos de texto (por ejemplo `/BRAND.md`), sin página armada. Se siguen leyendo en GitHub.
+
+---
+
+### Decisión: La hoja de estilos lleva versión
+
+**Contexto:** Al renombrar clases, quien tuviera guardado en el navegador el `style.css` anterior iba a ver el HTML nuevo sin estilos en el header y en el footer.
+
+**Decisión:** Las páginas piden `style.css?v=2`. El número sube cada vez que un cambio renombra o saca clases.
+
+**Razón:** Para el navegador una dirección nueva es un archivo nuevo, y no usa el que tenía guardado.
+
+---
+
+### Decisión: Imágenes del tamaño en que se ven
+
+**Contexto:** Las fotos de las fichas medían 500 x 500 px y se muestran a 80 x 80. En `/practicas/`, el afiche del ejemplo bajaba siempre a 1060 px de ancho y se ve, como mucho, a 416.
+
+**Decisión:** Las fotos pasan a 240 x 240 y conservan el fondo transparente. El ejemplo usa los dos tamaños que ya estaban en el repo, con `srcset`, igual que en la bitácora.
+
+**Razón:** Las cinco fotos pasan de 120 KB a 48 KB y alcanzan para pantallas de triple densidad. El ejemplo, en una pantalla común, baja de 123 KB a 60 KB. La salvedad: el archivo de 640 px no tiene exactamente la proporción del grande, así que la imagen mide 0,2 px distinto de alto y lo que sigue en esa página se corre menos de 1 px.
+
+---
+
+### Decisión: El video de prácticas responde al teclado como un botón
+
+**Contexto:** El link del video se anuncia como botón a los lectores de pantalla, pero no respondía a la barra espaciadora. Al arrancar el video, el foco del teclado se perdía.
+
+**Decisión:** Arranca también con la barra espaciadora y el foco pasa al reproductor.
+
+**Razón:** Si se anuncia como botón, se tiene que portar como un botón.
+
+---
+
+### Decisión: La letra base sigue fija en 16 px
+
+**Contexto:** `html { font-size: 16px }` no acompaña a quien configuró una letra más grande en su navegador. Se probó `100%`, que sí la acompaña.
+
+**Decisión:** Queda en 16 px.
+
+**Razón:** Con la letra del navegador en 20 px, en un teléfono angosto se cortan "MUNDANIDAD" y "MANIFIESTO". En 24 px se cortan en casi cualquier teléfono y, en la bitácora, la ficha del artefacto queda en una columna de 85 px. El zoom del navegador funciona bien. Para acompañar la letra configurada hay que volver a medir esos tamaños: queda en pendientes.
+
+---
+
 ## Decisiones Pendientes
 
 - [x] Dominio propio → `mundanidadforzada.org` está activo (ver `CNAME`)
@@ -559,7 +670,7 @@ Cómo se suma un punto: `MAPA.md`.
 - [x] Contenido real de practitioners (nombres, bios, fotos) → cinco fichas en `/red/`
 - [x] Imagen OG para redes sociales → reemplazada el 7 oct 2026
 - [x] ¿Agregar año de fundación en algún lugar visible? → Decidido: sí, en footer ("Est. 2025")
-- [ ] ¿El continente entra al header (`.logo-small`) o al poster de la home? Hoy es solo ícono
+- [ ] ¿El continente entra al header (`.logo`) o al poster de la home? Hoy es solo ícono
 - [ ] Retirar `img/lab-icon.png` (ícono anterior, 1 MB, sin referencias en el sitio) cuando los avatares de redes estén cambiados
 - [x] En la home, "MUNDANIDAD" se cortaba por la derecha entre 601 y unos 1420 px → bug, corregido el 7 oct 2026
 - [ ] La descripción de la red nombra Uruguay ("Argentina, Brasil, México, Uruguay y contando") y en `/red/` no hay nadie de Uruguay
@@ -567,6 +678,14 @@ Cómo se suma un punto: `MAPA.md`.
 - [ ] La pieza pegada en la home. Al verla publicada, Nicolás preguntó qué aporta. Suma el único ejemplo concreto de la portada y, en el teléfono, hace que el poster ya no entre en una pantalla. Sigue ahí hasta que él decida
 - [ ] Probar en Firefox y Safari que el mapa de `/red/` queda fijo al recorrer las fichas. Se probó en Chromium
 - [ ] Imprimir el volante desde Firefox y Safari. Se probó en Chromium, en A4 y en carta
+- [ ] En el manifiesto, las tarjetas de los pilares tienen 56 px de aire arriba del título y 24 px debajo del texto. En el marco, las mismas tarjetas tienen 24 px arriba. La limpieza lo dejó como estaba
+- [ ] En el manifiesto, las cajas de "Marcos teóricos" están separadas por 28 px y las de "Principios organizativos" por 8 px
+- [ ] En `/red/`, el link de cada ficha pasa a coral oscuro con el cursor encima. Los demás links de texto del sitio pasan a negro
+- [ ] La flecha "→" no está en los archivos de fuente del sitio y aparece 26 veces ("Charlemos →", "LinkedIn →"). Cada dispositivo la dibuja con su propia tipografía. Archivo Black y Space Grotesk la traen: habría que volver a generar los archivos con la flecha adentro. Aparte, en el teléfono a veces queda sola en el renglón de abajo ("Ver en la bitácora" y la flecha en otra línea): se arregla pegándola a la palabra anterior
+- [ ] Que la letra acompañe el tamaño configurado en el navegador. Ver "La letra base sigue fija en 16 px"
+- [ ] La nota que abre el manifiesto y el marco estaba pensada más chica (0,9 rem) y con más aire debajo (3 rem). Nunca se vio así: la pisaba la regla de los párrafos. Se ve del tamaño del texto (1,1 rem). La limpieza sacó las dos líneas que no aplicaban
+- [ ] Las cajas de "Marcos teóricos" y "Principios organizativos" estaban pensadas con 1 rem de relleno. Se ven con 0,5 rem arriba y abajo y sin relleno a la derecha, así que el texto llega al borde de la caja. Por lo mismo: la regla de las listas pisaba a la de las cajas
+- [ ] El logo del header estaba pensado en una línea. Siempre se vio en tres
 
 ---
 

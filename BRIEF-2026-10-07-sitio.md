@@ -2,6 +2,7 @@
 
 > Fecha: 7 octubre 2026
 > Base: Ver `IMPRENTA.md`, `BRAND.md`, `DECISIONS.md`, `SITE-STRUCTURE.md`
+> Estado: el código está publicado desde el 7 octubre 2026. Siguen abiertas las tareas 1 y 2: la revisión en producción y las pruebas en Firefox y Safari
 
 ---
 

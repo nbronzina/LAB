@@ -31,6 +31,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - Mapa de la red: el continente con un punto por persona
 - El continente con la veta azul continua, también en las islas
 - Arreglos: "MUNDANIDAD" completa en la home, `h1` en la home, Archivo Black sin negrita sintética, contraste del botón de prácticas
+- Limpieza del código de todo el repo: `style.css` reescrita en orden, clases con nombres que dicen dónde se usan, publicación sin Jekyll, imágenes del tamaño en que se ven. El sitio se ve igual que antes
 
 ## Pendientes
 
@@ -44,9 +45,12 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - [ ] Email con dominio propio
 - [ ] Probar en Firefox y Safari la impresión del volante y el mapa fijo de `/red/`
 - [ ] Retirar `img/lab-icon.png` cuando los avatares de redes estén cambiados
+- [ ] Sumar la flecha "→" a los archivos de fuente: hoy cada dispositivo la dibuja con su propia tipografía
+- [ ] Que la letra acompañe el tamaño configurado en el navegador (hoy está fija en 16 px)
 
 **En discusión:**
 - [ ] La pieza pegada en la home: Nicolás preguntó qué aporta
+- [ ] Seis detalles de diseño que la limpieza encontró y dejó como estaban: tres desparejos (el aire de las tarjetas de los pilares, la separación de "Marcos teóricos", el color del link de las fichas con el cursor encima) y tres que estaban pensados de otra forma y nunca se vieron así (la nota del manifiesto, el relleno de las cajas de marcos y principios, el logo del header en una línea). Están al final de `DECISIONS.md`
 
 **Decisiones abiertas:** ver el final de `DECISIONS.md`.
 

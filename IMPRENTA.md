@@ -55,7 +55,7 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 | `STATUS.md` | Estado del sitio y pendientes |
 | `SYSTEM.md` | Cómo funciona el sistema Iniciador → Alambre → Imprenta |
 | `IMPRENTA.md` | Este documento |
-| `BRIEF-*.md` | Briefs delta para tareas específicas |
+| `BRIEF-*.md` | Briefs delta para tareas específicas. Los ya ejecutados quedan como registro y pueden nombrar clases o archivos que después cambiaron: vale lo que dicen `SITE-STRUCTURE.md` y el código |
 
 ---
 
@@ -67,6 +67,7 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 - JavaScript: mínimo o cero. Hoy hay dos usos: la fachada del video en `/practicas/` y el botón "Imprimir" del volante
 - Sin frameworks ni paso de build
 - Optimizado para GitHub Pages. Se publica desde la rama por defecto: cada commit en esa rama sale al sitio
+- Sin Jekyll: el archivo `.nojekyll` hace que GitHub Pages publique los archivos tal cual están. No lo borres
 - Sin dependencias externas. Las fuentes son locales
 
 ### Colores
@@ -76,12 +77,19 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
   --coral: #E85D4A;
   --coral-dark: #C94A3A;
   --azul-electrico: #1E5EFF;
+  --azul-link: #0047AB;
   --crema: #F5EDE1;
   --crema-sucia: #E8DFD0;
   --negro: #1A1A1A;
+  --gris: #4A4A4A;
   --amarillo-aviso: #F2C94C;
+
+  --display: 'Archivo Black', sans-serif;
+  --texto: 'Space Grotesk', sans-serif;
 }
 ```
+
+Usá siempre la variable. No escribas un color ni una tipografía a mano.
 
 ### Tipografía
 
@@ -167,11 +175,29 @@ Crear página de proyectos
 ├── img/marca/              # Logo, continente, avatares, banner. No se editan a mano
 ├── favicon.svg, favicon-16.png, favicon-32.png, apple-touch-icon.png
 ├── og-image.png            # Imagen para redes (1200x630)
-├── sitemap.xml, robots.txt, CNAME
+├── sitemap.xml, robots.txt, CNAME, .nojekyll
 ├── BRAND.md, SITE-STRUCTURE.md, DECISIONS.md, STATUS.md, SYSTEM.md, MAPA.md
 ├── IMPRENTA.md             # Este archivo
 └── BRIEF-*.md              # Briefs delta
 ```
+
+---
+
+## Cómo está armado el código
+
+**Una sola hoja de estilos**, `style.css`, en este orden: variables, fuentes, base, piezas compartidas y después cada página (poster, documento, red, bitácora, prácticas, volante). Al final, impresión. Cada bloque lleva un comentario que dice qué es.
+
+**Piezas compartidas.** Lo que se repite en páginas de distinto tipo (header, footer, recuadro, botón sticker, pieza pegada, links) está al principio, junto, y `SITE-STRUCTURE.md` lista dónde se usa cada pieza. Antes de cambiar una, mirá esa lista. Tres bloques de página sirven a dos páginas cada uno: el poster (home y 404), el documento (manifiesto y marco) y las `.entry-*` de la bitácora, que también arman la práctica.
+
+**Sin clases de más.** Una clase existe solo si `style.css` o un script la usan. Si sacás una regla, sacá la clase del HTML. Si agregás una clase, que tenga su regla.
+
+**Sin roles repetidos.** `<header>`, `<nav>`, `<main>` y `<footer>` ya dicen qué son: no llevan `role`.
+
+**La versión de la hoja.** Las páginas la piden como `style.css?v=2`. Subí el número en las ocho páginas cuando cambies o saques nombres de clases: así el HTML nuevo nunca se junta con un CSS viejo guardado en el navegador de alguien. Para un cambio que no rompe el HTML anterior (un color, un margen) no hace falta.
+
+**Imágenes.** Siempre con `width`, `height` y `alt`. Los artefactos nuevos van en tres tamaños y con `srcset` (el afiche de Miriam, que es anterior, tiene dos). Las fotos de las fichas van a 240 x 240 px.
+
+**Antes de dar un cambio por terminado**, además de mirarlo a 390 y a 1440 px: que la consola no tenga errores, que no haya scroll horizontal y que los links internos y las anclas resuelvan.
 
 ---
 
@@ -191,7 +217,7 @@ El texto de "De dónde sale" lo escribe Alambre y lo valida Nicolás. Si no lo t
 
 ### Sumar una persona a la red
 
-1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP.
+1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP de 240 x 240 px. Si la foto está recortada, que conserve el fondo transparente.
 2. **Punto en el mapa.** Un `a.punto` que apunte a ese `id`, con las coordenadas de su ciudad. El paso a paso y la tabla de ciudades están en `MAPA.md`.
 3. **Remiendo** de `/red/` y su `lastmod` en `sitemap.xml`.
 

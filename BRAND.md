@@ -52,6 +52,8 @@ La identidad del Lab no aspira a la legitimidad académica o institucional. En v
 | **Crema Sucia** | `#E8DFD0` | Fondos secundarios, capas de profundidad |
 | **Coral Oscuro** | `#C94A3A` | Texto coral sobre fondos claros (mejor contraste) |
 | **Amarillo Aviso** | `#F2C94C` | Alertas, señalización, highlights, stickers |
+| **Azul Link** | `#0047AB` | Links dentro de un texto. El azul eléctrico no alcanza el contraste para texto chico |
+| **Gris** | `#4A4A4A` | Texto secundario chico: fechas, créditos, aclaraciones |
 
 ### Variables CSS
 
@@ -60,12 +62,19 @@ La identidad del Lab no aspira a la legitimidad académica o institucional. En v
   --coral: #E85D4A;
   --coral-dark: #C94A3A;
   --azul-electrico: #1E5EFF;
+  --azul-link: #0047AB;
   --crema: #F5EDE1;
   --crema-sucia: #E8DFD0;
   --negro: #1A1A1A;
+  --gris: #4A4A4A;
   --amarillo-aviso: #F2C94C;
+
+  --display: 'Archivo Black', sans-serif;
+  --texto: 'Space Grotesk', sans-serif;
 }
 ```
+
+En `style.css` los colores y las dos tipografías se usan siempre por su variable, nunca escritos a mano. La excepción es la hoja del volante, que va en negro y blanco puros (`#000`, `#fff`) porque es lo que sale de la impresora.
 
 ### Combinaciones Recomendadas
 
@@ -83,6 +92,8 @@ Medido contra WCAG. Vale para cualquier texto que haya que leer, no para los tí
 | Negro sobre coral | 5:1 | Botones y texto sobre coral |
 | Crema sobre negro | 15:1 | Rótulos, footer |
 | Coral oscuro sobre crema | 4:1 | Texto coral desde 19 px en Archivo Black |
+| Azul link sobre crema | 7.3:1 | Links dentro de un texto |
+| Gris sobre crema | 7.6:1 | Texto secundario chico |
 | Coral sobre crema | 2.97:1 | Solo títulos grandes con sombra azul |
 | Crema sobre coral | 2.97:1 | Solo títulos grandes. Nunca texto chico ni botones |
 | Azul de link sobre coral | 2.4:1 | No se usa |
@@ -131,18 +142,31 @@ FORZADA
 
 - Archivo Black
 - Color coral `#E85D4A`
-- Drop shadow: 4px offset en azul eléctrico `#1E5EFF`
-- Line-height: 0.9
+- Drop shadow en azul eléctrico `#1E5EFF`, abajo a la derecha: 6 px en el poster (4 px en el teléfono), 2 px en el header
+- Line-height: 0.85 en el poster, 0.9 en el header
 - Uppercase
 
 ### CSS del Logo
 
+En el sitio el logo es texto y tiene dos tamaños: el del poster de la home y el chico del header.
+
 ```css
-.logo {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
+/* Home: gigante, con las líneas escalonadas */
+.poster-logo {
+  font-family: var(--display);
+  font-size: clamp(2.6rem, calc(11.3vw - 5px), 10rem);
   color: var(--coral);
-  text-shadow: 4px 4px 0 var(--azul-electrico);
+  text-shadow: 6px 6px 0 var(--azul-electrico);
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+/* Header de las páginas internas: chico, sin escalonar */
+.logo {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  color: var(--coral);
+  text-shadow: 2px 2px 0 var(--azul-electrico);
   line-height: 0.9;
   text-transform: uppercase;
 }
@@ -269,10 +293,11 @@ Así se muestra un artefacto en el sitio (home, bitácora, prácticas): como una
 - Al pasar el cursor se endereza
 
 ```css
+/* --giro: hacia qué lado se inclina. Por defecto, a la izquierda */
 .artefacto-pieza {
   position: relative;
   display: block;
-  transform: rotate(-1.5deg);
+  transform: rotate(var(--giro, -1.5deg));
 }
 
 .artefacto-pieza::before {

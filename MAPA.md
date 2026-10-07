@@ -29,7 +29,7 @@ El nombre aparece al pasar el cursor por un punto o al llegar con el teclado. En
 
 - Cada punto es un link con nombre. Un lector de pantalla lee "Miriam Latorre, Chivilcoy".
 - Todo lo que está en el mapa está también en la lista. El mapa es un atajo, no la única forma de llegar.
-- Los puntos de dos ciudades cercanas quedan a menos de 24 px uno del otro. Lighthouse lo marca como área de toque insuficiente y por eso `/red/` da 96 en accesibilidad. Es la excepción "esencial" de WCAG 2.5.8, que pone de ejemplo los pines de un mapa: la posición es la información. No se corrige separando los puntos más de lo que dice "Cuando dos ciudades se pisan".
+- Los puntos de dos ciudades cercanas quedan a menos de 24 px uno del otro. Lighthouse lo marca como área de toque insuficiente y por eso `/red/` da 95 en accesibilidad y no 100. Es la excepción "esencial" de WCAG 2.5.8, que pone de ejemplo los pines de un mapa: la posición es la información. No se corrige separando los puntos más de lo que dice "Cuando dos ciudades se pisan".
 
 ---
 
