@@ -17,10 +17,12 @@
    FONTS (local, no Google Fonts)
    ============================================ */
 
+/* Archivo Black tiene un solo peso. El rango evita que el navegador
+   le invente una negrita encima en h1, h2, h3 y strong. */
 @font-face {
   font-family: 'Archivo Black';
   src: url('fonts/archivo-black-latin-400-normal.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: 400 900;
   font-style: normal;
   font-display: swap;
 }
@@ -60,6 +62,12 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -246,7 +254,9 @@ a.logo-small {
   background-color: var(--amarillo-aviso);
 }
 
-.header-nav a[aria-current="page"] {
+/* "page": la página actual. "true": su sección, cuando es una subpágina (el volante) */
+.header-nav a[aria-current="page"],
+.header-nav a[aria-current="true"] {
   background-color: var(--negro);
   color: var(--crema);
 }
@@ -598,10 +608,11 @@ a.logo-small {
   gap: 2rem;
 }
 
-/* Logo gigante */
+/* Logo gigante. El tamaño sale del ancho: "MUNDANIDAD" mide 7.64em
+   y tiene que entrar entera entre el margen izquierdo (10vw) y el derecho. */
 .poster-logo {
   font-family: 'Archivo Black', sans-serif;
-  font-size: clamp(4rem, 15vw, 10rem);
+  font-size: clamp(2.6rem, calc(11.3vw - 5px), 10rem);
   color: var(--coral);
   text-shadow: 6px 6px 0 var(--azul-electrico);
   line-height: 0.85;
@@ -707,6 +718,58 @@ a.logo-small {
   letter-spacing: 0.1em;
 }
 
+/* El último artefacto de la bitácora, pegado en el poster.
+   Sin epígrafe: los artefactos no se explican. */
+.poster-artefacto {
+  position: relative;
+  display: block;
+  align-self: flex-end;
+  width: min(50%, 12rem);
+  margin: 0.5rem 0.75rem 0 0;
+  transform: rotate(2deg);
+  transition: transform 0.15s ease;
+}
+
+.poster-artefacto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--azul-electrico);
+  transform: translate(8px, 8px);
+  z-index: -1;
+  transition: transform 0.15s ease;
+}
+
+.poster-artefacto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--negro);
+}
+
+.poster-artefacto:hover {
+  transform: rotate(0deg) translate(-2px, -2px);
+}
+
+.poster-artefacto:hover::before {
+  transform: translate(11px, 11px);
+}
+
+/* Con lugar a la derecha, va abajo a la derecha y el poster sigue en una pantalla */
+@media (min-width: 1000px) {
+  .poster {
+    position: relative;
+  }
+
+  .poster-artefacto {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 1.5rem;
+    width: clamp(11rem, min(18vw, 29vh), 17rem);
+    margin: 0;
+  }
+}
+
 /* Responsive poster */
 @media (max-width: 600px) {
   .poster {
@@ -716,7 +779,7 @@ a.logo-small {
   }
 
   .poster-logo {
-    font-size: clamp(2rem, 12vw, 3.5rem);
+    font-size: clamp(2rem, calc(13.1vw - 5px), 3.5rem);
     text-shadow: 4px 4px 0 var(--azul-electrico);
   }
 
@@ -971,6 +1034,126 @@ a.logo-small {
   border-color: var(--negro);
 }
 
+/* Artefacto primero: la pieza se muestra sin explicación.
+   El contexto queda plegado en "De dónde sale". */
+.bitacora-entry {
+  scroll-margin-top: 1.5rem;
+}
+
+.bitacora-artefacto {
+  display: grid;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-left-color: transparent;
+}
+
+.artefacto-pieza {
+  position: relative;
+  display: block;
+  margin-left: 0.25rem;
+  transform: rotate(-1.5deg);
+  transition: transform 0.15s ease;
+}
+
+.bitacora-artefacto .artefacto-pieza {
+  width: min(78%, 19rem);
+}
+
+.bitacora-artefacto:nth-of-type(even) .artefacto-pieza {
+  transform: rotate(1.5deg);
+}
+
+.artefacto-pieza::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--azul-electrico);
+  transform: translate(8px, 8px);
+  z-index: -1;
+}
+
+.artefacto-pieza img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--negro);
+}
+
+.artefacto-pieza:hover {
+  transform: rotate(0deg);
+}
+
+.artefacto-origen {
+  margin-top: 0.75rem;
+}
+
+.artefacto-origen summary {
+  display: inline-block;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  padding: 0.4rem 0.75rem;
+  border: 2px solid var(--negro);
+  cursor: pointer;
+  list-style: none;
+  transition: background-color 0.15s ease;
+}
+
+.artefacto-origen summary::-webkit-details-marker {
+  display: none;
+}
+
+/* El signo es solo visual: la segunda línea le da texto alternativo vacío */
+.artefacto-origen summary::after {
+  content: ' +';
+  content: ' +' / '';
+}
+
+.artefacto-origen summary:hover {
+  background-color: var(--amarillo-aviso);
+}
+
+.artefacto-origen summary:focus-visible {
+  outline: 2px solid var(--azul-electrico);
+  outline-offset: 2px;
+}
+
+.artefacto-origen[open] summary {
+  color: var(--crema);
+  background-color: var(--negro);
+}
+
+.artefacto-origen[open] summary::after {
+  content: ' \2212';
+  content: ' \2212' / '';
+}
+
+.artefacto-origen .entry-description {
+  margin-top: 1rem;
+}
+
+.artefacto-origen-titulo {
+  font-weight: 700;
+}
+
+@media (min-width: 700px) {
+  .bitacora-artefacto {
+    grid-template-columns: minmax(0, 19rem) minmax(0, 1fr);
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+
+  .bitacora-artefacto .artefacto-pieza {
+    width: 100%;
+  }
+
+  .artefacto-ficha {
+    padding-top: 0.5rem;
+  }
+}
+
 /* ============================================
    PRÁCTICAS
    ============================================ */
@@ -1015,10 +1198,12 @@ a.logo-small {
   border-left: 3px solid var(--azul-electrico);
 }
 
+/* Coral oscuro y cuerpo de título: el coral pleno sobre crema da 2.97:1 */
 .practica-lead {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 1.1rem;
-  color: var(--coral);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--coral-dark);
   margin-bottom: 0.75rem;
 }
 
@@ -1031,14 +1216,21 @@ a.logo-small {
   margin-bottom: 0.5rem;
 }
 
-.practica-ejemplo-link {
-  display: block;
-  max-width: 65%;
-  margin-bottom: 1rem;
+/* El ejemplo y las respuestas son artefactos: van pegados como en la bitácora */
+.practica .artefacto-pieza {
+  width: min(88%, 26rem);
+  margin-top: 1rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 0;
 }
 
-.practica-ejemplo-img {
-  width: 100%;
+.practica .practica-respuesta {
+  width: min(60%, 15rem);
+  transform: rotate(1.5deg);
+}
+
+.practica .artefacto-pieza:hover {
+  transform: rotate(0deg);
 }
 
 /* Video facade */
@@ -1114,6 +1306,22 @@ a.logo-small {
   background-color: var(--coral-dark);
 }
 
+/* Dentro de .entry-description los links son azules y subrayados.
+   El botón y las imágenes con link no: negro sobre coral da 5:1. */
+.entry-description .practica-cta-boton,
+.entry-description .practica-cta-boton:hover {
+  color: var(--negro);
+  border-bottom: 0;
+}
+
+.entry-description .practica-cta-boton:hover {
+  background-color: var(--amarillo-aviso);
+}
+
+.entry-description .video-facade-link {
+  border-bottom: 0;
+}
+
 .practica-cta-alt {
   font-size: 0.85rem;
   color: #4A4A4A;
@@ -1129,4 +1337,208 @@ a.logo-small {
 .practica-cta-alt a:hover {
   color: var(--negro);
   border-color: var(--negro);
+}
+
+/* ============================================
+   VOLANTE
+   Una hoja para imprimir, cortar las tiras y pegar.
+   Todo se mide en cqw (ancho de la hoja): se ve
+   igual en pantalla, en A4 y en carta.
+   ============================================ */
+.volante-acciones {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.volante-acciones a,
+.volante-foto a {
+  color: #0047AB;
+  text-decoration: none;
+  border-bottom: 1px solid #0047AB;
+}
+
+.volante-acciones a:hover,
+.volante-foto a:hover {
+  color: var(--negro);
+  border-color: var(--negro);
+}
+
+.volante-imprimir {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--negro);
+  background-color: var(--amarillo-aviso);
+  padding: 0.75rem 1.5rem;
+  border: 3px solid var(--negro);
+  box-shadow: 4px 4px 0 var(--negro);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.volante-imprimir:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--negro);
+}
+
+.volante-foto {
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+/* La hoja */
+.hoja {
+  container-type: size;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 34rem);
+  aspect-ratio: 210 / 297;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid var(--negro);
+  box-shadow: 8px 8px 0 var(--azul-electrico);
+}
+
+.hoja-cuerpo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 6.5cqw 6cqw 4cqw;
+}
+
+/* Tres líneas compuestas al ancho de la hoja, como afiche tipográfico.
+   Tamaño de cada línea = 88cqw (el ancho útil) / su ancho en em, menos 1%.
+   "¿QUÉ TIENE DE" mide 8.55em, "EXTRAORDINARIO" 10.14em, "TU ORDINARIO?" 8.88em.
+   Si cambia el texto hay que volver a medir. */
+.hoja-pregunta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9cqw;
+  font-family: 'Archivo Black', sans-serif;
+  line-height: 0.92;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 5cqw;
+}
+
+.hoja-pregunta span:nth-child(1) {
+  font-size: 10.2cqw;
+}
+
+.hoja-pregunta span:nth-child(2) {
+  font-size: 8.6cqw;
+}
+
+.hoja-pregunta span:nth-child(3) {
+  font-size: 9.82cqw;
+}
+
+.hoja-consigna {
+  font-size: 4cqw;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-bottom: 2.4cqw;
+}
+
+.hoja-pie {
+  display: flex;
+  align-items: flex-end;
+  gap: 3cqw;
+  margin-top: auto;
+  padding-top: 2cqw;
+}
+
+/* El SVG trae su margen blanco de 4 módulos: se compensa para alinear con el texto */
+.hoja-qr {
+  flex: none;
+  width: 23cqw;
+  height: 23cqw;
+  margin: -2.2cqw 0 -2.2cqw -2.2cqw;
+}
+
+.hoja-datos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3cqw;
+}
+
+.hoja-url {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3.4cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hoja-logo {
+  width: 26cqw;
+  height: auto;
+}
+
+/* Tiras para arrancar */
+.hoja-tiras {
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  height: 23.5cqw;
+  list-style: none;
+  border-top: 0.25cqw dashed #000;
+}
+
+/* Abajo queda aire: muchas impresoras no llegan al borde del papel */
+.hoja-tiras li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2cqw 0 3.6cqw;
+  border-left: 0.25cqw dashed #000;
+}
+
+.hoja-tiras li:first-child {
+  border-left: 0;
+}
+
+.hoja-tiras span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 1.55cqw;
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* ============================================
+   IMPRESIÓN
+   ============================================ */
+@media print {
+  .noise-overlay,
+  .skip-link {
+    display: none;
+  }
+
+  /* En la página del volante se imprime solo la hoja, a papel completo */
+  .volante-page {
+    background-color: #fff;
+  }
+
+  .volante-page .manifiesto-header,
+  .volante-page .contacto,
+  .volante-instrucciones {
+    display: none;
+  }
+
+  .hoja {
+    position: fixed;
+    inset: 0;
+    width: auto;
+    aspect-ratio: auto;
+    border: 0;
+    box-shadow: none;
+  }
 }
