@@ -667,13 +667,13 @@ Lighthouse da las mismas notas que antes en las ocho páginas, con una diferenci
 
 ## 2026-10-07 — Red: las fichas van por orden alfabético
 
-### Decisión: Dentro de cada grupo, por nombre
+### Decisión: Dentro de cada grupo, por apellido
 
-**Contexto:** Las fichas estaban en el orden en que cada persona se sumó. Al entrar Lucía Guedes, Nicolás pidió ordenarlas por abecedario en LATAM y en Diáspora.
+**Contexto:** Las fichas estaban en el orden en que cada persona se sumó. Al entrar Lucía Guedes, Nicolás pidió ordenarlas por abecedario en LATAM y en Diáspora. Alambre las ordenó primero por nombre y Nicolás lo corrigió: van por apellido.
 
-**Decisión:** En cada grupo las fichas van por orden alfabético de nombre: Israel, Lucía, Miriam; Jorge, Nicolás, Renan. Se ordena por el nombre y no por el apellido porque la ficha se lee así, con el nombre primero. Los puntos del mapa siguen el mismo orden.
+**Decisión:** En cada grupo las fichas van por orden alfabético de apellido: Guedes, Latorre, Viadest; Bronzina, De la Mora, Gastaldy. "De la Mora" va en la D, como está escrito. Los puntos del mapa siguen el mismo orden.
 
-**Razón:** El orden de llegada se puede leer como jerarquía, con quien inició el Lab primero. El abecedario no dice nada de nadie y deja claro dónde va la próxima persona.
+**Razón:** El orden de llegada se puede leer como jerarquía. El abecedario no dice nada de nadie y deja claro dónde va la próxima persona.
 
 ---
 
