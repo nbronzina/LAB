@@ -359,6 +359,7 @@ Estas reglas valen para el sitio, las redes y cualquier pieza del Lab.
 - Declaración: "Mirar hacia los lados, no hacia arriba."
 - Frase: "Metodologías de design fiction desde contextos latinoamericanos."
 - Contexto plegado de un artefacto: "De dónde sale"
+- Pie de página: "Último remiendo:" y la fecha
 
 **Idioma:** español rioplatense, con voseo.
 

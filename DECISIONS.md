@@ -431,6 +431,21 @@ Una sola idea para toda la actualización: que el sitio haga lo que el manifiest
 
 ---
 
+### Decisión: El remiendo a la vista
+
+**Contexto:** El manifiesto se declara documento vivo y el pilar 3 celebra la reparación visible. El sitio no mostraba cuándo ni cómo cambiaba. Nicolás pidió que se lo explicaran antes de decidir.
+
+**Opciones consideradas:**
+1. La fecha del último cambio y un link al historial en GitHub
+2. Solo la fecha
+3. Nada
+
+**Decisión:** Opción 1. Cada página dice al pie "Último remiendo:" con la fecha, y "Ver historial" abre la lista de cambios de ese archivo. La nota del manifiesto suma "Proponé un cambio", que abre un mail.
+
+**Razón:** El repositorio ya es público: el historial existe, faltaba mostrarlo. Al lado de "Est. 2025", una fecha reciente dice que el Lab se mueve. El costo está asumido: la fecha se cambia a mano con cada cambio de contenido o de diseño, y una fecha vieja juega en contra. El link deja a la vista los briefs y que el sitio se arma con Claude: es coherente con "conocimiento como bien común".
+
+---
+
 ### Decisión: "MUNDANIDAD" entra completa
 
 **Contexto:** Estaba en pendientes: entre 601 y unos 1420 px de ancho la palabra se cortaba por la derecha. A 1280 px se leía "MUNDANIDA".
@@ -471,13 +486,13 @@ Una sola idea para toda la actualización: que el sitio haga lo que el manifiest
 
 ---
 
-### Decisión: Alambre puede entregar un prototipo como PR
+### Decisión: Los commits van directo a la rama por defecto
 
-**Contexto:** El flujo era: Alambre escribe el brief, Imprenta codea. Para esta actualización Alambre armó el prototipo sobre el CSS real, para poder mostrarle capturas a Nicolás antes de decidir.
+**Contexto:** Para esta actualización Alambre armó un prototipo, mostró capturas, publicó una vista previa y abrió un PR para que Nicolás aprobara antes de publicar.
 
-**Decisión:** Cuando el prototipo ya está hecho y probado, entra como PR. Imprenta lo revisa y lo mantiene, y sigue ejecutando los briefs.
+**Decisión:** Nicolás: "Necesito hacer todos los commits acá, no hace falta que armes borradores para que vea." Los cambios se commitean directo en `claude/setup-imprenta-framework-V4MJF`, que es la rama desde la que se publica el sitio. Sin PR ni vista previa.
 
-**Razón:** Reescribir como brief algo que ya funciona es trabajo doble. El límite no cambia: nada se publica sin que Nicolás lo valide.
+**Razón:** Menos pasos. Nicolás revisa sobre el sitio publicado y lo que no le cierra se corrige con otro commit. Sigue valiendo que el qué lo decide él: Alambre no sube nada que no haya pedido o aprobado.
 
 ---
 
@@ -493,7 +508,6 @@ Una sola idea para toda la actualización: que el sitio haga lo que el manifiest
 - [x] En la home, "MUNDANIDAD" se cortaba por la derecha entre 601 y unos 1420 px → bug, corregido el 7 oct 2026
 - [ ] La descripción de la red nombra Uruguay ("Argentina, Brasil, México, Uruguay y contando") y en `/red/` no hay nadie de Uruguay
 - [ ] Mapa de la red, segunda versión: un punto por persona sobre el continente, sin nombres ni hilos. Alambre la muestra probada con treinta puntos
-- [ ] Remiendo al pie: "Último remiendo:" con la fecha en cada página y, si Nicolás quiere, un link al historial de cambios en GitHub. Está explicado y falta su decisión: con link, solo la fecha, o nada
 - [ ] Imprimir el volante desde Firefox y Safari. Se probó en Chromium, en A4 y en carta
 
 ---

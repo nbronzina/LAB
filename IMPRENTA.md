@@ -65,7 +65,7 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 - HTML + CSS puro
 - JavaScript: mínimo o cero. Hoy hay dos usos: la fachada del video en `/practicas/` y el botón "Imprimir" del volante
 - Sin frameworks ni paso de build
-- Optimizado para GitHub Pages. Se publica desde la rama por defecto: mergear es publicar
+- Optimizado para GitHub Pages. Se publica desde la rama por defecto: cada commit en esa rama sale al sitio
 - Sin dependencias externas. Las fuentes son locales
 
 ### Colores
@@ -184,13 +184,23 @@ Tareas que se repiten. No hace falta un brief para hacerlas, sí que Nicolás la
 2. **Bitácora.** Un `article.bitacora-entry.bitacora-artefacto` con `id`, arriba de todo en su año. Copiá la estructura de `#servicio-tecnico`. El `h3` es el nombre que la propia pieza lleva. El `alt` describe lo que se ve. El contexto, el título del proyecto y los links van adentro de `details.artefacto-origen`.
 3. **Home.** Cambiá la imagen y el link de `.poster-artefacto` por los del artefacto nuevo. La home muestra siempre el último.
 4. **Prácticas.** Si es respuesta a una práctica, sumala en "Respuestas" de esa práctica, con crédito y link a su ancla en la bitácora.
-5. **Sitemap.** Actualizá el `lastmod` de las páginas que tocaste.
+5. **Remiendo y sitemap** de las páginas que tocaste.
 
 El texto de "De dónde sale" lo escribe Alambre y lo valida Nicolás. Si no lo tenés, pedilo.
 
 ### Sumar una persona a la red
 
-Un `article.practitioner-card` nuevo en `/red/`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. La ficha necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP. Actualizá el `lastmod` de `/red/` en `sitemap.xml`.
+Un `article.practitioner-card` nuevo en `/red/`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. La ficha necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP. Actualizá el remiendo de `/red/` y su `lastmod` en `sitemap.xml`.
+
+### Actualizar el remiendo
+
+Cuando cambia el contenido o el diseño de una página, en esa página:
+
+```html
+<p class="remiendo">Último remiendo: <time datetime="2026-10-07">7 de octubre de 2026</time>. <a href="https://github.com/nbronzina/LAB/commits/HEAD/red/index.html">Ver historial</a></p>
+```
+
+Cambian el `datetime`, la fecha escrita y, en `sitemap.xml`, el `lastmod` de esa URL. No se toca por cambios que pasan por todas las páginas a la vez (el `<head>`, el footer). Una fecha vieja juega en contra: si tocaste la página, actualizala.
 
 ### Abrir una práctica nueva
 

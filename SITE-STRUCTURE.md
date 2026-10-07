@@ -35,8 +35,9 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 | Componente | Dónde | Qué tiene |
 |------------|-------|-----------|
 | Header compacto | Todas menos la home y la 404 | Logo en una línea (link a `/`) y navegación: Manifiesto, La red, Prácticas, Bitácora. La página actual lleva `aria-current="page"`; una subpágina marca a su sección con `aria-current="true"` |
-| Footer | Todas menos la home y la 404 | "Charlemos →" y "Est. 2025" |
-| Footer del poster | Home y 404 | Lo mismo en una fila |
+| Footer | Todas menos la home y la 404 | "Charlemos →", "Est. 2025" y el remiendo |
+| Footer del poster | Home y 404 | Lo mismo en una fila. La 404 no lleva remiendo |
+| Remiendo | Todas menos la 404 | "Último remiendo:" con la fecha en un `<time>` y el link "Ver historial" al historial de ese archivo en GitHub |
 | Ruido de impresión | Todas | `.noise-overlay`. No se imprime |
 | Saltar al contenido | Todas menos la 404 | `.skip-link` |
 

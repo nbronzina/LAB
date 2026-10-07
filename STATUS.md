@@ -6,7 +6,7 @@
 
 Live en: https://mundanidadforzada.org/
 
-Se publica solo desde la rama por defecto del repo (GitHub Pages). Mergear es publicar.
+Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit en esa rama se publica.
 
 ## Páginas
 
@@ -27,6 +27,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Mergear es pu
 - Bitácora con el artefacto primero y home con el último artefacto pegado
 - Primera respuesta publicada a la Práctica #01
 - Volante para imprimir
+- Remiendo al pie de cada página y "Proponé un cambio" en el manifiesto
 - Arreglos: "MUNDANIDAD" completa en la home, `h1` en la home, Archivo Black sin negrita sintética, contraste del botón de prácticas
 
 ## Pendientes
@@ -44,7 +45,6 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Mergear es pu
 
 **En discusión:**
 - [ ] Mapa de la red, segunda versión (un punto por persona)
-- [ ] Remiendo al pie de cada página
 
 **Decisiones abiertas:** ver el final de `DECISIONS.md`.
 

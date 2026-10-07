@@ -157,27 +157,27 @@ El sistema vive en el gap entre "chatear con IA" y "tener artefactos funcionales
 5. Brief delta a Imprenta (o Alambre actualiza docs directamente si no hay código)
 ```
 
-### Prototipo como PR
+### Commits directos
 
-Desde octubre 2026 hay una variante. Cuando para mostrarle algo al Iniciador hace falta verlo andando, Alambre arma el prototipo en una rama, sobre el CSS real, y le muestra capturas.
+Desde octubre 2026, por pedido del Iniciador, Alambre también puede hacer el cambio completo y commitearlo en la rama por defecto, que es la que se publica. Sin PR ni vista previa.
 
 ```
-1. Alambre arma el prototipo en una rama y lo prueba
+1. Iniciador pide o aprueba el cambio
          │
          ▼
-2. Iniciador mira capturas y decide qué entra
+2. Alambre lo hace sobre el código real y lo prueba
          │
          ▼
-3. Alambre abre el PR con el código, los docs al día y un brief delta que dice qué trae
+3. Alambre commitea en la rama por defecto, con los docs al día (se publica solo)
          │
          ▼
-4. Iniciador mergea (mergear es publicar)
+4. Iniciador mira el sitio publicado
          │
          ▼
-5. Imprenta revisa lo publicado y lo mantiene con las recetas de IMPRENTA.md
+5. Lo que no cierra se corrige con otro commit
 ```
 
-Nada se sube antes del paso 2 y nada se publica sin el paso 4.
+Imprenta sigue ejecutando los briefs y mantiene lo publicado con las recetas de `IMPRENTA.md`.
 
 ---
 
@@ -224,7 +224,7 @@ Como cualquier software, este sistema se refina con el uso. Bugs en el flujo se 
 Este sistema es v1. Posibles evoluciones:
 
 - [ ] Imprenta tiene acceso directo a /docs en el repo (no necesita que se le pasen)
-- [x] Alambre puede commitear a /docs y entregar prototipos, siempre por PR (octubre 2026)
+- [x] Alambre puede commitear directamente, docs y código, cuando el Iniciador lo pide (octubre 2026)
 - [ ] Otros miembros del Lab tienen sus propios Alambres configurados
 - [ ] El sistema se documenta como metodología replicable para otros colectivos
 
