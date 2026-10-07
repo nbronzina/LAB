@@ -51,7 +51,7 @@ Abrí el sitio publicado y comprobá:
 
 - [ ] Las ocho páginas cargan sin errores en la consola ni pedidos fallidos
 - [ ] El favicon es el continente
-- [ ] Al compartir un link, la imagen de preview es la nueva (`og-image.png?v=3`)
+- [ ] Al compartir un link, la imagen de preview es la nueva (`og-image.png?v=4`)
 - [ ] En la home, el cartel lleva a `/bitacora/#servicio-tecnico`
 - [ ] "Ver historial", al pie de cada página, abre el historial de ese archivo en GitHub
 - [ ] En `/bitacora/`, "De dónde sale" abre y cierra, y al tocar una pieza se abre la imagen completa

@@ -302,6 +302,25 @@
 
 **Razón:** Es la decisión de enero ("Drop shadow siempre en azul eléctrico") aplicada al ícono. En formas tan chicas como las islas el desplazamiento se vuelve ruido.
 
+Lo de las islas se corrigió el mismo día: ver "La veta azul es continua y va también en las islas".
+
+---
+
+### Decisión: La veta azul es continua y va también en las islas
+
+**Contexto:** En el continente riso el azul era una copia del coral corrida abajo a la derecha, y las islas iban sin azul. Al verlo en grande, Nicolás marcó dos fallas: "falta Cuba y alrededores con su veta azul" y, en la parte baja de México, "está mal superpuesto el coral y el azul, se deja ver el fondo".
+
+**Opciones consideradas:**
+1. Achicar el corrimiento
+2. Dejar la copia corrida y sumarla en las islas
+3. Una veta continua: el área que barre la forma al correrse
+
+**Decisión:** Opción 3, en todo el territorio.
+
+**Razón:** Donde la tierra es más angosta que el corrimiento (Baja California, el istmo centroamericano, las islas) una copia corrida se despega del coral y deja ver el fondo. El barrido queda siempre pegado a la costa. Dejar las islas sin azul había sido una decisión de Alambre, y fue un error. En el wordmark no cambia nada: las letras son más gruesas que el corrimiento.
+
+Se regeneraron `continente-riso.svg`, `logo-riso.svg`, `apple-touch-icon.png`, `og-image.png` (pasa a `?v=4`) y `avatar-crema.png`.
+
 ---
 
 ### Decisión: Tres tamaños ópticos, marca completa por defecto

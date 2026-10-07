@@ -171,7 +171,8 @@ Se usa para:
 - **Territorio:** de México a Tierra del Fuego, más Cuba, La Española, Puerto Rico y las Islas Malvinas.
 - **Proyección:** Equal Earth (áreas iguales), centrada en el meridiano 76° O. Cada territorio ocupa su superficie real. No se usa Mercator.
 - **Trazo:** datos de Natural Earth 1:50m. El delta del Amazonas y los archipiélagos australes van soldados al continente: a escala de logo se leían como manchas.
-- **Color:** coral. En la versión riso lleva el desplazamiento azul eléctrico abajo a la derecha, el mismo gesto que el `text-shadow` de los títulos. Las islas van sin azul: en formas tan chicas el desplazamiento se vuelve ruido.
+- **Color:** coral. En la versión riso lleva una veta azul eléctrico abajo a la derecha, el mismo gesto que el `text-shadow` de los títulos. Va en todo el territorio, islas incluidas.
+- **La veta es continua.** Es el área que barre la forma al correrse, no una copia corrida. Así queda pegada a la costa también donde la tierra es más angosta que el corrimiento (Baja California, el istmo, las islas), y nunca se ve el fondo entre el coral y el azul.
 
 **Tres tamaños ópticos**
 
@@ -192,7 +193,7 @@ Se usa para:
 
 ### Logo completo (continente + wordmark)
 
-El continente a la izquierda y el wordmark en tres líneas escalonadas. Usa las mismas métricas que `.poster-logo`: Archivo Black, mayúsculas, interlineado 0.85, sangrías de 0.3em y 0.6em. La sombra mide 0.05em y va abajo a la derecha. El continente mide 1.3 veces el alto del bloque de texto y va centrado con él.
+El continente a la izquierda y el wordmark en tres líneas escalonadas. Usa las mismas métricas que `.poster-logo`: Archivo Black, mayúsculas, interlineado 0.85, sangrías de 0.3em y 0.6em. La sombra mide 0.05em y va abajo a la derecha: en el continente es la veta continua y en el wordmark la copia corrida de siempre, igual que en el sitio. El continente mide 1.3 veces el alto del bloque de texto y va centrado con él.
 
 Es un archivo, no texto vivo. Se usa donde no hay CSS: redes, `og-image`, documentos, firmas. **En el sitio el wordmark sigue siendo texto** (`.poster-logo`, `.logo`). Si el continente entra al header o al poster es una decisión pendiente (ver `DECISIONS.md`).
 
