@@ -217,7 +217,7 @@ El texto de "De dónde sale" lo escribe Alambre y lo valida Nicolás. Si no lo t
 
 ### Sumar una persona a la red
 
-1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP de 240 x 240 px. Si la foto está recortada, que conserve el fondo transparente.
+1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP de 240 x 240 px. La foto va como las demás: la figura recortada del fondo (fondo transparente, se ve el color de la ficha), en escala de grises neutra y con el encuadre en cabeza y hombros.
 2. **Punto en el mapa.** Un `a.punto` que apunte a ese `id`, con las coordenadas de su ciudad. El paso a paso y la tabla de ciudades están en `MAPA.md`.
 3. **Remiendo** de `/red/` y su `lastmod` en `sitemap.xml`.
 

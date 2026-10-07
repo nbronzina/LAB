@@ -93,12 +93,15 @@ Elegí el lado donde no haya otro punto y donde el nombre entre: `punto--der` no
 
 ## Cuando dos ciudades se pisan
 
-Chivilcoy y Buenos Aires están a 160 km: a escala del mapa es el mismo lugar. Se corre cada `<li>` unos píxeles con `--dx` y `--dy`:
+Chivilcoy, Buenos Aires y Montevideo están a menos de 400 km: a escala del mapa es casi el mismo lugar. Se corre cada `<li>` unos píxeles con `--dx` y `--dy`:
 
 ```html
-<li style="--x: 64.3%; --y: 77.5%; --dx: -5px">…</li>
-<li style="--x: 66.09%; --y: 77.19%; --dx: 5px">…</li>
+<li style="--x: 64.3%; --y: 77.5%; --dx: -8px">…</li>
+<li style="--x: 66.09%; --y: 77.19%">…</li>
+<li style="--x: 68.44%; --y: 77.5%; --dx: 7px; --dy: -3px">…</li>
 ```
+
+Buenos Aires queda en su lugar y las otras dos se abren hacia los costados. Montevideo sube 3 px porque, corrida hacia el este, caía sobre el mar.
 
 - No más de 8 px en total por ciudad.
 - Las ciudades de costa (Lima, Valparaíso, Barranquilla) quedan justo en el borde del dibujo. Si el punto cae sobre el mar, corrélo tierra adentro.

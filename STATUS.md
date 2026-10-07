@@ -15,7 +15,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 | `/` | ✓ Poster con el último artefacto |
 | `/manifiesto/` | ✓ |
 | `/marco/` | ✓ Revisión de texto pendiente (ver abajo) |
-| `/red/` | ✓ Cinco personas, con el mapa |
+| `/red/` | ✓ Seis personas, con el mapa |
 | `/practicas/` | ✓ Práctica #01 abierta, sin fecha de cierre. Una respuesta publicada |
 | `/practicas/volante/` | ✓ Imprime en A4 y carta |
 | `/bitacora/` | ✓ Dos artefactos y cuatro entradas de texto |
@@ -33,12 +33,12 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - Arreglos: "MUNDANIDAD" completa en la home, `h1` en la home, Archivo Black sin negrita sintética, contraste del botón de prácticas
 - Limpieza del código de todo el repo: `style.css` reescrita en orden, clases con nombres que dicen dónde se usan, publicación sin Jekyll, imágenes del tamaño en que se ven. El sitio se ve igual que antes
 - Ícono anterior retirado (`img/lab-icon.png`): los avatares de redes ya llevan el continente
+- Lucía Guedes (Montevideo) se suma a la red: ficha, foto y punto en el mapa
 
 ## Pendientes
 
 **Contenido:**
 - [ ] Más respuestas a la Práctica #01
-- [ ] Persona de Uruguay en `/red/` (la descripción de la red ya nombra Uruguay)
 - [ ] Revisión del marco teórico, anunciada en la bitácora de septiembre. Su introducción repite los dos primeros párrafos del manifiesto
 - [ ] Fotos de volantes pegados, para la bitácora
 
