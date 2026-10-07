@@ -74,6 +74,8 @@ En `.punto-nombre` va el nombre completo: es lo que se ve al pasar el cursor. Lo
 
 Arriba del punto. Se alinea solo según la ciudad: en el oeste del mapa se extiende hacia la derecha y en el este hacia la izquierda. Así nunca se sale del mapa.
 
+Con el cursor o el foco encima, la ciudad pasa adelante de las demás y del sticker amarillo, así el nombre se lee entero.
+
 Si arriba hay otro punto y el nombre lo tapa, se cambia de lado con una clase en el `<a>`. Pasaba con Querétaro y Monterrey, que están casi en el mismo meridiano: el nombre de Israel tapaba el punto de Jorge.
 
 | Clase | Dónde sale el nombre |

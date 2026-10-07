@@ -998,6 +998,13 @@ select:focus {
   transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, 0px)));
 }
 
+/* Con el cursor o el foco encima, la ciudad pasa adelante de las demás y del sticker:
+   su nombre se lee entero. */
+.red-mapa-puntos li:hover,
+.red-mapa-puntos li:focus-within {
+  z-index: 1;
+}
+
 /* Una persona. Negro: vive ahí. Azul: salió de ahí.
    El tamaño acompaña al del mapa (--p). */
 .punto {
