@@ -98,6 +98,7 @@ El sistema vive en el gap entre "chatear con IA" y "tener artefactos funcionales
 | `SITE-STRUCTURE.md` | Estructura del sitio |
 | `DECISIONS.md` | Log de decisiones con razones |
 | `STATUS.md` | Estado del sitio y pendientes |
+| `MAPA.md` | El mapa de la red: cómo se suma un punto |
 | `IMPRENTA.md` | Brief base para Claude Code |
 | `SYSTEM.md` | Este documento |
 | `BRIEF-*.md` | Briefs delta para tareas específicas |

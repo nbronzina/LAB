@@ -501,7 +501,28 @@ Una sola idea para toda la actualización: que el sitio haga lo que el manifiest
 
 **Decisión:** No en esa forma. `/red/` queda como estaba.
 
-**Razón:** Nicolás: "Ahora somos 5 pero si se suman más queda feo." Con quince personas los nombres se pisan y los hilos hacia Europa se vuelven una maraña. Un mapa de la red tiene que aguantar que la red crezca. Queda en pendientes una versión con un punto por persona, sin nombres ni hilos.
+**Razón:** Nicolás: "Ahora somos 5 pero si se suman más queda feo." Con quince personas los nombres se pisan y los hilos hacia Europa se vuelven una maraña. Un mapa de la red tiene que aguantar que la red crezca.
+
+Se rehízo el mismo día: ver la decisión que sigue.
+
+---
+
+### Decisión: El mapa de la red, con un punto por persona
+
+**Contexto:** La versión con nombres e hilos no aguantaba que la red creciera.
+
+**Opciones consideradas:**
+1. No poner mapa
+2. Un punto por persona sobre el continente, como portada de la página, con las fichas abajo
+3. Lo mismo, con el mapa fijo al costado de la lista
+
+**Decisión:** Opción 3. `/red/` muestra el continente de la marca con un punto por persona. Negro: vive ahí. Azul: salió de ahí, y el punto va en su ciudad de origen. Sin nombres, sin hilos y sin leyenda. Cada punto es un link a la ficha. Desde 700 px de ancho la lista va a la izquierda y el mapa a la derecha, fijo mientras se recorren las fichas. Un sticker amarillo sobre el Pacífico pregunta "¿Y vos, desde dónde?" y abre el mail para sumarse.
+
+**Razón:** Se probó con treinta y un puntos y se sigue leyendo. Al costado de la lista el mapa trabaja de índice: queda a la vista mientras se recorren las fichas y cada punto lleva a su persona. Además deja entrar las primeras fichas en la primera pantalla; como portada, las mandaba abajo. Los colores de los puntos son los de los rótulos de los grupos (LATAM en negro, Diáspora en azul), por eso no lleva leyenda.
+
+El costo: las fichas quedan en una columna más angosta y la lista es más larga. Si la red pasa de unas veinte personas va a hacer falta una ficha más compacta.
+
+Cómo se suma un punto: `MAPA.md`.
 
 ---
 
@@ -526,7 +547,9 @@ Una sola idea para toda la actualización: que el sitio haga lo que el manifiest
 - [ ] Retirar `img/lab-icon.png` (ícono anterior, 1 MB, sin referencias en el sitio) cuando los avatares de redes estén cambiados
 - [x] En la home, "MUNDANIDAD" se cortaba por la derecha entre 601 y unos 1420 px → bug, corregido el 7 oct 2026
 - [ ] La descripción de la red nombra Uruguay ("Argentina, Brasil, México, Uruguay y contando") y en `/red/` no hay nadie de Uruguay
-- [ ] Mapa de la red, segunda versión: un punto por persona sobre el continente, sin nombres ni hilos. Alambre la muestra probada con treinta puntos
+- [x] Mapa de la red, segunda versión: un punto por persona sobre el continente, sin nombres ni hilos → publicado el 7 oct 2026
+- [ ] La pieza pegada en la home. Al verla publicada, Nicolás preguntó qué aporta. Suma el único ejemplo concreto de la portada y, en el teléfono, hace que el poster ya no entre en una pantalla. Sigue ahí hasta que él decida
+- [ ] Probar en Firefox y Safari que el mapa de `/red/` queda fijo al recorrer las fichas. Se probó en Chromium
 - [ ] Imprimir el volante desde Firefox y Safari. Se probó en Chromium, en A4 y en carta
 
 ---

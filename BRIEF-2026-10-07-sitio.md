@@ -24,6 +24,7 @@ Estos commits también ejecutan `BRIEF-2026-10-07.md` (favicon SVG, Open Graph, 
 | Primera respuesta a la Práctica #01 | `practicas/index.html` | Lo mismo |
 | Volante para imprimir | `practicas/volante/index.html`, `style.css` ("VOLANTE" e "IMPRESIÓN") | `BRAND.md`, "Volante" |
 | Remiendo al pie | Todas las páginas menos la 404 | Receta "Actualizar el remiendo" en `IMPRENTA.md` |
+| Mapa de la red, un punto por persona | `red/index.html`, `style.css` ("RED - Mapa") | `MAPA.md` |
 | "Proponé un cambio" en el manifiesto | `manifiesto/index.html` | |
 | Imágenes nuevas | `img/artefacto-servicio-tecnico.webp`, `-640.webp`, `-480.webp`, `img/ejemplo-practica-miriam-640.webp` | `SITE-STRUCTURE.md`, "Imágenes" |
 
@@ -55,10 +56,16 @@ Abrí el sitio publicado y comprobá:
 - [ ] En la home, el cartel lleva a `/bitacora/#servicio-tecnico`
 - [ ] "Ver historial", al pie de cada página, abre el historial de ese archivo en GitHub
 - [ ] En `/bitacora/`, "De dónde sale" abre y cierra, y al tocar una pieza se abre la imagen completa
+- [ ] En `/red/`, cada punto del mapa lleva a la ficha de esa persona
 
-### 2. Imprimir el volante en Firefox y Safari
+### 2. Probar en Firefox y Safari
 
-Se probó en Chromium: sale en una sola página en A4 y en carta, y el QR se lee. Falta probarlo en los otros dos. Si la hoja sale cortada o en dos páginas, anotá qué pasa y avisá. No lo rediseñes.
+Todo se probó en Chromium. Falta en los otros dos:
+
+- **El volante.** Tiene que salir en una sola página en A4 y en carta, con el QR legible.
+- **El mapa de `/red/`.** En escritorio tiene que quedar fijo a la derecha mientras se recorren las fichas.
+
+Si algo sale distinto, anotá qué pasa y avisá. No lo rediseñes.
 
 ### 3. De acá en más
 
@@ -68,7 +75,7 @@ Las tareas que se repiten tienen receta en `IMPRENTA.md`: publicar un artefacto,
 
 ## No tocar
 
-- **`/red/`.** Hay una segunda versión del mapa de la red en camino (ver pendientes en `DECISIONS.md`). No agregues un mapa por tu cuenta.
+- **El mapa de `/red/`.** Los puntos se suman con la receta de `MAPA.md`. No se le agregan nombres, líneas ni leyenda.
 - **El copy.** El del volante y el de "De dónde sale" están validados por Nicolás. Si falta un texto, pedilo.
 - **`font-weight: 400 900`** en el `@font-face` de Archivo Black.
 - **Las anclas publicadas** (`#servicio-tecnico`, `#laboratorio-de-innovacion-climatica`).
@@ -85,8 +92,10 @@ En Chromium, con el sitio servido en local:
 - Todas las imágenes cargan y tienen `alt`, `width` y `height`
 - Un `h1` por página
 - axe: sin infracciones (antes, cuatro: dos de contraste en prácticas, y la falta de `h1` en la home y la 404)
-- Lighthouse, móvil y escritorio: 99 a 100 en rendimiento y 100 en accesibilidad, buenas prácticas y SEO. Prácticas pasó de 96 a 100 en accesibilidad
+- Lighthouse, móvil y escritorio: 99 a 100 en rendimiento y 100 en accesibilidad, buenas prácticas y SEO, salvo la accesibilidad de `/red/` (ver más abajo). Prácticas pasó de 96 a 100 en accesibilidad
 - El volante impreso a PDF en A4 y en carta: una página, QR leído
+- El mapa de la red con treinta y un puntos de prueba y una lista de treinta y una fichas
+- En `/red/` Lighthouse da 96 en accesibilidad: marca el área de toque de los dos puntos más cercanos del mapa (Chivilcoy y Buenos Aires). Está explicado en "Accesibilidad", en `MAPA.md`
 
 No se probó: Firefox, Safari, ni una impresora real.
 
@@ -95,19 +104,20 @@ No se probó: Firefox, Safari, ni una impresora real.
 ## Criterios de Done
 
 - [ ] Revisión en producción completa (tarea 1)
-- [ ] Volante probado en Firefox y Safari (tarea 2)
-- [ ] Sin cambios en el copy, en `/red/` ni en `img/marca/`
+- [ ] Volante y mapa probados en Firefox y Safari (tarea 2)
+- [ ] Sin cambios en el copy ni en `img/marca/`
 
 ---
 
 ## Archivos Afectados
 
 **En estos commits:**
-- `index.html`, `404.html`, `manifiesto/index.html`, `practicas/index.html`, `bitacora/index.html`
+- `index.html`, `404.html`, `manifiesto/index.html`, `practicas/index.html`, `bitacora/index.html`, `red/index.html`
 - `practicas/volante/index.html` (nuevo)
-- `marco/index.html`, `red/index.html` (el `<head>` y el remiendo)
+- `marco/index.html` (el `<head>` y el remiendo)
 - `style.css`, `sitemap.xml`
 - `img/artefacto-servicio-tecnico.webp`, `-640.webp`, `-480.webp`, `img/ejemplo-practica-miriam-640.webp` (nuevos)
 - `BRAND.md`, `DECISIONS.md`, `SITE-STRUCTURE.md`, `STATUS.md`, `IMPRENTA.md`, `SYSTEM.md`
+- `MAPA.md` (nuevo)
 
 **Pendientes (los decide Nicolás):** ver el final de `DECISIONS.md`.

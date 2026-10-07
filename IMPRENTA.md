@@ -50,6 +50,7 @@ Antes de ejecutar cualquier tarea, consultá estos archivos:
 |---------|-----------|
 | `BRAND.md` | Sistema de marca completo (colores, tipografía, principios) |
 | `SITE-STRUCTURE.md` | Estructura del sitio (páginas, componentes, anclas, imágenes) |
+| `MAPA.md` | El mapa de `/red/`: cómo se suma un punto y la tabla de coordenadas |
 | `DECISIONS.md` | Log de decisiones con razones |
 | `STATUS.md` | Estado del sitio y pendientes |
 | `SYSTEM.md` | Cómo funciona el sistema Iniciador → Alambre → Imprenta |
@@ -155,7 +156,7 @@ Crear página de proyectos
 ├── index.html              # Home: poster
 ├── manifiesto/index.html   # Manifiesto
 ├── marco/index.html        # Marco teórico
-├── red/index.html          # La red: fichas
+├── red/index.html          # La red: mapa y fichas
 ├── practicas/index.html    # Prácticas
 ├── practicas/volante/index.html  # Volante para imprimir
 ├── bitacora/index.html     # Bitácora
@@ -167,7 +168,7 @@ Crear página de proyectos
 ├── favicon.svg, favicon-16.png, favicon-32.png, apple-touch-icon.png
 ├── og-image.png            # Imagen para redes (1200x630)
 ├── sitemap.xml, robots.txt, CNAME
-├── BRAND.md, SITE-STRUCTURE.md, DECISIONS.md, STATUS.md, SYSTEM.md
+├── BRAND.md, SITE-STRUCTURE.md, DECISIONS.md, STATUS.md, SYSTEM.md, MAPA.md
 ├── IMPRENTA.md             # Este archivo
 └── BRIEF-*.md              # Briefs delta
 ```
@@ -190,7 +191,9 @@ El texto de "De dónde sale" lo escribe Alambre y lo valida Nicolás. Si no lo t
 
 ### Sumar una persona a la red
 
-Un `article.practitioner-card` nuevo en `/red/`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. La ficha necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP. Actualizá el remiendo de `/red/` y su `lastmod` en `sitemap.xml`.
+1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora), copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP.
+2. **Punto en el mapa.** Un `a.punto` que apunte a ese `id`, con las coordenadas de su ciudad. El paso a paso y la tabla de ciudades están en `MAPA.md`.
+3. **Remiendo** de `/red/` y su `lastmod` en `sitemap.xml`.
 
 ### Actualizar el remiendo
 

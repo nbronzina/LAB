@@ -11,7 +11,7 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 | `/` | `index.html` | Poster. Una pantalla: logo, declaración, frase, cuatro links y el último artefacto pegado |
 | `/manifiesto/` | `manifiesto/index.html` | Declaración corta. 3 a 5 minutos |
 | `/marco/` | `marco/index.html` | Fundamentación académica. 25 a 30 minutos. Se llega desde el manifiesto |
-| `/red/` | `red/index.html` | Fichas de la red (LATAM y diáspora) e invitación a sumarse |
+| `/red/` | `red/index.html` | Mapa de la red, fichas (LATAM y diáspora) e invitación a sumarse |
 | `/practicas/` | `practicas/index.html` | Cómo funcionan las prácticas, la #01, cómo responder y las respuestas |
 | `/practicas/volante/` | `practicas/volante/index.html` | Volante de la práctica para imprimir |
 | `/bitacora/` | `bitacora/index.html` | Registro por año. Los artefactos se ven primero |
@@ -49,8 +49,11 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 - `.poster-artefacto`: el último artefacto de la bitácora, pegado. Desde 1000 px va abajo a la derecha; más angosto, debajo de los links
 
 **Red** (`body.red-page`)
-- Dos `section.practitioners-grupo`: LATAM y Diáspora
-- `article.practitioner-card`: una ficha
+- `.red-cuerpo`: la grilla de la página. Desde 700 px, la lista a la izquierda y el mapa a la derecha
+- `.red-encabezado`: título e introducción
+- `nav.red-mapa`: el continente (`img.red-mapa-continente`), los puntos (`ul.red-mapa-puntos`, un `<li>` por ciudad y un `a.punto` por persona) y el sticker `.red-mapa-sumate`. Ver `MAPA.md`
+- `.red-grupos`: dos `section.practitioners-grupo`, LATAM y Diáspora (`.practitioners-grupo--diaspora`)
+- `article.practitioner-card` con `id`: una ficha. Es el destino de su punto en el mapa
 - `.red-cta`: invitación a sumarse
 
 **Prácticas** (`body.bitacora-page`)
@@ -73,6 +76,7 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 |-------|--------|--------|
 | `#servicio-tecnico` | `/bitacora/` | Cartel de servicio técnico |
 | `#laboratorio-de-innovacion-climatica` | `/bitacora/` | Afiche del Lab IC+ de Chivilcoy |
+| `#nombre-apellido` (por ejemplo `#miriam-latorre`) | `/red/` | La ficha de cada persona. En minúsculas, sin tildes y con guiones |
 
 Un ancla publicada no se renombra: puede estar enlazada desde afuera.
 
@@ -92,8 +96,9 @@ Todas las imágenes llevan `width`, `height` y un `alt` que describe lo que se v
 
 | Ancho | Qué cambia |
 |-------|------------|
-| hasta 600 px | Poster y header en columna, fichas apiladas |
-| desde 700 px | Artefactos de la bitácora con la ficha al lado |
+| hasta 600 px | Poster y header en columna, fichas con la foto arriba |
+| desde 700 px | Artefactos de la bitácora con la ficha al lado. En `/red/`, la lista a la izquierda y el mapa fijo a la derecha |
+| de 700 a 899 px | En `/red/`, fichas con la foto arriba (la columna es angosta) |
 | desde 1000 px | Artefacto de la home abajo a la derecha |
 
 ---

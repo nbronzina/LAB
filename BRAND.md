@@ -300,6 +300,20 @@ Así se muestra un artefacto en el sitio (home, bitácora, prácticas): como una
 - Diez tiras para arrancar con la dirección
 - Entra en A4 y en carta
 
+### Mapa de la red
+
+`/red/`. El continente de la marca usado como mapa, con un punto por persona.
+
+- El continente es el archivo de la marca (`continente-riso.svg`). No se redibuja
+- Punto negro: vive ahí. Punto azul: salió de ahí, y va en su ciudad de origen
+- Cada punto lleva un aro crema que lo despega del coral
+- Sin nombres, sin líneas, sin leyenda y sin países. El nombre aparece al pasar el cursor o al llegar con el teclado, y el punto se pone amarillo
+- Varias personas en una ciudad se apilan de a tres por fila
+- Un sticker amarillo sobre el Pacífico: "¿Y vos, desde dónde?"
+- Desde 700 px va a la derecha de la lista y queda fijo mientras se recorren las fichas
+
+Cómo se suma un punto: `MAPA.md`.
+
 ---
 
 ## Lo que NO Hacer
