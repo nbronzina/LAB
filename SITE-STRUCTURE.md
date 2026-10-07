@@ -84,7 +84,7 @@ Un ancla publicada no se renombra: puede estar enlazada desde afuera.
 
 | Carpeta o patrón | Contenido |
 |------------------|-----------|
-| `img/marca/` | Logo, continente y avatares. No se editan a mano |
+| `img/marca/` | Logo, continente, avatares y banner de LinkedIn. No se editan a mano |
 | `img/nombre-apellido.webp` | Fotos de las fichas, 80x80 en pantalla |
 | `img/artefacto-<nombre>.webp` | Un artefacto a tamaño completo. Es lo que se abre al tocar la pieza |
 | `img/artefacto-<nombre>-640.webp`, `-480.webp` | La misma pieza a 640 y 480 px de ancho, para mostrarla en las páginas |

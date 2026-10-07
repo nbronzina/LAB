@@ -23,7 +23,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 
 ## Hecho en octubre 2026
 
-- Marca nueva: el continente (favicon, `og-image`, logo completo, avatares)
+- Marca nueva: el continente (favicon, `og-image`, logo completo, avatares y banner de LinkedIn)
 - Bitácora con el artefacto primero y home con el último artefacto pegado
 - Primera respuesta publicada a la Práctica #01
 - Volante para imprimir

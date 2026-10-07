@@ -164,7 +164,7 @@ Crear página de proyectos
 ├── style.css               # Estilos compartidos (único CSS)
 ├── fonts/                  # Archivo Black y Space Grotesk (woff2)
 ├── img/                    # Fotos de fichas, artefactos, miniatura del video
-├── img/marca/              # Logo, continente, avatares. No se editan a mano
+├── img/marca/              # Logo, continente, avatares, banner. No se editan a mano
 ├── favicon.svg, favicon-16.png, favicon-32.png, apple-touch-icon.png
 ├── og-image.png            # Imagen para redes (1200x630)
 ├── sitemap.xml, robots.txt, CNAME

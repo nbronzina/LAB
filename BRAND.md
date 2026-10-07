@@ -342,6 +342,7 @@ Cómo se suma un punto: `MAPA.md`.
 | `img/marca/continente-m-*.svg`, `continente-s-*.svg` | Tamaños ópticos M y S: coral y crema |
 | `img/marca/avatar-crema.png` | Avatar 1200x1200. Continente riso sobre crema (LinkedIn) |
 | `img/marca/avatar-coral.png` | Avatar 1200x1200. Continente crema sobre coral (Instagram) |
+| `img/marca/banner-linkedin.png` | Banner 4200x700. El nombre en coral con sombra azul sobre crema (LinkedIn) |
 
 En los SVG el wordmark está convertido a trazos: no dependen de que la fuente esté cargada.
 
@@ -354,6 +355,7 @@ Las piezas para redes usan el mismo sistema que el sitio. No tienen tipografías
 | Pieza | Regla |
 |-------|-------|
 | Avatar LinkedIn | `avatar-crema.png` |
+| Banner LinkedIn | `banner-linkedin.png`, 4200x700. El nombre en tres líneas escalonadas, coral con sombra azul sobre crema, como en la home. Sin continente: el avatar queda al lado y juntos arman el logo completo. El texto va entre el 31% y el 67% del ancho, porque LinkedIn pone el avatar abajo a la izquierda y en el teléfono puede recortar los costados |
 | Avatar Instagram | `avatar-coral.png`. Instagram lo recorta en círculo y lo muestra muy chico; el coral se distingue en modo claro y en modo oscuro |
 | Placas de carrusel | 1080x1350 (4:5), márgenes de 100 px |
 | Títulos | Archivo Black, mayúsculas. Coral con sombra azul `6px 6px 0` sobre crema o negro. Negro sobre coral |

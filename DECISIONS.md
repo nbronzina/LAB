@@ -401,6 +401,22 @@ Se regeneraron `continente-riso.svg`, `logo-riso.svg`, `apple-touch-icon.png`, `
 
 ---
 
+### Decisión: El banner de LinkedIn lleva el nombre
+
+**Contexto:** Nicolás pidió un banner para la página de LinkedIn. Alambre entregó primero la declaración ("Mirar hacia los lados, no hacia arriba.") en negro sobre coral, porque LinkedIn ya escribe el nombre debajo del banner y el avatar ya es el continente. Nicolás preguntó por qué no iba el propio nombre.
+
+**Opciones consideradas:**
+1. La declaración, en negro sobre coral
+2. El nombre: las tres líneas escalonadas, coral con sombra azul sobre crema
+
+**Decisión:** Opción 2. Sin continente, porque el avatar queda al lado y juntos arman el logo completo.
+
+**Razón:** El nombre que escribe LinkedIn va en su tipografía, no en la del Lab, y el negro sobre coral no lleva la sombra azul. La primera versión quedaba sin las dos cosas que hacen reconocible a la marca. El nombre, además, entra con letras más grandes y en el teléfono se lee mejor.
+
+Medidas: 4200 x 700 px, PNG o JPG, hasta 3 MB. Son las que pide LinkedIn según Sprout Social (mayo 2026) y otras guías que citan su ayuda; la página de ayuda no se pudo abrir directo. Algunas guías siguen dando 1128 x 191, la medida anterior.
+
+---
+
 ## 2026-10-07 — Sitio: que haga lo que dice
 
 Una sola idea para toda la actualización: que el sitio haga lo que el manifiesto dice.
