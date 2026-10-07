@@ -38,12 +38,13 @@ El nombre aparece al pasar el cursor por un punto o al llegar con el teclado. En
 1. **Ficha.** Agregá el `<article class="practitioner-card" id="nombre-apellido">` en el grupo que corresponda (LATAM o Diáspora). El `id` va en minúsculas, sin tildes y con guiones.
 2. **Punto.** Agregá un `<li>` en `<ul class="red-mapa-puntos">` con las coordenadas de su ciudad (tabla de abajo). Si la ciudad ya tiene su `<li>`, el punto nuevo va adentro de ese mismo `<li>`.
 3. **Mirá el mapa a 390 px y a 1440 px.** Si dos ciudades se pisan o un punto de la costa cae sobre el mar, corrélo (ver "Cuando dos ciudades se pisan").
-4. **Remiendo.** Actualizá la fecha al pie de la página y el `lastmod` de `/red/` en `sitemap.xml`.
+4. **Pasá el cursor por el punto nuevo y por sus vecinos.** Si un nombre tapa a otro punto, cambialo de lado (ver "Dónde sale el nombre").
+5. **Remiendo.** Actualizá la fecha al pie de la página y el `lastmod` de `/red/` en `sitemap.xml`.
 
 ### Vive ahí
 
 ```html
-<li style="--x: 19.38%; --y: 15.05%"><a href="#israel-viadest" class="punto"><span class="punto-nombre">Israel Viadest<span class="solo-lector">, Querétaro</span></span></a></li>
+<li style="--x: 45.95%; --y: 52.41%"><a href="#nombre-apellido" class="punto"><span class="punto-nombre">Nombre Apellido<span class="solo-lector">, Lima</span></span></a></li>
 ```
 
 ### Salió de ahí
@@ -68,6 +69,25 @@ Un solo `<li>` con un `<a>` por persona. Los puntos se apilan solos, de a tres p
 ### El texto de cada punto
 
 En `.punto-nombre` va el nombre completo: es lo que se ve al pasar el cursor. Lo que sigue, dentro de `.solo-lector`, no se ve y lo lee un lector de pantalla: la ciudad, o "de (origen) a (donde está hoy)".
+
+### Dónde sale el nombre
+
+Arriba del punto. Se alinea solo según la ciudad: en el oeste del mapa se extiende hacia la derecha y en el este hacia la izquierda. Así nunca se sale del mapa.
+
+Si arriba hay otro punto y el nombre lo tapa, se cambia de lado con una clase en el `<a>`. Pasaba con Querétaro y Monterrey, que están casi en el mismo meridiano: el nombre de Israel tapaba el punto de Jorge.
+
+| Clase | Dónde sale el nombre |
+|-------|----------------------|
+| (ninguna) | Arriba |
+| `punto--der` | A la derecha |
+| `punto--izq` | A la izquierda |
+| `punto--abajo` | Abajo |
+
+```html
+<a href="#israel-viadest" class="punto punto--der">…</a>
+```
+
+Elegí el lado donde no haya otro punto y donde el nombre entre: `punto--der` no sirve en la costa de Brasil, ni `punto--izq` en México. En una zona con muchos puntos juntos algún nombre va a tapar a un vecino mientras el cursor está encima, y está bien. Lo que se evita es tapar al punto de al lado cuando hay lugar para no hacerlo.
 
 ---
 

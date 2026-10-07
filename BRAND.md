@@ -307,7 +307,7 @@ Así se muestra un artefacto en el sitio (home, bitácora, prácticas): como una
 - El continente es el archivo de la marca (`continente-riso.svg`). No se redibuja
 - Punto negro: vive ahí. Punto azul: salió de ahí, y va en su ciudad de origen
 - Cada punto lleva un aro crema que lo despega del coral
-- Sin nombres, sin líneas, sin leyenda y sin países. El nombre aparece al pasar el cursor o al llegar con el teclado, y el punto se pone amarillo
+- Sin nombres, sin líneas, sin leyenda y sin países. El nombre aparece al pasar el cursor o al llegar con el teclado, y el punto se pone amarillo. Sale arriba del punto, o al costado si arriba tapa a otro
 - Varias personas en una ciudad se apilan de a tres por fila
 - Un sticker amarillo sobre el Pacífico: "¿Y vos, desde dónde?"
 - Desde 700 px va a la derecha de la lista y queda fijo mientras se recorren las fichas

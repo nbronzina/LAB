@@ -718,12 +718,15 @@ a.logo-small {
   inset: -0.4rem;
 }
 
-/* El nombre aparece al pasar el cursor o al llegar con el teclado */
+/* El nombre aparece al pasar el cursor o al llegar con el teclado.
+   Sale arriba del punto y se alinea según dónde está la ciudad (--x):
+   hacia la derecha en el oeste del mapa, hacia la izquierda en el este.
+   Así nunca se sale del mapa. */
 .punto-nombre {
   position: absolute;
   left: 50%;
   bottom: calc(100% + 0.5rem);
-  transform: translateX(-50%);
+  transform: translateX(calc(var(--x) * -1));
   font-family: 'Archivo Black', sans-serif;
   font-size: 0.75rem;
   line-height: 1;
@@ -746,6 +749,28 @@ a.logo-small {
 .punto:hover .punto-nombre,
 .punto:focus-visible .punto-nombre {
   opacity: 1;
+}
+
+/* Si arriba hay otro punto y el nombre lo tapa, el nombre cambia de lado */
+.punto--der .punto-nombre,
+.punto--izq .punto-nombre {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.punto--der .punto-nombre {
+  left: calc(100% + 0.5rem);
+}
+
+.punto--izq .punto-nombre {
+  left: auto;
+  right: calc(100% + 0.5rem);
+}
+
+.punto--abajo .punto-nombre {
+  bottom: auto;
+  top: calc(100% + 0.5rem);
 }
 
 /* Sticker: el punto que falta. Va sobre el Pacífico y su tamaño acompaña al del mapa */
