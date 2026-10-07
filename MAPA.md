@@ -35,8 +35,8 @@ El nombre aparece al pasar el cursor por un punto o al llegar con el teclado. En
 
 ## Sumar una persona
 
-1. **Ficha.** Agregá el `<article class="practitioner-card" id="nombre-apellido">` en el grupo que corresponda (LATAM o Diáspora). El `id` va en minúsculas, sin tildes y con guiones.
-2. **Punto.** Agregá un `<li>` en `<ul class="red-mapa-puntos">` con las coordenadas de su ciudad (tabla de abajo). Si la ciudad ya tiene su `<li>`, el punto nuevo va adentro de ese mismo `<li>`.
+1. **Ficha.** Agregá el `<article class="practitioner-card" id="nombre-apellido">` en el grupo que corresponda (LATAM o Diáspora), en el lugar que le toque por orden alfabético de nombre. El `id` va en minúsculas, sin tildes y con guiones.
+2. **Punto.** Agregá un `<li>` en `<ul class="red-mapa-puntos">` con las coordenadas de su ciudad (tabla de abajo). Si la ciudad ya tiene su `<li>`, el punto nuevo va adentro de ese mismo `<li>`. Los `<li>` van en el mismo orden que las fichas: es el orden en que se recorren los puntos con el teclado.
 3. **Mirá el mapa a 390 px y a 1440 px.** Si dos ciudades se pisan o un punto de la costa cae sobre el mar, corrélo (ver "Cuando dos ciudades se pisan").
 4. **Pasá el cursor por el punto nuevo y por sus vecinos.** Si un nombre tapa a otro punto, cambialo de lado (ver "Dónde sale el nombre").
 5. **Remiendo.** Actualizá la fecha al pie de la página y el `lastmod` de `/red/` en `sitemap.xml`.
