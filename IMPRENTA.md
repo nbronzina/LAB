@@ -231,7 +231,7 @@ La bitácora es un registro por día. Qué entra y qué no: `DECISIONS.md`, "Bit
 ```
 
    La fecha va cuatro veces y tienen que coincidir: en el `id`, en el `href`, en el `datetime` y escrita. A la vista va abreviada (ene, feb, mar, abr, may, jun, jul, ago, sept, oct, nov, dic) y completa para el lector de pantalla. El día es el de quien anota, en su hora.
-2. **La anotación.** Un `li.bitacora-nota` con una a tres frases: el hecho, sin el camino para llegar. Los nombres de personas enlazan a su ficha (`/red/#nombre-apellido`) y lo que se menciona, a su página. Si lleva un link aparte ("Ver post →"), el texto y el link van cada uno en su `<p>`.
+2. **La anotación.** Un `li.bitacora-nota` con una a tres frases: el hecho, sin el camino para llegar. Cada ciudad, con su país. Los nombres de personas enlazan a su ficha (`/red/#nombre-apellido`) y lo que se menciona, a su página. Si lleva un link aparte ("Ver post →"), el texto y el link van cada uno en su `<p>`.
 3. **Un año nuevo** es otra `section.bitacora-year` arriba de la anterior.
 4. **Remiendo** de `/bitacora/` y su `lastmod` en `sitemap.xml`.
 
@@ -242,7 +242,7 @@ La anotación de cada sesión de trabajo la escribe Alambre antes de cerrarla (v
 1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora) y en el lugar que le toque por orden alfabético de apellido, copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP de 240 x 240 px. La foto va como las demás: la figura recortada del fondo (fondo transparente, se ve el color de la ficha), en escala de grises neutra y con el encuadre en cabeza y hombros.
 2. **Punto en el mapa.** Un `a.punto` que apunte a ese `id`, con las coordenadas de su ciudad. El paso a paso y la tabla de ciudades están en `MAPA.md`.
 3. **Remiendo** de `/red/` y su `lastmod` en `sitemap.xml`.
-4. **Bitácora.** Una anotación el día en que se suma, con el nombre enlazado a la ficha y desde dónde.
+4. **Bitácora.** Una anotación el día en que se suma, con el nombre enlazado a la ficha y desde dónde (ciudad y país).
 
 ### Actualizar el remiendo
 
