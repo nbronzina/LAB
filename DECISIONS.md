@@ -679,6 +679,8 @@ Reemplazada el 8 oct 2026: con la bitácora por día cada artefacto está en su 
 
 **Razón:** El orden de llegada se puede leer como jerarquía. El abecedario no dice nada de nadie y deja claro dónde va la próxima persona.
 
+**8 de octubre:** la ficha de Lucía pasa a llevar su nombre completo, Lucía Guedes de Rezende Montes. Sigue en la G: con más de un apellido, cuenta el primero. Su `id` sigue siendo `lucia-guedes`.
+
 ---
 
 ## 2026-10-08 — Footer: las redes del Lab
@@ -749,7 +751,7 @@ Cambia una regla de la limpieza: la inclinación de los artefactos ya no la alte
 
 **Decisión:** Opción 2. Los artefactos conservan su crédito.
 
-**Razón:** Con la opción 1, casi todas las anotaciones habrían dicho "Nicolás Bronzina, Madrid". El lugar se nombra cuando informa: "se suma Lucía Guedes, desde Montevideo, Uruguay". Cuando anoten otras personas de la red, su nombre va en la frase.
+**Razón:** Con la opción 1, casi todas las anotaciones habrían dicho "Nicolás Bronzina, Madrid". El lugar se nombra cuando informa: "se suma Lucía Guedes de Rezende Montes, desde Montevideo, Uruguay". Cuando anoten otras personas de la red, su nombre va en la frase.
 
 ---
 

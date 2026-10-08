@@ -420,7 +420,7 @@ En el sitio eso tiene forma: la pieza se ve primero y el contexto queda plegado 
 
 **La red se nombra abierta.** "Latinoamérica y su diáspora". La diáspora es mundial, no solo España. Cuando se listan países: "Argentina, Brasil, México, Uruguay y contando". Está abierta a futuristas y a quien quiera probar por primera vez.
 
-**La bitácora anota, no presenta.** Una a tres frases por anotación, en primera persona del plural o en impersonal: "Abrimos", "Probamos", "Se suma". Dice qué pasó, sin el camino para llegar: ni borradores, ni versiones descartadas, ni pendientes. Sin adjetivos sobre el propio trabajo. El nombre y el lugar van en la frase cuando informan: "se suma Lucía Guedes, desde Montevideo, Uruguay". Cada ciudad lleva su país: "Chivilcoy, Argentina", "Valencia, España".
+**La bitácora anota, no presenta.** Una a tres frases por anotación, en primera persona del plural o en impersonal: "Abrimos", "Probamos", "Se suma". Dice qué pasó, sin el camino para llegar: ni borradores, ni versiones descartadas, ni pendientes. Sin adjetivos sobre el propio trabajo. El nombre y el lugar van en la frase cuando informan: "se suma Lucía Guedes de Rezende Montes, desde Montevideo, Uruguay". Cada ciudad lleva su país: "Chivilcoy, Argentina", "Valencia, España".
 
 **Quién escribe.** El copy nuevo lo articula Alambre y lo valida Nicolás. Imprenta no redacta: si falta un texto, lo pide.
 

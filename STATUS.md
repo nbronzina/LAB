@@ -33,7 +33,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - Arreglos: "MUNDANIDAD" completa en la home, `h1` en la home, Archivo Black sin negrita sintética, contraste del botón de prácticas
 - Limpieza del código de todo el repo: `style.css` reescrita en orden, clases con nombres que dicen dónde se usan, publicación sin Jekyll, imágenes del tamaño en que se ven. El sitio se ve igual que antes
 - Ícono anterior retirado (`img/lab-icon.png`): los avatares de redes ya llevan el continente
-- Lucía Guedes (Montevideo) se suma a la red: ficha, foto y punto en el mapa
+- Lucía Guedes de Rezende Montes (Montevideo) se suma a la red: ficha, foto y punto en el mapa
 - En la red, las fichas van por orden alfabético de apellido
 - Instagram y LinkedIn del Lab en el footer de todas las páginas
 - La bitácora pasa a ser un registro por día, con lo anterior reconstruido y una rutina para anotar
