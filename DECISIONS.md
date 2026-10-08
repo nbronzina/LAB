@@ -783,6 +783,23 @@ Un feed para seguir la bitácora y la última anotación a la vista en la home. 
 
 ---
 
+## 2026-10-08 — Red: quien llega a Latinoamérica desde afuera
+
+### Decisión: Va en LATAM, con su origen en la ficha
+
+**Contexto:** Se suma Pierre Heistein, sudafricano que vive en San Rafael, Mendoza, Argentina. Es el caso al revés de la diáspora: llegó a Latinoamérica en vez de salir. Nicolás: "la mirada de un sudafricano viviendo en Argentina y no Buenos Aires es clave".
+
+**Opciones consideradas:**
+1. Un tercer grupo, para quien llegó desde afuera
+2. Un color de punto nuevo en el mapa
+3. LATAM, con el origen en la ficha
+
+**Decisión:** Opción 3. Su ficha va en LATAM y dice "Sudáfrica → San Rafael, Argentina", con la flecha de la diáspora. En el mapa lleva punto negro en San Rafael, a la misma latitud que Buenos Aires y 900 km al oeste. Sudáfrica está fuera del continente y no se marca. Del lado del origen va el país, que es lo que cuenta de su mirada.
+
+**Razón:** Los grupos van por dónde vive cada uno: agrupar por nacionalidad se descartó el 26 de enero. La flecha ya muestra el movimiento, así que el caso al revés se lee sin sumar nada al sistema.
+
+---
+
 ## Decisiones Pendientes
 
 - [x] Dominio propio → `mundanidadforzada.org` está activo (ver `CNAME`)

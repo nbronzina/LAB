@@ -17,7 +17,7 @@ Desde 700 px de ancho la lista va a la izquierda y el mapa a la derecha, fijo mi
 
 | En el mapa | Qué significa |
 |------------|---------------|
-| Punto negro | Vive ahí |
+| Punto negro | Vive ahí. También quien llegó desde afuera del continente: su origen va en la ficha, no en el mapa |
 | Punto azul | Salió de ahí. Va en su ciudad de origen, porque el ancla del Lab es Latinoamérica |
 | Sticker amarillo | "¿Y vos, desde dónde?". Abre el mail para sumarse |
 
@@ -35,7 +35,7 @@ El nombre aparece al pasar el cursor por un punto o al llegar con el teclado. En
 
 ## Sumar una persona
 
-1. **Ficha.** Agregá el `<article class="practitioner-card" id="nombre-apellido">` en el grupo que corresponda (LATAM o Diáspora), en el lugar que le toque por orden alfabético de apellido. El `id` va en minúsculas, sin tildes y con guiones.
+1. **Ficha.** Agregá el `<article class="practitioner-card" id="nombre-apellido">` en el grupo que corresponda (LATAM o Diáspora: el grupo va por dónde vive), en el lugar que le toque por orden alfabético de apellido. El `id` va en minúsculas, sin tildes y con guiones.
 2. **Punto.** Agregá un `<li>` en `<ul class="red-mapa-puntos">` con las coordenadas de su ciudad (tabla de abajo). Si la ciudad ya tiene su `<li>`, el punto nuevo va adentro de ese mismo `<li>`. Los `<li>` van en el mismo orden que las fichas: es el orden en que se recorren los puntos con el teclado.
 3. **Mirá el mapa a 390 px y a 1440 px.** Si dos ciudades se pisan o un punto de la costa cae sobre el mar, corrélo (ver "Cuando dos ciudades se pisan").
 4. **Pasá el cursor por el punto nuevo y por sus vecinos.** Si un nombre tapa a otro punto, cambialo de lado (ver "Dónde sale el nombre").
@@ -192,6 +192,7 @@ El encuadre, en las unidades del continente L, va de X −20 a 750 y de Y −20 
 | Tucumán | 59.17% | 68.90% |
 | Córdoba | 60.07% | 73.85% |
 | Mendoza | 54.92% | 75.40% |
+| San Rafael | 55.40% | 77.21% |
 | Rosario | 63.80% | 75.47% |
 | Chivilcoy | 64.30% | 77.50% |
 | Buenos Aires | 66.09% | 77.19% |

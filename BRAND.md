@@ -331,6 +331,7 @@ Así se muestra un artefacto en el sitio (home, bitácora, prácticas): como una
 
 - El continente es el archivo de la marca (`continente-riso.svg`). No se redibuja
 - Punto negro: vive ahí. Punto azul: salió de ahí, y va en su ciudad de origen
+- Quien llegó desde afuera del continente: punto negro donde vive, y el origen en la ficha ("Sudáfrica → San Rafael, Argentina")
 - Cada punto lleva un aro crema que lo despega del coral
 - Sin nombres, sin líneas, sin leyenda y sin países. El nombre aparece al pasar el cursor o al llegar con el teclado, y el punto se pone amarillo. Sale arriba del punto, o al costado si arriba tapa a otro
 - Varias personas en una ciudad se apilan de a tres por fila

@@ -239,7 +239,7 @@ La anotación de cada sesión de trabajo la escribe Alambre antes de cerrarla (v
 
 ### Sumar una persona a la red
 
-1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora) y en el lugar que le toque por orden alfabético de apellido, copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP de 240 x 240 px. La foto va como las demás: la figura recortada del fondo (fondo transparente, se ve el color de la ficha), en escala de grises neutra y con el encuadre en cabeza y hombros.
+1. **Ficha.** Un `article.practitioner-card` nuevo en `/red/`, con su `id`, en el grupo que corresponda (LATAM o Diáspora: el grupo va por dónde vive) y en el lugar que le toque por orden alfabético de apellido, copiando la estructura de las fichas que ya están. Necesita: nombre, ciudad (u origen → ciudad actual), hasta tres etiquetas, una o dos frases de bio, un link y una foto cuadrada en WebP de 240 x 240 px. La foto va como las demás: la figura recortada del fondo (fondo transparente, se ve el color de la ficha), en escala de grises neutra y con el encuadre en cabeza y hombros.
 2. **Punto en el mapa.** Un `a.punto` que apunte a ese `id`, con las coordenadas de su ciudad. El paso a paso y la tabla de ciudades están en `MAPA.md`.
 3. **Remiendo** de `/red/` y su `lastmod` en `sitemap.xml`.
 4. **Bitácora.** Una anotación el día en que se suma, con el nombre enlazado a la ficha y desde dónde (ciudad y país).

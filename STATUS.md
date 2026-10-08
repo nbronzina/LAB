@@ -42,6 +42,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 
 **Contenido:**
 - [ ] Más respuestas a la Práctica #01
+- [ ] Sumar a Pierre Heistein (Sudáfrica → San Rafael, Argentina) a la red. Faltan la foto y la bio, que las manda él. LinkedIn: https://www.linkedin.com/in/pierreheistein/. Cómo va: "Red: quien llega a Latinoamérica desde afuera", en `DECISIONS.md`
 - [ ] Revisión del marco teórico, anunciada en la bitácora de septiembre. Su introducción repite los dos primeros párrafos del manifiesto
 - [ ] Fotos de volantes pegados, para la bitácora
 - [ ] Anotaciones de otras personas de la red en la bitácora: hasta ahora anota una sola
