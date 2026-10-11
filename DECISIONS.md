@@ -802,6 +802,24 @@ Un feed para seguir la bitácora y la última anotación a la vista en la home. 
 
 ---
 
+## 2026-10-11 — Prácticas: la #02, Arreglos sin gran cosa
+
+### Decisión: Una práctica de observación, que pide una foto
+
+**Contexto:** Para Instagram armamos "Arreglos sin gran cosa": cuatro arreglos de Brasil encontrados en Wikimedia Commons, un homenaje a Nicolas Nova (1977-2024) y un ejercicio de observación a partir de su libro *Exercices d'observation* (en castellano, *Ejercicios de observación*, Ediciones Menguantes). Nicolás pidió sumar ese ejercicio a `/practicas/`.
+
+**Decisión:** Práctica de mundanidad #02, "Arreglos sin gran cosa". Tres pasos: caminar veinte minutos mirando desde abajo y de cerca (el piso, los umbrales, los bordes), fotografiar de frente lo arreglado con lo que había y anotar dónde, cuándo y con qué. Se entrega una foto o varias, cada una con su nota, sin caras ni direcciones a la vista. Se responde por mensaje directo en Instagram (`ig.me/m/labmundanidadforzada`) o por mail.
+
+El paso 1 va "a lo Nova", como pidió Nicolás: es el punto de vista que Nova propone en su entrevista con HEAD (2023).
+
+Los ejemplos van como tipología: las cuatro fotos cuadradas, derechas y del mismo tamaño, en grilla (`.practica-tipologia`), cada una con su nota. Los artefactos van pegados y girados; estas fotos se comparan entre sí y por eso van parejas.
+
+La #02 va arriba de la #01, como dice `IMPRENTA.md`. "Cómo funciona" suma un renglón con las dos y sus anclas (`#practica-02`, `#practica-01`). Los links de la bitácora a la #01 apuntan a su ancla.
+
+**Razón:** La #01 pide mucho: imaginar un futuro y hacer un artefacto. En ocho meses tuvo una respuesta. La #02 pide una foto, y además alimenta a la #01: el Lab adapta la mirada de antropólogo de Nova a la mundanidad forzada, y lo que se encuentra mirando así es material para imaginar.
+
+---
+
 ## Decisiones Pendientes
 
 - [x] Dominio propio → `mundanidadforzada.org` está activo (ver `CNAME`)
@@ -826,6 +844,7 @@ Un feed para seguir la bitácora y la última anotación a la vista en la home. 
 - [ ] Las cajas de "Marcos teóricos" y "Principios organizativos" estaban pensadas con 1 rem de relleno. Se ven con 0,5 rem arriba y abajo y sin relleno a la derecha, así que el texto llega al borde de la caja. Por lo mismo: la regla de las listas pisaba a la de las cajas
 - [ ] El logo del header estaba pensado en una línea. Siempre se vio en tres
 - [ ] Un feed para seguir la bitácora, y la última anotación a la vista en la home. Ver "Bitácora: un registro por día"
+- [ ] El volante de la Práctica #02. Ver "Abrir una práctica nueva" en `IMPRENTA.md`
 
 ---
 

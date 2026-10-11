@@ -1468,6 +1468,48 @@ select:focus {
   width: min(60%, 15rem);
 }
 
+/* Los pasos de un ejercicio, numerados */
+.practica-pasos {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.4rem;
+}
+
+.practica-pasos li + li {
+  margin-top: 0.5rem;
+}
+
+/* Tipología: la misma cosa fotografiada siempre igual, en grilla (#02, a partir de Nicolas Nova).
+   Fotos cuadradas y derechas, para compararlas entre sí. */
+.practica-tipologia {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1rem;
+  margin: 1rem 0 0.75rem;
+}
+
+.practica-tipologia img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid var(--negro);
+}
+
+.practica-tipologia figcaption {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+.practica-tipologia figcaption span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+
 /* Video: una imagen con link que, al hacer clic, se reemplaza por el reproductor */
 .video-facade {
   position: relative;
@@ -1520,7 +1562,8 @@ select:focus {
   margin-top: 0.75rem;
 }
 
-.video-facade-credit {
+.video-facade-credit,
+.practica-credito {
   font-size: 0.8rem;
   color: var(--gris);
   margin-bottom: 1rem;

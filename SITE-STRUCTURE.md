@@ -1,6 +1,6 @@
 # Site Structure — Lab de Mundanidad Forzada
 
-> Última actualización: 8 octubre 2026
+> Última actualización: 11 octubre 2026
 
 ## Páginas
 
@@ -12,7 +12,7 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 | `/manifiesto/` | `manifiesto/index.html` | Declaración corta: unas 350 palabras |
 | `/marco/` | `marco/index.html` | Fundamentación académica: unas 4.300 palabras. Se llega desde el manifiesto |
 | `/red/` | `red/index.html` | Mapa de la red, fichas (LATAM y diáspora) e invitación a sumarse |
-| `/practicas/` | `practicas/index.html` | Cómo funcionan las prácticas, la #01, cómo responder y las respuestas |
+| `/practicas/` | `practicas/index.html` | Cómo funcionan las prácticas y cada una (la #02 y la #01), con cómo responder y las respuestas |
 | `/practicas/volante/` | `practicas/volante/index.html` | Volante de la práctica para imprimir |
 | `/bitacora/` | `bitacora/index.html` | Registro por día: anotaciones cortas y, entre ellas, los artefactos |
 | cualquier otra | `404.html` | Página no encontrada |
@@ -28,6 +28,7 @@ Cada página es una carpeta con su `index.html`. Las URLs no llevan `.html`.
 ```
 
 - La home y `/practicas/` enlazan a un artefacto de la bitácora por su ancla: `/bitacora/#servicio-tecnico`.
+- Cada práctica tiene su ancla: `/practicas/#practica-02`, `/practicas/#practica-01`. La bitácora enlaza a la práctica por ahí.
 - Todos los links internos son absolutos desde la raíz (`/red/`). Los archivos (CSS, fuentes, imágenes) van con ruta relativa.
 
 ## Componentes compartidos
@@ -78,8 +79,10 @@ Una clase existe solo si `style.css` o un script la usan. No hay clases "por las
 - `.red-cta`: invitación a sumarse
 
 **Prácticas** (`body.pagina`)
-- `.practica-como-funciona`, con el link al volante
-- `article.practica`: una práctica. Adentro: video con fachada (`.video-facade`), secciones con `h3.practica-subtitulo`, el ejemplo y las respuestas como piezas pegadas (`.artefacto-pieza`), el botón `.practica-cta-boton`
+- `.practica-como-funciona`, con el link al volante y un renglón con las prácticas abiertas y sus anclas
+- `article.practica` con `id="practica-NN"`: una práctica. La más nueva va arriba. Adentro: secciones con `h3.practica-subtitulo` y el botón `.practica-cta-boton`
+- En la #01: video con fachada (`.video-facade`), el ejemplo y las respuestas como piezas pegadas (`.artefacto-pieza`)
+- En la #02: los pasos numerados (`ol.practica-pasos`), los ejemplos como tipología (`ul.practica-tipologia`: fotos cuadradas y derechas, en grilla de dos, con su nota) y su crédito (`.practica-credito`)
 
 **Volante** (`body.pagina.volante-page`)
 - `.volante-instrucciones`: título, para qué sirve, botón "Imprimir". No se imprime
@@ -114,6 +117,7 @@ Un ancla publicada no se renombra: puede estar enlazada desde afuera.
 | `img/artefacto-<nombre>.webp` | Un artefacto a tamaño completo. Es lo que se abre al tocar la pieza |
 | `img/artefacto-<nombre>-640.webp`, `-480.webp` | La misma pieza a 640 y 480 px de ancho, para mostrarla en las páginas |
 | `img/ejemplo-practica-miriam.webp`, `-640.webp` | El afiche de Miriam. Conserva el nombre con el que se publicó |
+| `img/arreglo-<nombre>-640.webp`, `-320.webp` | Los ejemplos de la Práctica #02, cuadrados. Fotos en dominio público de Wikimedia Commons; la de la manta, recortada para que no se vea una cara |
 
 Todas las imágenes llevan `width`, `height` y un `alt` que describe lo que se ve.
 
