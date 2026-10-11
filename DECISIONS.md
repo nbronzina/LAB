@@ -808,7 +808,7 @@ Un feed para seguir la bitácora y la última anotación a la vista en la home. 
 
 **Contexto:** Para Instagram armamos "Arreglos sin gran cosa": cuatro arreglos de Brasil encontrados en Wikimedia Commons, un homenaje a Nicolas Nova (1977-2024) y un ejercicio de observación a partir de su libro *Exercices d'observation* (en castellano, *Ejercicios de observación*, Ediciones Menguantes). Nicolás pidió sumar ese ejercicio a `/practicas/`.
 
-**Decisión:** Práctica de mundanidad #02, "Arreglos sin gran cosa". Tres pasos: caminar veinte minutos mirando desde abajo y de cerca (el piso, los umbrales, los bordes), fotografiar de frente lo arreglado con lo que había y anotar dónde, cuándo y con qué. Se entrega una foto o varias, cada una con su nota, sin caras ni direcciones a la vista. Se responde por mensaje directo en Instagram (`ig.me/m/labmundanidadforzada`) o por mail.
+**Decisión:** Práctica de mundanidad #02, "Arreglos sin gran cosa". Tres pasos: caminar veinte minutos mirando desde abajo y de cerca (el piso, los umbrales, los bordes), fotografiar de frente lo arreglado con lo que había y anotar dónde, cuándo y con qué. Se entrega una foto o varias, cada una con su nota, sin caras ni direcciones a la vista. Se responde con un formulario de Tally, como la #01 (`https://tally.so/r/gDyNYP`), o por mensaje directo en Instagram (`ig.me/m/labmundanidadforzada`) o por mail.
 
 El paso 1 va "a lo Nova", como pidió Nicolás: es el punto de vista que Nova propone en su entrevista con HEAD (2023).
 
