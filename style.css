@@ -358,10 +358,11 @@ select:focus {
 }
 
 /* --- Botón sticker: caja amarilla con sombra negra ---
-   Links del poster, "Imprimir" del volante y sticker del mapa.
+   Links del poster, "Imprimir" del volante y de prácticas, y sticker del mapa.
    Tamaño, giro y movimiento van en cada uno. */
 .poster-tag,
 .volante-imprimir,
+.practica-imprimir,
 .red-mapa-sumate {
   font-family: var(--display);
   text-transform: uppercase;
@@ -375,6 +376,7 @@ select:focus {
 
 .poster-tag:hover,
 .volante-imprimir:hover,
+.practica-imprimir:hover,
 .red-mapa-sumate:hover {
   box-shadow: 6px 6px 0 var(--negro);
 }
@@ -1423,6 +1425,40 @@ select:focus {
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 0.75rem;
+}
+
+/* El volante en "Cómo funciona": la miniatura pegada y, encima de su esquina de abajo,
+   el sticker para imprimir. Tapa parte de las tiras, nunca la consigna ni el QR. */
+.practica-volante {
+  display: flex;
+  align-items: flex-end;
+  margin: 0.5rem 0 1.75rem;
+}
+
+/* Son links, pero sin el subrayado azul de los links de texto de esta sección */
+.practica-volante .artefacto-pieza {
+  flex: none;
+  width: min(55%, 13rem);
+  border-bottom: 0;
+}
+
+/* Caja amarilla: ver "Botón sticker". Achica con la miniatura para no tapar la dirección */
+.practica-como-funciona .practica-imprimir {
+  flex: none;
+  font-size: clamp(0.8rem, 3.6vw, 0.95rem);
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0.65em 1.25em;
+  margin: 0 0 0.5rem -2.25rem;
+  color: var(--negro);
+  border-bottom: 3px solid var(--negro);
+  transform: rotate(3deg);
+}
+
+.practica-como-funciona .practica-imprimir:hover {
+  color: var(--negro);
+  border-color: var(--negro);
+  transform: rotate(0deg) translate(-2px, -2px);
 }
 
 .practica-separador {

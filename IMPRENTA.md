@@ -193,7 +193,7 @@ Crear página de proyectos
 
 **Sin roles repetidos.** `<header>`, `<nav>`, `<main>` y `<footer>` ya dicen qué son: no llevan `role`.
 
-**La versión de la hoja.** Las páginas la piden como `style.css?v=6`. Subí el número en las ocho páginas cuando cambies o saques nombres de clases, o cuando el HTML nuevo dependa de una clase nueva: así el HTML nuevo nunca se junta con un CSS viejo guardado en el navegador de alguien. Para un cambio que no rompe el HTML anterior (un color, un margen) no hace falta.
+**La versión de la hoja.** Las páginas la piden como `style.css?v=7`. Subí el número en las ocho páginas cuando cambies o saques nombres de clases, o cuando el HTML nuevo dependa de una clase nueva: así el HTML nuevo nunca se junta con un CSS viejo guardado en el navegador de alguien. Para un cambio que no rompe el HTML anterior (un color, un margen) no hace falta.
 
 **Imágenes.** Siempre con `width`, `height` y `alt`. Los artefactos nuevos van en tres tamaños y con `srcset` (el afiche de Miriam, que es anterior, tiene dos). Las fotos de las fichas van a 240 x 240 px.
 
@@ -257,7 +257,7 @@ Cambian el `datetime`, la fecha escrita y, en `sitemap.xml`, el `lastmod` de esa
 ### Abrir una práctica nueva
 
 1. Un `article.practica` nuevo en `/practicas/`, arriba de la anterior, con su ancla (`id="practica-NN"`). Sumala al renglón de las abiertas, al final de "Cómo funciona".
-2. El volante es uno solo, para todas las prácticas. Si la nueva no entra en su consigna, sumala ahí y probá que la hoja siga entrando en A4 y en carta: el pie no se tiene que montar sobre las tiras. La práctica nueva lo menciona arriba, después de su presentación, con el mismo párrafo que las otras.
+2. El volante es uno solo, para todas las prácticas. Si la nueva no entra en su consigna, sumala ahí y probá que la hoja siga entrando en A4 y en carta: el pie no se tiene que montar sobre las tiras. Si cambia la hoja, volvé a sacar su miniatura (`img/volante-practicas-*.webp`, captura de `.hoja`) y fijate que el sticker "Imprimir" de `/practicas/` siga tapando solo las tiras. La práctica nueva menciona el volante arriba, después de su presentación, con el mismo párrafo que las otras.
 3. El copy lo trae un brief.
 
 ---
