@@ -818,6 +818,14 @@ La #02 va arriba de la #01, como dice `IMPRENTA.md`. "Cómo funciona" suma un re
 
 **Razón:** La #01 pide mucho: imaginar un futuro y hacer un artefacto. En ocho meses tuvo una respuesta. La #02 pide una foto, y además alimenta a la #01: el Lab adapta la mirada de antropólogo de Nova a la mundanidad forzada, y lo que se encuentra mirando así es material para imaginar.
 
+### Decisión: Un volante para todas las prácticas, a la vista en /practicas/
+
+**Contexto:** El volante tenía la consigna de la #01 y en `/practicas/` era un renglón de texto. Nicolás pidió sacarlo de la #01 para que se vea en la página de prácticas, y que sirva para las prácticas en general.
+
+**Decisión:** La pregunta sigue: "¿Qué tiene de extraordinario tu ordinario?" sirve para las dos. La consigna nombra las dos: "Imaginá tu barrio de acá a unos años y hacé un objeto de ese futuro. O fotografiá algo arreglado con lo que había." Salen los ejemplos de objetos (un cartel, un ticket): con ellos el párrafo pasaba a cuatro renglones y en carta el pie se montaba sobre las tiras. En "Cómo funciona" el volante va como miniatura pegada (`.practica-volante`), con link a la página para imprimir.
+
+**Razón:** Un volante por práctica obliga a elegir cuál pegar, y la pregunta ya era de todas. Una miniatura se ve; un link en un párrafo, no.
+
 ---
 
 ## Decisiones Pendientes
@@ -844,7 +852,7 @@ La #02 va arriba de la #01, como dice `IMPRENTA.md`. "Cómo funciona" suma un re
 - [ ] Las cajas de "Marcos teóricos" y "Principios organizativos" estaban pensadas con 1 rem de relleno. Se ven con 0,5 rem arriba y abajo y sin relleno a la derecha, así que el texto llega al borde de la caja. Por lo mismo: la regla de las listas pisaba a la de las cajas
 - [ ] El logo del header estaba pensado en una línea. Siempre se vio en tres
 - [ ] Un feed para seguir la bitácora, y la última anotación a la vista en la home. Ver "Bitácora: un registro por día"
-- [ ] El volante de la Práctica #02. Ver "Abrir una práctica nueva" en `IMPRENTA.md`
+- [x] El volante de la Práctica #02 → el volante pasa a servir para todas las prácticas, 11 oct 2026. Ver "Un volante para todas las prácticas"
 
 ---
 

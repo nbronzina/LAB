@@ -17,7 +17,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 | `/marco/` | ✓ Revisión de texto pendiente (ver abajo) |
 | `/red/` | ✓ Seis personas, con el mapa |
 | `/practicas/` | ✓ Prácticas #02 y #01 abiertas, sin fecha de cierre. Una respuesta publicada, a la #01 |
-| `/practicas/volante/` | ✓ Imprime en A4 y carta |
+| `/practicas/volante/` | ✓ Para todas las prácticas. Imprime en A4 y carta |
 | `/bitacora/` | ✓ Registro por día, de septiembre de 2025 a hoy. Dos artefactos |
 | `404.html` | ✓ |
 
@@ -38,12 +38,12 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - Instagram y LinkedIn del Lab en el footer de todas las páginas
 - La bitácora pasa a ser un registro por día, con lo anterior reconstruido y una rutina para anotar
 - Práctica #02, "Arreglos sin gran cosa": un ejercicio de observación a partir de Nicolas Nova
+- El volante pasa a servir para todas las prácticas y se ve en `/practicas/`
 
 ## Pendientes
 
 **Contenido:**
 - [ ] Más respuestas a las prácticas #01 y #02
-- [ ] El volante de la Práctica #02
 - [ ] Sumar a Pierre Heistein (Sudáfrica → San Rafael, Argentina) a la red. Faltan la foto y la bio, que las manda él. LinkedIn: https://www.linkedin.com/in/pierreheistein/. Cómo va: "Red: quien llega a Latinoamérica desde afuera", en `DECISIONS.md`
 - [ ] Revisión del marco teórico, anunciada en la bitácora de septiembre. Su introducción repite los dos primeros párrafos del manifiesto
 - [ ] Fotos de volantes pegados, para la bitácora
