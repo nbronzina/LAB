@@ -818,13 +818,15 @@ La #02 va arriba de la #01, como dice `IMPRENTA.md`. "Cómo funciona" suma un re
 
 **Razón:** La #01 pide mucho: imaginar un futuro y hacer un artefacto. En ocho meses tuvo una respuesta. La #02 pide una foto, y además alimenta a la #01: el Lab adapta la mirada de antropólogo de Nova a la mundanidad forzada, y lo que se encuentra mirando así es material para imaginar.
 
-### Decisión: Un volante para todas las prácticas, a la vista en /practicas/
+### Decisión: Un volante para todas las prácticas, mencionado en cada una
 
 **Contexto:** El volante tenía la consigna de la #01 y en `/practicas/` era un renglón de texto. Nicolás pidió sacarlo de la #01 para que se vea en la página de prácticas, y que sirva para las prácticas en general.
 
-**Decisión:** La pregunta sigue: "¿Qué tiene de extraordinario tu ordinario?" sirve para las dos. La consigna nombra las dos: "Imaginá tu barrio de acá a unos años y hacé un objeto de ese futuro. O fotografiá algo arreglado con lo que había." Salen los ejemplos de objetos (un cartel, un ticket): con ellos el párrafo pasaba a cuatro renglones y en carta el pie se montaba sobre las tiras. En "Cómo funciona" el volante va como miniatura pegada (`.practica-volante`), con link a la página para imprimir.
+**Decisión:** La pregunta sigue: "¿Qué tiene de extraordinario tu ordinario?" sirve para las dos. La consigna nombra las dos: "Imaginá tu barrio de acá a unos años y hacé un objeto de ese futuro. O fotografiá algo arreglado con lo que había." Salen los ejemplos de objetos (un cartel, un ticket): con ellos el párrafo pasaba a cuatro renglones y en carta el pie se montaba sobre las tiras.
 
-**Razón:** Un volante por práctica obliga a elegir cuál pegar, y la pregunta ya era de todas. Una miniatura se ve; un link en un párrafo, no.
+Cada práctica lo menciona arriba, en el párrafo que sigue a su presentación: "Para que circule fuera de las redes hay un volante para imprimir y pegar donde pase gente", con link a la página para imprimir. Primero estuvo en "Cómo funciona", como miniatura pegada y con un renglón de link. Al verlo publicado, Nicolás pidió sacar las dos cosas de ahí y dejar la mención en cada práctica.
+
+**Razón:** Un volante por práctica obliga a elegir cuál pegar, y la pregunta ya era de todas. Los links de la bitácora llevan al ancla de cada práctica y se saltean "Cómo funciona": la mención tiene que estar en la práctica.
 
 ---
 

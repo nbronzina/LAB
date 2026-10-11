@@ -1425,14 +1425,6 @@ select:focus {
   margin-bottom: 0.75rem;
 }
 
-/* El volante, a la vista en "Cómo funciona": pegado como un papel más.
-   Es link, pero sin el subrayado de los links de texto de esta sección. */
-.practica-como-funciona .practica-volante {
-  width: min(55%, 13rem);
-  margin: 0.5rem 0 1.75rem 0.25rem;
-  border-bottom: 0;
-}
-
 .practica-separador {
   border: none;
   border-top: 2px solid var(--negro);

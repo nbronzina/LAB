@@ -38,7 +38,7 @@ Se publica solo desde la rama por defecto del repo (GitHub Pages). Cada commit e
 - Instagram y LinkedIn del Lab en el footer de todas las páginas
 - La bitácora pasa a ser un registro por día, con lo anterior reconstruido y una rutina para anotar
 - Práctica #02, "Arreglos sin gran cosa": un ejercicio de observación a partir de Nicolas Nova
-- El volante pasa a servir para todas las prácticas y se ve en `/practicas/`
+- El volante pasa a servir para todas las prácticas, y cada una lo menciona arriba
 
 ## Pendientes
 

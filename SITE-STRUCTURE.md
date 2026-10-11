@@ -79,8 +79,8 @@ Una clase existe solo si `style.css` o un script la usan. No hay clases "por las
 - `.red-cta`: invitación a sumarse
 
 **Prácticas** (`body.pagina`)
-- `.practica-como-funciona`, con el volante a la vista (`a.artefacto-pieza.practica-volante`: miniatura que lleva a `/practicas/volante/`) y un renglón con las prácticas abiertas y sus anclas
-- `article.practica` con `id="practica-NN"`: una práctica. La más nueva va arriba. Adentro: secciones con `h3.practica-subtitulo` y el botón `.practica-cta-boton`
+- `.practica-como-funciona`, con un renglón con las prácticas abiertas y sus anclas
+- `article.practica` con `id="practica-NN"`: una práctica. La más nueva va arriba. Adentro: la bajada (`.practica-lead`) y su presentación, un párrafo con el link al volante, secciones con `h3.practica-subtitulo` y el botón `.practica-cta-boton`
 - En la #01: video con fachada (`.video-facade`), el ejemplo y las respuestas como piezas pegadas (`.artefacto-pieza`)
 - En la #02: los pasos numerados (`ol.practica-pasos`), los ejemplos como tipología (`ul.practica-tipologia`: fotos cuadradas y derechas, en grilla de dos, con su nota) y su crédito (`.practica-credito`)
 
@@ -117,7 +117,6 @@ Un ancla publicada no se renombra: puede estar enlazada desde afuera.
 | `img/artefacto-<nombre>.webp` | Un artefacto a tamaño completo. Es lo que se abre al tocar la pieza |
 | `img/artefacto-<nombre>-640.webp`, `-480.webp` | La misma pieza a 640 y 480 px de ancho, para mostrarla en las páginas |
 | `img/ejemplo-practica-miriam.webp`, `-640.webp` | El afiche de Miriam. Conserva el nombre con el que se publicó |
-| `img/volante-practicas-480.webp`, `-240.webp` | Miniatura del volante para `/practicas/`. Es una captura de `.hoja`: si cambia el volante, se vuelve a sacar |
 | `img/arreglo-<nombre>-640.webp`, `-320.webp` | Los ejemplos de la Práctica #02, cuadrados. Fotos en dominio público de Wikimedia Commons; la de la manta, recortada para que no se vea una cara |
 
 Todas las imágenes llevan `width`, `height` y un `alt` que describe lo que se ve.

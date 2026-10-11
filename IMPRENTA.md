@@ -257,7 +257,7 @@ Cambian el `datetime`, la fecha escrita y, en `sitemap.xml`, el `lastmod` de esa
 ### Abrir una práctica nueva
 
 1. Un `article.practica` nuevo en `/practicas/`, arriba de la anterior, con su ancla (`id="practica-NN"`). Sumala al renglón de las abiertas, al final de "Cómo funciona".
-2. El volante es uno solo, para todas las prácticas. Si la nueva no entra en su consigna, sumala ahí y probá que la hoja siga entrando en A4 y en carta: el pie no se tiene que montar sobre las tiras. Si cambia la hoja, volvé a sacar su miniatura (`img/volante-practicas-*.webp`, captura de `.hoja`).
+2. El volante es uno solo, para todas las prácticas. Si la nueva no entra en su consigna, sumala ahí y probá que la hoja siga entrando en A4 y en carta: el pie no se tiene que montar sobre las tiras. La práctica nueva lo menciona arriba, después de su presentación, con el mismo párrafo que las otras.
 3. El copy lo trae un brief.
 
 ---
